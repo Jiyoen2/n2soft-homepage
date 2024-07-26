@@ -1,0 +1,556 @@
+/********** HomeVideo.css **********/
+
+.video-main {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 226px 0px 262.9px 320px;
+  background-image: url("../images/hero_img.jpg");
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 900px;
+}
+
+.video-main h2 {
+  color: white;
+  text-align: left;
+  font-size: 70px;
+}
+
+.video-main p {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
+
+.text-com {
+  padding-top: 100px;
+}
+
+.stick {
+  background: #fff;
+  width: 32px;
+  height: 4px;
+}
+
+.text {
+  padding-top: 34px;
+}
+
+/********** HomeContents.css **********/
+
+.contents-main {
+  margin: 119.1px 0px 0px 320px;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .company-feature img {
+    width: 400px;
+    height: 160;
+  }
+
+  .company-feature h2 {
+    font-size: 30px;
+    margin-top: 24px;
+  }
+
+  .company-feature p {
+    font-size: 20px;
+  }
+} */
+
+.company-feature h2 {
+  font-size: 36px;
+  margin-top: 24px;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .company-feature h2 {
+    font-size: 25px;
+  }
+} */
+
+.company-feature p {
+  font-size: 20px;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .company-feature p {
+    font-size: 20px;
+  }
+} */
+
+.company-text {
+  margin-top: 34px;
+}
+
+.chevron {
+  padding: 0 0 0 587px;
+}
+
+.chevron-left {
+  cursor: pointer;
+}
+
+.chevron-right {
+  cursor: pointer;
+}
+
+/* @media (min-width: 768px) {
+  .chevron {
+    padding: 0 0 0 300px;
+  }
+} */
+
+.company-feature-com {
+  display: flex;
+  justify-content: space-around;
+  transition: transform 0.5s ease;
+}
+
+.company-feature {
+  display: flex;
+  padding: 0px 80px 0px 0px;
+  flex-direction: column;
+  white-space: pre-line;
+  /* margin-right: 80px; */
+}
+
+.company-feature-com {
+  display: flex;
+  justify-content: flex-start; /* 좌측 정렬 */
+  transition: transform 0.5s ease;
+  overflow: hidden; /* 이미지가 컨테이너를 넘지 않도록 함 */
+}
+
+.company-feature {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 80px 0px 0px;
+  /* 이미지 크기 조절 */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.company-feature img {
+  width: 100%; /* 이미지의 너비를 100%로 설정하여 컨테이너에 맞게 조절 */
+  height: auto; /* 비율을 유지하며 높이 자동 조절 */
+}
+
+.stick-com {
+  display: flex;
+  position: relative;
+}
+
+/* .stick-red {
+  position: absolute;
+  width: 427px;
+  height: 2px;
+  margin: 80px 0 0 0;
+  background-color: #f00;
+  transition: transform 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .stick-red {
+    width: 293px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stick-red {
+    width: 427px;
+  }
+
+.stick-gray {
+  width: 1281px;
+  height: 2px;
+  margin: 80px 320px 0 0;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  transition: transform 0.5s ease;
+}
+} */
+
+.stick-red {
+  position: absolute;
+  width: 427px;
+  height: 2px;
+  margin: 80px 0 0 0;
+  background-color: #f00;
+  transition: transform 0.5s ease;
+}
+
+.stick-gray {
+  width: 1281px;
+  height: 2px;
+  margin: 80px 320px 0 0;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  transition: transform 0.5s ease;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .stick-red {
+    width: 100px;
+  }
+  .stick-gray {
+    width: 300px;
+  }
+} */
+
+/* @media (min-width: 768px) {
+  .stick-red {
+    width: 315px;
+  }
+  .stick-gray {
+    width: 1280px;
+  }
+} */
+
+/********** HomeCust.css **********/
+
+.cust-img-group.odd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  ul {
+    position: absolute;
+    display: flex;
+    width: max-content;
+    animation: aniScroll 30s linear infinite;
+    /* 2번째 <ul> 태그에 애니메이션 넣기 */
+    &.list2 {
+      animation: aniScroll-2 30s linear infinite;
+    }
+    li {
+      list-style: none;
+      line-height: 100px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+/* 0%에서 -100%으로 이동하는 애니메이션 */
+@keyframes aniScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 100%에서 0%으로 이동하는 애니메이션 */
+@keyframes aniScroll-2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.cust-img-group.even {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  ul {
+    position: absolute;
+    display: flex;
+    width: max-content;
+    animation: aniScroll-even 30s linear infinite;
+    /* 2번째 <ul> 태그에 애니메이션 넣기 */
+    &.list2 {
+      animation: aniScroll-even2 30s linear infinite;
+    }
+    li {
+      list-style: none;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+/* 0%에서 -100%으로 이동하는 애니메이션 */
+@keyframes aniScroll-even {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 100%에서 0%으로 이동하는 애니메이션 */
+@keyframes aniScroll-even2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.client-1 img {
+  padding-left: 20px;
+  width: 300px;
+  height: 150px;
+}
+
+/********** HomeNews.css **********/
+
+.news-feature {
+  padding: 180px 206px 0px 212px;
+}
+
+.rectangle-container {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 81px;
+  padding: 84px 150px 0 150px;
+}
+
+.plus {
+  padding: 0 0 0 888px;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .plus {
+    padding: 0 0 0 500px;
+  }
+} */
+
+.newsPlusImg {
+  width: 80px;
+  height: 80px;
+  /* margin: 0 0 0 864px; */
+  object-fit: contain;
+}
+
+.num-com {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  z-index: -1;
+  padding: 60px 0 0 0;
+}
+
+.num-com img {
+  width: 300px;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.stick-line01 {
+  width: 2px;
+  height: 342px;
+  margin: 0 100px 0 400px;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+.stick-line02 {
+  width: 2px;
+  height: 342px;
+  margin: 0 100px 0 400px;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+/********** HomeContact.css **********/
+
+.contact-section {
+  padding: 0px 320px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .contact-section {
+    padding: 0px 200px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+} */
+
+.map-button {
+  display: flex;
+  width: 400px;
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+  border: none; /* 버튼의 기본 테두리 제거 */
+  border-radius: 0px; /* 선택 사항: 모서리 둥글게 만들기 */
+  /* flex-grow: 0; */
+}
+
+.map-black {
+  background-color: #101010;
+  color: #fff;
+  font-weight: 500;
+  padding: 13px 45px;
+}
+
+.map-white {
+  background-color: #fff;
+  border: solid 1px #101010;
+  color: #101010;
+  font-weight: bold;
+  padding: 13px 48px 13px 42px;
+}
+
+.contactMap-main {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+}
+
+/* @media (min-width: 768px) and (max-width: 2000px) {
+  .map {
+    width: 800px;
+    height: 400px;
+  }
+
+  .map-road-img {
+    width: 800px;
+  }
+  .map-road-button {
+    width: 800px;
+  }
+  .map-road-com {
+    height: 403px;
+  }
+} */
+
+.contact-stick {
+  width: 26px;
+  height: 2px;
+  margin: 58px 0 24px 0;
+  background-color: #da1c3e;
+}
+
+.contact-text {
+  padding: 16px 0 70px 0;
+  font-size: 20px;
+}
+
+.phoneImg,
+.printerImg {
+  padding: 0 16px 0 0;
+}
+
+.contact-img p {
+  display: block;
+  font-size: 20px;
+  padding: 0 16px 16px 0;
+}
+
+.contact-img img {
+  vertical-align: middle;
+}
+
+.map {
+  width: 1166px;
+  height: 440px;
+  /* align-items: center; */
+  justify-content: center;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  border-style: solid;
+  border-width: 0px;
+  /* border-color: #d8d8d8; */
+}
+
+/********** CompanyTop.css **********/
+.company-main {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding: 170px 271px 0 320px;
+  width: 100%;
+  height: 372px;
+  background-image: url("../images/top01.jpg");
+  background-size: 1920px auto;
+  background-position: center;
+  background-color: rgba(217, 217, 217, 0.5);
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.company-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 152px;
+}
+
+.company-main h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  /* padding-right: 450px; */
+}
+
+.company-main h2 {
+  color: #fff;
+  font-size: 15px;
+}
+
+/********** ContactUsTop.css **********/
+.contactus-main {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 170px 271px 0 320px;
+  background-image: url("../images/top04.jpg");
+  background-color: rgba(217, 217, 217, 0.5);
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  height: 372px;
+  align-items: center;
+}
+
+/* @media (min-width: 2000px) {
+  .contactus-main {
+    background-image: url("../images/top04.jpg");
+    background-color: rgba(217, 217, 217, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+} */
+
+.contactus-main h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 450px;
+}
+
+.contactus-main h2 {
+  color: #fff;
+  font-size: 15px;
+}
+
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/
+/********** CompanyVideo.css **********/

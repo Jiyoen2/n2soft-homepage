@@ -1,0 +1,29 @@
+/* 공통 */
+.common-main {
+  padding: 180px 0px 0px 320px;
+  /* border-bottom: 1px solid gray; */
+  white-space: pre-line; /* 줄바꿈*/
+}
+
+.container {
+  display: flex;
+}
+
+.title-one {
+  text-align: left;
+  padding-bottom: 60px;
+}
+
+.title-one h2 {
+  font-size: 48px;
+}
+
+.title-one h2 span {
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.title-one p {
+  font-size: 20px;
+  padding-top: 16px;
+}
