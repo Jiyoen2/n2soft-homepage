@@ -3,11 +3,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../components/css/Common.css";
 import "../components/css/Layout.css";
-import HomeVideo from "../components/mainHomeCom/HomeVideo";
-import HomeContents from "../components/mainHomeCom/HomeContents";
-import HomeCust from "../components/mainHomeCom/HomeCust";
-import HomeNews from "../components/mainHomeCom/HomeNews";
-import HomeContact from "../components/mainHomeCom/HomeContact";
+import HomeVideo from "../components/com/home/HomeVideo";
+import HomeContents from "../components/com/home/HomeContents";
+import HomeCust from "../components/com/home/HomeCust";
+import HomeNews from "../components/com/home/HomeNews";
+import HomeContact from "../components/com/home/HomeContact";
 // import { useMediaQuery, MediaQuery } from "react-responsive";
 
 const MainHome = () => {

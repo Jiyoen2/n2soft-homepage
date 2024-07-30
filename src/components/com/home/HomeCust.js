@@ -1,5 +1,5 @@
 import React from "react";
-import CustImg from "./homeCustCom/CustImg";
+import CustImg from "./homeCust/CustImg";
 
 const HomeCust = () => {
   return (

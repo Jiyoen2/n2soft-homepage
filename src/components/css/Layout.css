@@ -1,4 +1,6 @@
-/********** HomeVideo.css **********/
+/******************** MainHome.css ********************/
+
+/******************** HomeVideo.css ********************/
 
 .video-main {
   position: relative;
@@ -39,7 +41,7 @@
   padding-top: 34px;
 }
 
-/********** HomeContents.css **********/
+/******************** HomeContents.css ********************/
 
 .contents-main {
   margin: 119.1px 0px 0px 320px;
@@ -210,7 +212,7 @@
   }
 } */
 
-/********** HomeCust.css **********/
+/******************** HomeCust.css ********************/
 
 .cust-img-group.odd {
   position: relative;
@@ -307,7 +309,7 @@
   height: 150px;
 }
 
-/********** HomeNews.css **********/
+/******************** HomeNews.css ********************/
 
 .news-feature {
   padding: 180px 206px 0px 212px;
@@ -370,7 +372,7 @@
   background-color: #f4f4f4;
 }
 
-/********** HomeContact.css **********/
+/******************** HomeContact.css ********************/
 
 .contact-section {
   padding: 0px 320px 0px 0px;
@@ -396,7 +398,6 @@
   cursor: pointer;
   border: none; /* 버튼의 기본 테두리 제거 */
   border-radius: 0px; /* 선택 사항: 모서리 둥글게 만들기 */
-  /* flex-grow: 0; */
 }
 
 .map-black {
@@ -476,53 +477,409 @@
   /* border-color: #d8d8d8; */
 }
 
-/********** CompanyTop.css **********/
+/******************** MainCompany.css ********************/
+
+.company-img {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-image: url("../images/top01.jpg");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .company-main {
   display: flex;
-  border-bottom: 1px solid gray;
-  padding: 170px 271px 0 320px;
-  width: 100%;
-  height: 372px;
-  background-image: url("../images/top01.jpg");
-  background-size: 1920px auto;
-  background-position: center;
-  background-color: rgba(217, 217, 217, 0.5);
-  background-repeat: no-repeat;
+  padding: 100px 320px 166px 320px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.company-text {
+.company-title h1 {
+  font-size: 45px;
+  padding-bottom: 35px;
+}
+
+.company-content p {
+  height: 80px;
+  margin: 24px 487px 24px 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 64px;
+  font-weight: bold;
+  color: #303030;
+}
+
+.company-com {
+  padding-bottom: 22px;
+}
+
+.company-num {
+  font-family: SpoqaHanSansNeo;
+  font-size: 18px;
+  padding-right: 16px;
+  font-weight: bold;
+  color: #bc1d22;
+}
+
+.company-num-inside {
+  font-weight: bold;
+}
+
+.company-text,
+.company-text-inside {
+  font-size: 18px;
+  /* padding-bottom: 12px; */
+  color: #424242;
+}
+
+.company-text-inside {
+  font-weight: normal;
+}
+
+.company-s {
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.company-s .company-text-inside {
+  padding: 0 0 0 25px;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-items2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 345px;
+  padding-left: 79px;
+}
+
+.line-long {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1px;
+  margin: 95px 0 0 0;
+  height: 2153px;
+  background-color: #cdcdcd;
+}
+
+.line-dot-1 {
+  width: 640px;
+  height: 1px;
+  flex-grow: 0;
+  margin: 46px 0 0 0;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
+}
+
+.line-dot-2 {
+  width: 640px;
+  height: 1px;
+  flex-grow: 0;
+  margin: 46px 0 0 -79px;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
+}
+
+.Ellipse-1 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 41px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-2 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 238px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-3 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 121px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-4 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 238px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-5 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 159px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-6 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 163px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-7 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 147px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-8 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 101px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-9 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 220px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-10 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 16px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-11 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 196px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-12 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 52px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.Ellipse-13 {
+  width: 12px;
+  height: 12px;
+  align-self: stretch;
+  margin: 159px 0 0 0;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/******************** MainContactUs.css ********************/
+
+.contact-img {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-image: url("../images/top04.jpg");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-con {
+  display: flex; /* 자식 요소들을 수평으로 배치 */
+  flex-wrap: wrap; /* 줄 바꿈을 허용 */
+  gap: 20px; /* 자식 요소들 사이의 간격 */
+  padding: 40px 0 60px 0;
+}
+
+.contact-con > div {
+  flex: 1 1 45%; /* 각 항목이 적당히 너비를 가지도록 설정 */
+}
+
+.com-tit {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding-bottom: 152px;
 }
 
-.company-main h1 {
-  color: #fff;
-  font-size: 40px;
+.contact-tit-2 {
+  /* height: 19px; */
+  /* padding: 0 5px 0 0px; */
+  font-size: 16px;
+  color: #9e9e9e;
+}
+
+.contact-tit-3 {
+  /* height: 19px; */
+  /* padding: 0 5px 0 0px; */
+  font-size: 20px;
+  color: #212121;
+  font-family: Pretendard;
+  text-align: left;
+}
+
+.contact-tit-4 {
+  font-family: Pretendard;
+  font-size: 28px;
   font-weight: bold;
-  /* padding-right: 450px; */
+  text-align: left;
+  color: #212121;
 }
 
-.company-main h2 {
-  color: #fff;
-  font-size: 15px;
+.contact-st {
+  color: #eb5757;
 }
 
-/********** ContactUsTop.css **********/
-.contactus-main {
-  display: flex;
+/* .contact-stick-1 {
+  height: 1px;
+  background-color: #212121;
+}
+
+.contact-stick-2 {
+  width: 88px;
+  height: 1px;
+  background-color: #f00;
+} */
+
+.contact-box {
   width: 100%;
-  border-bottom: 1px solid gray;
-  padding: 170px 271px 0 320px;
-  background-image: url("../images/top04.jpg");
-  background-color: rgba(217, 217, 217, 0.5);
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  height: 372px;
+  height: 60px;
+  margin: 20px 0;
+  padding: 20px 18px;
+  border-radius: 4px;
+  font-size: 18px;
+  border: solid 1px #eee;
+  background-color: #fff;
+}
+
+.contact-text {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  border: solid 1px #eee;
+  background-color: #fff;
+  padding: 20px 0 0 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.5;
+  resize: none;
+  margin-top: 20px;
+}
+
+.contact-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-sub {
+  width: 176px;
+  height: 54px;
+  background-color: #101010;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-agree {
+  width: 100%;
+  margin: 20px 0 28px 0;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.agree-cont {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+  padding-bottom: 20px;
+}
+
+.contact-agree span {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: #424242;
+}
+
+.contact-check {
+  display: flex;
   align-items: center;
+  padding-bottom: 40px;
+  width: 400px;
+}
+
+.contact-check p {
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: #424242;
+}
+
+.check-circle-Gr {
+  margin-right: 23.3px;
+  cursor: pointer;
 }
 
 /* @media (min-width: 2000px) {
@@ -534,23 +891,13 @@
   }
 } */
 
-.contactus-main h1 {
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  padding-right: 450px;
-}
-
-.contactus-main h2 {
-  color: #fff;
-  font-size: 15px;
-}
-
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
-/********** CompanyVideo.css **********/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/
+/******************** MainContactUs.css ********************/

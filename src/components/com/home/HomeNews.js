@@ -1,9 +1,9 @@
 import React from "react";
-import NewNews from "./homeNewsCom/NewNews";
-import NewsPlus from "../images/plus.png";
-import NumberImg01 from "../images/news-01.png";
-import NumberImg02 from "../images/news-02.png";
-import NumberImg03 from "../images/news-03.png";
+import NewNews from "./homeNews/NewNews";
+import NewsPlus from "./../../images/plus.png";
+import NumberImg01 from "./../../images/news-01.png";
+import NumberImg02 from "./../../images/news-02.png";
+import NumberImg03 from "./../../images/news-03.png";
 
 const data = [
   {

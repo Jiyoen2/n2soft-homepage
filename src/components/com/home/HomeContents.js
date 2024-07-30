@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import CompanyFeature from "./homeContentCom/CompanyFeature";
-import SolutionImage1 from "../images/solution01.jpg";
-import SolutionImage2 from "../images/solution02.jpg";
-import SolutionImage3 from "../images/solution03.jpg";
-import Chevronleft from "../images/chevron-left.png";
-import ChevronRight from "../images/chevron-right.png";
+import CompanyFeature from "./homeContent/CompanyFeature";
+import SolutionImage1 from "./../../images/solution01.jpg";
+import SolutionImage2 from "./../../images/solution02.jpg";
+import SolutionImage3 from "./../../images/solution03.jpg";
+import Chevronleft from "./../../images/chevron-left.png";
+import ChevronRight from "./../../images/chevron-right.png";
 
 const data = [
   {

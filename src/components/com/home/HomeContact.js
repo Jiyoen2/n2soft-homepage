@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ContactMapOne from "./homeContactCom/ContactMapOne";
-import ContactMapTwo from "./homeContactCom/ContactMapTwo.js";
+import ContactMapOne from "./homeContact/ContactMapOne.js";
+import ContactMapTwo from "./homeContact/ContactMapTwo.js";
 
 const HomeContact = () => {
   // 상태를 정의합니다. 초기값은 'ContactMapOne'입니다.

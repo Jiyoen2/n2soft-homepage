@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import PhoneImage from "../../images/phone.png";
-import PrinterImage from "../../images/printer.png";
+import PhoneImage from "./../../../images/phone.png";
+import PrinterImage from "./../../../images/printer.png";
 
 const ContactMapOne = () => {
   //스크립트 파일 읽어오기
@@ -31,12 +31,12 @@ const ContactMapOne = () => {
       kakao.maps.load(() => {
         const mapContainer = document.getElementById("map");
         const options = {
-          center: new kakao.maps.LatLng(37.4395083, 127.173853), //좌표설정
+          center: new kakao.maps.LatLng(37.3382513, 127.1013616), //좌표설정
           level: 3,
         };
         const map = new kakao.maps.Map(mapContainer, options); //맵생성
         //마커설정
-        const markerPosition = new kakao.maps.LatLng(37.4395083, 127.173853);
+        const markerPosition = new kakao.maps.LatLng(37.3382513, 127.1013616);
         const marker = new kakao.maps.Marker({
           position: markerPosition,
         });
@@ -49,10 +49,10 @@ const ContactMapOne = () => {
     <div className="contactMap-main">
       <div className="contact-title">
         <div className="contact-stick"></div>
-        <h2>엔투소프트(본사)</h2>
+        <h2>엔투소프트(사옥)</h2>
         <div className="contact-text">
-          <p>경기 성남시 중원구 갈마치로 288번길</p>
-          <p>14 (SKV1 타워 ) A동 730호</p>
+          <p>경기 용인시 수지구 신수로</p>
+          <p>767 ( 분당수지 U타워 ) A동 2106호</p>
         </div>
         <div className="contact-img">
           <p>
