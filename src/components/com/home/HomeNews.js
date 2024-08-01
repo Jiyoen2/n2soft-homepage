@@ -1,27 +1,27 @@
-import React from "react";
-import NewNews from "./homeNews/NewNews";
-import NewsPlus from "./../../images/plus.png";
-import NumberImg01 from "./../../images/news-01.png";
-import NumberImg02 from "./../../images/news-02.png";
-import NumberImg03 from "./../../images/news-03.png";
+import React, { useRef } from "react";
+import HomeNew from "./homeNews/HomeNew";
+import ArrRight from "../../images/arr_right.png";
+import ArrLeft from "../../images/arr_left.png";
 
 const data = [
   {
     title: (
       <>
         <p>스마트저축은행</p>
-        <p> 여신관리시스템 고도화</p>
+        <p>여신관리시스템 고도화</p>
         <p>프로젝트 수주</p>
       </>
     ),
     content: (
       <>
-        <p>사용자에 최적화된 화면 제공과 엔투소프트</p>
-        <p> 의 기술력을 더하여 소비자 채권관리 시스</p>
-        <p> 템의 High-end 버전을 목표로 합니다.</p>
+        <p>
+          사용자에 최적화된 화면 제공과 엔투소프트의 기술력이 더하여 소비자
+          채권관리 시스템의 High-end 버전을 목표로 합니다.
+        </p>
       </>
     ),
     date: "2024.05.17",
+    num: "01",
   },
   {
     title: (
@@ -33,12 +33,14 @@ const data = [
     ),
     content: (
       <>
-        <p>통합여신관리시스템을 n.Tree 솔루션으로</p>
-        <p> 전환하여 소비자 채권관리에 업무효율성 향</p>
-        <p> 상을 목표로 합니다.</p>
+        <p>
+          통합여신관리시스템을 n.Tree솔루션으로 전환하여 소비자 채권관리에
+          업무효율성 향상을 목표로 합니다.
+        </p>
       </>
     ),
     date: "2024.04.25",
+    num: "02",
   },
   {
     title: (
@@ -49,50 +51,130 @@ const data = [
     ),
     content: (
       <>
-        <p>NPL채권관리를 전산화 하여 최소한의 인력</p>
-        <p>으로 최대 효율을 낼 수 있도록 시스템을 구</p>
-        <p>축합니다.</p>
+        <p>
+          NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록
+          시스템을 구축합니다.
+        </p>
       </>
     ),
     date: "2024.04.13",
+    num: "03",
+  },
+  {
+    title: (
+      <>
+        <p>HB저축은행</p>
+        <p> NPL 채권관리시스템 구축</p>
+      </>
+    ),
+    content: (
+      <>
+        <p>
+          NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록
+          시스템을 구축합니다.
+        </p>
+      </>
+    ),
+    date: "2024.03.15",
+    num: "04",
+  },
+  {
+    title: (
+      <>
+        <p>HB저축은행</p>
+        <p> NPL 채권관리시스템 구축</p>
+      </>
+    ),
+    content: (
+      <>
+        <p>
+          NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록
+          시스템을 구축합니다.
+        </p>
+      </>
+    ),
+    date: "2024.02.17",
+    num: "05",
+  },
+  {
+    title: (
+      <>
+        <p>HB저축은행</p>
+        <p> NPL 채권관리시스템 구축</p>
+      </>
+    ),
+    content: (
+      <>
+        <p>
+          NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록
+          시스템을 구축합니다.
+        </p>
+      </>
+    ),
+    date: "2023.01.17",
+    num: "06",
   },
 ];
 
 const HomeNews = () => {
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: -400,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: 400,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="news-feature">
-      <div className="container">
-        <div className="title-one" style={{ padding: "0px 0px 0px 120px" }}>
+      <div className="news-com">
+        <div className="news-tit-2">
           <h2>
             <span>N2SOFT </span>
             NEWS
           </h2>
-          <p>엔투소프트의 최근 새로운 소식입니다.</p>
+          <p>엔투소프트의</p>
+          <p>최신 근황을 알려드립니다.</p>
         </div>
-        <div className="plus">
-          <img src={NewsPlus} alt="더보기" className="newsPlusImg" />
+        <div className="news-arr">
+          <img
+            src={ArrLeft}
+            alt="더보기"
+            className="newsArrLeft"
+            onClick={scrollLeft}
+          />
+          <img
+            src={ArrRight}
+            alt="더보기"
+            className="newsArrRight"
+            onClick={scrollRight}
+          />
         </div>
       </div>
-      {/* <div className="container"> */}
-      <div className="num-com">
-        <img src={NumberImg01} alt="순번01" className="numberImg01" />
-        <div class="stick-line01"></div>
-        <img src={NumberImg02} alt="순번02" className="numberImg02" />
-        <div class="stick-line02"></div>
-        <img src={NumberImg03} alt="순번03" className="numberImg03" />
-      </div>
-      <div className="rectangle-container">
+      <div className="rectangle-com" ref={containerRef}>
         {data.map((News, i) => (
           <div key={i} className="rectangle">
-            <NewNews
+            <HomeNew
               date={News.date}
               title={News.title}
               content={News.content}
+              num={News.num}
             />
           </div>
         ))}
       </div>
-      {/* </div> */}
     </div>
   );
 };

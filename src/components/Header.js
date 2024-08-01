@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../components/css/Header.css";
 import N2softLogoWhImg from "./images/N2SOFTlogo-Wh.png";
@@ -9,8 +9,10 @@ const Header = () => {
   const [color, setColor] = useState("white");
   const [boxShadow, setBoxShadow] = useState("none");
   const [activeMenu, setActiveMenu] = useState("");
+  const [logo, setLogo] = useState(N2softLogoWhImg);
 
   const location = useLocation();
+  const menu1Ref = useRef(null);
 
   useEffect(() => {
     setActiveMenu(location.pathname);
@@ -21,10 +23,18 @@ const Header = () => {
       setBackground("#FFFFFF");
       setColor("black");
       setBoxShadow("0 2px 6px rgba(0, 0, 0, 0.12)");
+      setLogo(N2softLogoRdImg);
+      if (menu1Ref.current) {
+        menu1Ref.current.style.backgroundColor = "gray";
+      }
     } else {
       setBackground("rgba(0, 0, 0, 0)");
       setColor("white");
       setBoxShadow("none");
+      setLogo(N2softLogoWhImg);
+      if (menu1Ref.current) {
+        menu1Ref.current.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+      }
     }
   };
 
@@ -45,7 +55,7 @@ const Header = () => {
       }}
     >
       <Link to="/" className="logo-link">
-        <img src={N2softLogoWhImg} alt="N2soft 흰로고" className="logo-image" />
+        <img src={logo} alt="N2soft 로고" className="logo-image" />
       </Link>
       <ul className="menu-li">
         <li className="menu">
@@ -76,7 +86,7 @@ const Header = () => {
           {activeMenu === "/notice" && <div className="stick-header"></div>}
         </li>
       </ul>
-      <div className="menu1">
+      <div className="menu1" ref={menu1Ref}>
         <Link
           to="/contact"
           style={{ color: activeMenu === "/contact" ? "#ff0000" : color }}

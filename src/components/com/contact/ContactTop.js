@@ -3,7 +3,7 @@ import React from "react";
 const ContactTop = ({ setActiveTab, activeTab }) => {
   return (
     <div className="contact-img">
-      <div className="top-title">
+      <div className="top-tit">
         <h1>CONTACT US</h1>
       </div>
       <div>

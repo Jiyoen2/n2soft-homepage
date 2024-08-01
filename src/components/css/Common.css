@@ -1,45 +1,62 @@
 /* 공통 */
-.common-main {
-  padding: 180px 0px 0px 320px;
+.main-common {
+  padding-bottom: 200px;
   /* border-bottom: 1px solid gray; */
-  white-space: pre-line; /* 줄바꿈*/
+  /* white-space: pre-line; 줄바꿈 */
 }
 
-.container {
+/* .container {
   display: flex;
-}
+} */
 
-.title-one {
+.main-tit-1 {
   text-align: left;
   padding-bottom: 60px;
 }
 
-.title-one h2 {
+/* .main-tit-2 {
+  padding: 0 173px 0 320px;
+} */
+
+.main-tit-2 h2 {
   font-size: 48px;
+  font-family: Pretendard;
 }
 
-.title-one h2 span {
+.main-tit-2 h2 span {
   font-size: 48px;
+  font-family: Pretendard;
   font-weight: normal;
 }
 
-.title-one p {
-  font-size: 20px;
-  padding-top: 16px;
+.main-tit-2 p {
+  font-size: 23.8px;
+  font-family: Pretendard;
+  padding: 40px 0 60px 0;
+}
+
+.main-tit-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 200px;
+  /* justify-content: space-between; */
 }
 
 /******************** 하위 메뉴바 css ********************/
 
-.top-title h1 {
+.top-tit h1 {
   color: #fff;
   font-size: 40px;
+  font-family: Pretendard;
   font-weight: bold;
   padding: 170px 0 96px 320px;
 }
 
 .top-stick {
   width: 100%;
-  height: 53px;
+  height: 52px;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -54,6 +71,7 @@
   background-color: transparent;
   z-index: 2;
   font-size: 20px;
+  font-family: Pretendard;
   font-weight: bold;
   text-align: center;
   align-items: center;
@@ -90,4 +108,5 @@
 
 .com-tit h1 {
   font-size: 48px;
+  font-family: Pretendard;
 }

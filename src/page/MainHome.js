@@ -12,21 +12,21 @@ import HomeContact from "../components/com/home/HomeContact";
 
 const MainHome = () => {
   return (
-    <div className="main">
+    <div>
       <Header />
-      <div className="main-video">
+      <div>
         <HomeVideo />
       </div>
-      <div className="main-contents">
+      <div>
         <HomeContents />
       </div>
-      <div className="main-cust">
+      <div>
         <HomeCust />
       </div>
-      <div className="main-news">
+      <div>
         <HomeNews />
       </div>
-      <div className="main-news">
+      <div>
         <HomeContact />
       </div>
       <Footer />

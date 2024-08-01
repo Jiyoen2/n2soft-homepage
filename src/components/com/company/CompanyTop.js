@@ -3,7 +3,7 @@ import React from "react";
 const CompanyTop = ({ setActiveTab, activeTab }) => {
   return (
     <div className="company-img">
-      <div className="top-title">
+      <div className="top-tit">
         <h1>COMPANY</h1>
       </div>
       <div>
