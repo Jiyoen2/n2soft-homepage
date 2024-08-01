@@ -15,14 +15,14 @@ const CompanyTop = ({ setActiveTab, activeTab }) => {
             >
               회사소개
             </div>
-            <div
+            {/* <div
               className={`top-menu-2 ${activeTab === "mgmt" ? "active" : ""}`}
               onClick={() => setActiveTab("mgmt")}
             >
               경영철학
-            </div>
+            </div> */}
             <div
-              className={`top-menu-3 ${
+              className={`top-menu-2 ${
                 activeTab === "history" ? "active" : ""
               }`}
               onClick={() => setActiveTab("history")}

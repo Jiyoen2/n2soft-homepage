@@ -95,6 +95,7 @@
 .contents-feature-com {
   display: flex;
   justify-content: flex-start;
+  overflow-x: hidden;
   transition: transform 0.5s ease;
 }
 
@@ -364,6 +365,8 @@
   /* margin: 60px 121px 0 94px; */
   background-color: #d73a3e;
 }
+
+/******************** HomeCertifiy.css ********************/
 
 /******************** HomeContact.css ********************/
 

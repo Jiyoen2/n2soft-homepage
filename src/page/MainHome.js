@@ -7,7 +7,7 @@ import HomeVideo from "../components/com/home/HomeVideo";
 import HomeContents from "../components/com/home/HomeContents";
 import HomeCust from "../components/com/home/HomeCust";
 import HomeNews from "../components/com/home/HomeNews";
-import HomeContact from "../components/com/home/HomeContact";
+import HomeCertifiy from "../components/com/home/HomeCertifiy";
 // import { useMediaQuery, MediaQuery } from "react-responsive";
 
 const MainHome = () => {
@@ -27,7 +27,7 @@ const MainHome = () => {
         <HomeNews />
       </div>
       <div>
-        <HomeContact />
+        <HomeCertifiy />
       </div>
       <Footer />
     </div>

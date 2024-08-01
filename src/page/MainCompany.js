@@ -15,8 +15,8 @@ const MainCompany = () => {
     switch (activeTab) {
       case "intro":
         return <CompanyIntro />;
-      case "mgmt":
-        return <CompanyMgmt />;
+      // case "mgmt":
+      //   return <CompanyMgmt />;
       case "history":
         return <CompanyHistory />;
       default:
