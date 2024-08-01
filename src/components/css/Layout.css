@@ -222,15 +222,24 @@
 
 /******************** HomeNews.css ********************/
 
-.news-feature {
-  display: flex;
+.news-main {
   background-image: url("../images/bg_main_news.png");
   background-repeat: no-repeat;
-  padding: 0 0 84px 320px;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+}
+
+.news-feature {
+  display: flex;
+  /* background-image: url("../images/bg_main_news.png"); */
+  /* background-repeat: no-repeat; */
+  padding: 0 0 0 320px;
+  /* background-position: top center;
+  background-size: cover;
+  background-attachment: fixed; */
+  /* width: 100%; */
 }
 
 .news-com {
@@ -238,10 +247,10 @@
 }
 
 .news-arr {
-  margin-top: 325px;
+  margin-top: 200px;
   display: flex;
   justify-content: space-between;
-  width: 100px; /* 버튼 사이 간격 조정 */
+  width: 20px; /* 버튼 사이 간격 조정 */
 }
 
 .news-tit-2 h2 {
@@ -264,15 +273,15 @@
 .rectangle-com {
   display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   overflow-x: hidden; /* 가로 스크롤을 숨깁니다 */
-  scroll-behavior: smooth; /* 부드러운 스크롤링 */
+  /* scroll-behavior: smooth; 부드러운 스크롤링 */
 }
 
 .rectangle {
   min-width: 416px; /* min-width를 사용하여 크기 고정 */
   height: 506px;
-  margin: 0 20px 60px 0;
+  margin: 0 20px 0 0;
   padding: 60px 43px 60px 42px;
   border-radius: 30px;
   border: solid 3px #d31f24;
@@ -340,7 +349,7 @@
 }
 
 .news-stick-com {
-  padding-right: 320px;
+  padding: 0 320px 84px 755px;
 }
 
 .news-stick-gr {

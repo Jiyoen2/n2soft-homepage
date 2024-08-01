@@ -75,7 +75,7 @@ const data = [
         </p>
       </>
     ),
-    date: "2024.03.15",
+    date: "2024.03.17",
     num: "04",
   },
   {
@@ -93,7 +93,7 @@ const data = [
         </p>
       </>
     ),
-    date: "2024.02.17",
+    date: "2024.02.15",
     num: "05",
   },
   {
@@ -111,7 +111,7 @@ const data = [
         </p>
       </>
     ),
-    date: "2023.01.17",
+    date: "2024.01.20",
     num: "06",
   },
 ];
@@ -122,7 +122,7 @@ const HomeNews = () => {
   const scrollLeft = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: -400,
+        left: -containerRef.current.offsetWidth / 2, // 한 번에 화면의 절반 너비만큼 스크롤
         behavior: "smooth",
       });
     }
@@ -131,49 +131,56 @@ const HomeNews = () => {
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: 400,
+        left: containerRef.current.offsetWidth / 2, // 한 번에 화면의 절반 너비만큼 스크롤
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className="news-feature">
-      <div className="news-com">
-        <div className="news-tit-2">
-          <h2>
-            <span>N2SOFT </span>
-            NEWS
-          </h2>
-          <p>엔투소프트의</p>
-          <p>최신 근황을 알려드립니다.</p>
-        </div>
-        <div className="news-arr">
-          <img
-            src={ArrLeft}
-            alt="더보기"
-            className="newsArrLeft"
-            onClick={scrollLeft}
-          />
-          <img
-            src={ArrRight}
-            alt="더보기"
-            className="newsArrRight"
-            onClick={scrollRight}
-          />
-        </div>
-      </div>
-      <div className="rectangle-com" ref={containerRef}>
-        {data.map((News, i) => (
-          <div key={i} className="rectangle">
-            <HomeNew
-              date={News.date}
-              title={News.title}
-              content={News.content}
-              num={News.num}
+    <div className="news-main">
+      <div className="news-feature">
+        <div className="news-com">
+          <div className="news-tit-2">
+            <h2>
+              <span>N2SOFT </span>
+              NEWS
+            </h2>
+            <p>엔투소프트의</p>
+            <p>최신 근황을 알려드립니다.</p>
+          </div>
+          <div className="news-arr">
+            <img
+              src={ArrLeft}
+              alt="더보기"
+              className="newsArrLeft"
+              onClick={scrollLeft}
+            />
+            <img
+              src={ArrRight}
+              alt="더보기"
+              className="newsArrRight"
+              onClick={scrollRight}
             />
           </div>
-        ))}
+        </div>
+        <div className="rectangle-com" ref={containerRef}>
+          {data.map((News, i) => (
+            <div key={i} className="rectangle">
+              <HomeNew
+                date={News.date}
+                title={News.title}
+                content={News.content}
+                num={News.num}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="news-stick-com">
+        <div class="news-stick-gr">
+          <div class="news-stick-rd"></div>
+        </div>
       </div>
     </div>
   );
