@@ -6,7 +6,6 @@ import "../components/css/Layout.css";
 import CompanyTop from "../components/com/company/CompanyTop";
 import CompanyHistory from "../components/com/company/CompanyHistory";
 import CompanyIntro from "../components/com/company/CompanyIntro";
-import CompanyMgmt from "../components/com/company/CompanyMgmt";
 
 const MainCompany = () => {
   const [activeTab, setActiveTab] = useState("intro");
@@ -15,8 +14,6 @@ const MainCompany = () => {
     switch (activeTab) {
       case "intro":
         return <CompanyIntro />;
-      // case "mgmt":
-      //   return <CompanyMgmt />;
       case "history":
         return <CompanyHistory />;
       default:

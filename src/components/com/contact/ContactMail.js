@@ -76,67 +76,67 @@ export const ContactMail = () => {
       <div className="com-main">
         <div className="com-tit">
           <h1>문의내용</h1>
-          <span className="contact-tit-2">
-            <span className="contact-st">* </span>
+          <span className="contactus-tit-2">
+            <span className="contactus-st">* </span>
             필수입력사항
           </span>
         </div>
-        <div className="contact-con">
+        <div className="contactus-con">
           <div>
-            <span className="contact-tit-3">
+            <span className="contactus-tit-3">
               이름
-              <span className="contact-st"> *</span>
+              <span className="contactus-st"> *</span>
             </span>
             <input
-              className="contact-box"
+              className="contactus-box"
               type="text"
               name="from_name"
               placeholder="홍길동"
             />
           </div>
           <div>
-            <span className="contact-tit-3">
+            <span className="contactus-tit-3">
               회사명
-              <span className="contact-st"> *</span>
+              <span className="contactus-st"> *</span>
             </span>
             <input
-              className="contact-box"
+              className="contactus-box"
               type="text"
               name="from_company"
               placeholder="엔투소프트"
             />
           </div>
           <div>
-            <span className="contact-tit-3">
+            <span className="contactus-tit-3">
               이메일
-              <span className="contact-st"> *</span>
+              <span className="contactus-st"> *</span>
             </span>
             <input
-              className="contact-box"
+              className="contactus-box"
               type="email"
               name="from_email"
               placeholder="example@n2soft.co.kr"
             />
           </div>
           <div>
-            <span className="contact-tit-3">
+            <span className="contactus-tit-3">
               연락처
-              <span className="contact-st"> *</span>
+              <span className="contactus-st"> *</span>
             </span>
             <input
-              className="contact-box"
+              className="contactus-box"
               type="tel"
               name="from_phone"
               placeholder="010-0123-4567"
             />
           </div>
           <div>
-            <span className="contact-tit-3">
+            <span className="contactus-tit-3">
               내용
-              <span className="contact-st"> *</span>
+              <span className="contactus-st"> *</span>
             </span>
             <textarea
-              className="contact-text"
+              className="contactus-text"
               name="message"
               placeholder="문의할 내용을 입력해 주세요."
             />
@@ -144,7 +144,7 @@ export const ContactMail = () => {
         </div>
         <ContactAgree onAgreeChange={handleAgreeChange} isChecked={isAgreed} />{" "}
         {/* 동의 상태를 전달 */}
-        <div className="contact-button">
+        <div className="contactus-button">
           <input className="button-sub" type="submit" value="제출" />
         </div>
       </div>

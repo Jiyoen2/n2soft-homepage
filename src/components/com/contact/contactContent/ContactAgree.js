@@ -12,11 +12,11 @@ const ContactAgree = ({ onAgreeChange, isChecked }) => {
   return (
     <div>
       <div>
-        <span className="contact-tit-4">
+        <span className="contactus-tit-4">
           개인정보 수집 및 이용 동의
-          <span className="contact-st"> *</span>
+          <span className="contactus-st"> *</span>
         </span>
-        <div className="contact-agree">
+        <div className="contactus-agree">
           <div className="agree-cont">
             <p>1. 목적 : 제안/문의사항 따른 연락처 정보 확인</p>
             <p>2. 항목 : 이름, 회사명, 연락처, 이메일</p>
@@ -30,7 +30,7 @@ const ContactAgree = ({ onAgreeChange, isChecked }) => {
             문의 접수가 제한될 수 있습니다.
           </span>
         </div>
-        <div className="contact-check" onClick={handleClick}>
+        <div className="contactus-check" onClick={handleClick}>
           <img
             src={isChecked ? CheckRdImg : CheckGrImg}
             alt={isChecked ? "빨간 체크" : "회색 체크"}

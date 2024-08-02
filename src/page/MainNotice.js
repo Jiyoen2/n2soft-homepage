@@ -7,7 +7,6 @@ import HomeVideo from "../components/com/home/HomeVideo";
 import HomeContents from "../components/com/home/HomeContents";
 import HomeCust from "../components/com/home/HomeCust";
 import HomeNews from "../components/com/home/HomeNews";
-import HomeContact from "../components/com/home/HomeContact";
 import { useMediaQuery, MediaQuery } from "react-responsive";
 
 const MainNotice = () => {

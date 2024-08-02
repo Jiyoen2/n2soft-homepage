@@ -368,25 +368,248 @@
 
 /******************** HomeCertifiy.css ********************/
 
-/******************** HomeContact.css ********************/
+/******************** CompanyOverview.css ********************/
+
+.overview-main {
+  padding: 120px 320px 200px 320px;
+}
+
+.overview-main h1 {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.overview-main h1 span {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 60px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.overview-image {
+  /* width: 370px;
+  height: 51px; */
+  padding-bottom: 60px;
+}
+
+.overview-main p {
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+}
+
+.overview-cont {
+  display: flex;
+  list-style-type: none;
+  padding-right: 167px;
+  justify-content: space-between;
+}
+
+.overview-cont p {
+  /* width: 110px; */
+  height: 29px;
+  margin-bottom: 20px;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  /* font-style: normal; */
+  /* line-height: normal; */
+  /* letter-spacing: normal; */
+  text-align: left;
+  color: #bc1d22;
+}
+
+.overview-cont span {
+  width: 125px;
+  height: 115px;
+  /* margin: 20px 308px 200px 0; */
+  font-family: Pretendard;
+  font-size: 96px;
+  font-weight: bold;
+  font-stretch: normal;
+  /* font-style: normal; */
+  /* line-height: normal; */
+  /* letter-spacing: normal; */
+  text-align: left;
+  color: #212121;
+}
+
+/******************** CompanyGoal.css ********************/
+.goal-bg {
+  background-image: url("../images/bg_company.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 754px;
+}
+
+.goal-main {
+  padding: 0 320px 0 320px;
+}
+.goal-tit-1 {
+  padding-bottom: 60px;
+}
+
+.goal-tit-1 h1 {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 300;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.goal-tit-1 span {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.goal-tit-1 p {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.goal-Rec {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.goal-rec {
+  width: 100%;
+  height: 308px;
+  margin: 20px 20px 0 0;
+  padding: 40px 0 40px 40px;
+  justify-content: space-between;
+  border-radius: 30px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.goal-text-sub {
+  height: 24px;
+  margin-bottom: 20px;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bc1d22;
+}
+
+.goal-text-tit {
+  height: 43px;
+  margin-bottom: 40px;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: Pretendard;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.goal-text-cont {
+  height: 111px;
+  margin: 40px 0 0 10zpx;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+}
+/******************** CompanyContact.css ********************/
+
+.contact-main {
+  padding: 276px 320px 120px 320px;
+}
+
+.contact-title h2 {
+  height: 34px;
+  margin-bottom: 20px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.94;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
 
 .contact-section {
-  padding: 0px 320px 0px 0px;
   display: flex;
   justify-content: space-between;
 }
 
 .map-button {
   display: flex;
-  width: 400px;
+  width: 450px;
   height: 60px;
   font-size: 25px;
   font-family: Pretendard;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
   text-align: center;
   align-content: center;
   cursor: pointer;
   border: none; /* 버튼의 기본 테두리 제거 */
-  border-radius: 0px; /* 선택 사항: 모서리 둥글게 만들기 */
+  border-radius: 10px;
 }
 
 .map-black {
@@ -406,40 +629,34 @@
   padding: 13px 48px 13px 42px;
 }
 
-.contactMap-main {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 120px;
-}
-
-/* @media (min-width: 768px) and (max-width: 2000px) {
-  .map {
-    width: 800px;
-    height: 400px;
-  }
-
-  .map-road-img {
-    width: 800px;
-  }
-  .map-road-button {
-    width: 800px;
-  }
-  .map-road-com {
-    height: 403px;
-  }
-} */
-
 .contact-stick {
   width: 26px;
   height: 2px;
-  margin: 58px 0 24px 0;
+  margin-bottom: 40px;
   background-color: #da1c3e;
+}
+
+.contact-addr {
+  display: flex;
 }
 
 .contact-text {
   font-size: 20px;
   font-family: Pretendard;
-  padding: 16px 0 70px 0;
+}
+
+.contact-text p {
+  height: 34px;
+  margin-bottom: 40px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #101010;
 }
 
 .phoneImg,
@@ -447,27 +664,40 @@
   padding: 0 16px 0 0;
 }
 
+.contact-img {
+  display: flex;
+  padding-bottom: 40px;
+  margin-left: auto;
+}
+
 .contact-img p {
-  display: block;
+  font-family: SpoqaHanSansNeo;
+  height: 34px;
   font-size: 20px;
-  font-family: Pretendard;
-  padding: 0 16px 16px 0;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
 }
 
 .contact-img img {
   vertical-align: middle;
+  padding-right: 16px;
+}
+
+.printerImg {
+  padding-left: 40px;
 }
 
 .map {
-  width: 1166px;
-  height: 440px;
-  /* align-items: center; */
+  width: 100%;
+  height: 500px;
   justify-content: center;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   border-style: solid;
   border-width: 0px;
-  /* border-color: #d8d8d8; */
 }
 
 /******************** MainCompany.css ********************/
@@ -592,7 +822,7 @@
 
 /******************** MainContactUs.css ********************/
 
-.contact-img {
+.contactus-img {
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
@@ -603,14 +833,14 @@
   background-repeat: no-repeat;
 }
 
-.contact-con {
+.contactus-con {
   display: flex; /* 자식 요소들을 수평으로 배치 */
   flex-wrap: wrap; /* 줄 바꿈을 허용 */
   gap: 20px; /* 자식 요소들 사이의 간격 */
   padding: 40px 0 60px 0;
 }
 
-.contact-con > div {
+.contactus-con > div {
   flex: 1 1 45%; /* 각 항목이 적당히 너비를 가지도록 설정 */
 }
 
@@ -620,7 +850,7 @@
   justify-content: space-between;
 }
 
-.contact-tit-2 {
+.contactus-tit-2 {
   /* height: 19px; */
   /* padding: 0 5px 0 0px; */
   font-size: 16px;
@@ -628,7 +858,7 @@
   color: #9e9e9e;
 }
 
-.contact-tit-3 {
+.contactus-tit-3 {
   /* height: 19px; */
   /* padding: 0 5px 0 0px; */
   font-size: 20px;
@@ -637,7 +867,7 @@
   text-align: left;
 }
 
-.contact-tit-4 {
+.contactus-tit-4 {
   font-size: 28px;
   font-family: Pretendard;
   font-weight: bold;
@@ -645,23 +875,12 @@
   color: #212121;
 }
 
-.contact-st {
+.contactus-st {
   font-family: Pretendard;
   color: #eb5757;
 }
 
-/* .contact-stick-1 {
-  height: 1px;
-  background-color: #212121;
-}
-
-.contact-stick-2 {
-  width: 88px;
-  height: 1px;
-  background-color: #f00;
-} */
-
-.contact-box {
+.contactus-box {
   width: 100%;
   height: 60px;
   margin: 20px 0;
@@ -673,22 +892,23 @@
   background-color: #fff;
 }
 
-.contact-text {
+.contactus-text {
   width: 100%;
   height: 200px;
-  border-radius: 4px;
+  margin-top: 20px;
+  padding: 20px 20px 156px 20px;
+  border-radius: 10px;
   border: solid 1px #eee;
   background-color: #fff;
-  padding: 20px 0 0 20px;
   box-sizing: border-box;
   font-size: 18px;
   font-family: Pretendard;
   line-height: 1.5;
   resize: none;
-  margin-top: 20px;
+  overflow-y: hidden;
 }
 
-.contact-button {
+.contactus-button {
   display: flex;
   justify-content: flex-end;
 }
@@ -705,7 +925,7 @@
   cursor: pointer;
 }
 
-.contact-agree {
+.contactus-agree {
   width: 100%;
   margin: 20px 0 28px 0;
   padding: 40px;
@@ -726,7 +946,7 @@
   padding-bottom: 20px;
 }
 
-.contact-agree span {
+.contactus-agree span {
   font-size: 20px;
   font-family: Pretendard;
   font-weight: bold;
@@ -734,14 +954,14 @@
   color: #424242;
 }
 
-.contact-check {
+.contactus-check {
   display: flex;
   align-items: center;
   padding-bottom: 40px;
   width: 400px;
 }
 
-.contact-check p {
+.contactus-check p {
   font-size: 20px;
   font-family: Pretendard;
   font-weight: bold;

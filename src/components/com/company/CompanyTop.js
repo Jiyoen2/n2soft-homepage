@@ -15,12 +15,6 @@ const CompanyTop = ({ setActiveTab, activeTab }) => {
             >
               회사소개
             </div>
-            {/* <div
-              className={`top-menu-2 ${activeTab === "mgmt" ? "active" : ""}`}
-              onClick={() => setActiveTab("mgmt")}
-            >
-              경영철학
-            </div> */}
             <div
               className={`top-menu-2 ${
                 activeTab === "history" ? "active" : ""
