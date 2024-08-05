@@ -305,9 +305,8 @@
 }
 
 /* .news-text-date {
-  width: 101px;
   height: 34px;
-  margin: 0 227px 30px 3px;
+  margin: 0 0 30px 3px;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: 500;
@@ -320,9 +319,8 @@
 }
 
 .news-text-tit {
-  width: 330px;
   height: 99px;
-  margin: 30px 1px 83px 0;
+  margin-top: 30px;
   font-family: Pretendard;
   font-size: 28px;
   font-weight: bold;
@@ -335,11 +333,10 @@
 }
 
 .news-text-cont {
-  width: 331px;
-  height: 72px;
+  height: 85px;
   margin: 83px 0 34px;
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -350,9 +347,7 @@
 }
 
 .news-text-num {
-  width: 22px;
-  height: 34px;
-  margin: 34px 0 0 0;
+  height: 34 px;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: 500;
@@ -1068,23 +1063,6 @@
   color: #424242;
 }
 
-/* .notice-rect-1,
-.notice-rect-2 {
-  display: flex;
-  width: 100%;
-  margin: 0;
-}
-
-.notice-rect {
-  min-width: 411px;
-  height: 506px;
-  margin: 0 15px 60px 0;
-  padding: 60px 43px 60px 42px;
-  border-radius: 30px;
-  border: solid 3px #d31f24;
-  background-color: #fff;
-} */
-
 .notice-rect-1,
 .notice-rect-2 {
   display: flex;
@@ -1166,8 +1144,67 @@
   color: #bdbdbd;
 }
 
-/******************** MainContactUs.css ********************/
-/******************** MainContactUs.css ********************/
+/******************** MainSolution.css ********************/
+
+/* SolutionService.css */
+
+.solu-main {
+  padding: 150px 320px 200px 320px;
+}
+
+.solu-text-tit {
+  height: 45px;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.solu-text-cont {
+  height: 50px;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.solu-text-img {
+  width: 667px;
+  height: 374px;
+  /* margin: 150px 320px 140px 104px; */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.solu-text-num {
+  width: 36px;
+  height: 30px;
+  margin: 225px 578px 140px 320px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bc1d22;
+}
+
 /******************** MainContactUs.css ********************/
 /******************** MainContactUs.css ********************/
 /******************** MainContactUs.css ********************/

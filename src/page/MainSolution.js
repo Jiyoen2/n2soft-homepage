@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import "../components/css/Common.css";
 import "../components/css/Layout.css";
 import SolutionTop from "../components/com/solution/SolutionTop";
+import SolutionService from "../components/com/solution/SolutionService";
 
 const MainSolution = () => {
   const [activeTab, setActiveTab] = useState("solution");
@@ -22,7 +23,7 @@ const MainSolution = () => {
       <Header />
       <SolutionTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
-      {/* <NoticeNews /> */}
+      <SolutionService />
       <Footer />
     </div>
   );
