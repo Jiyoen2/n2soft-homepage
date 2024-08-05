@@ -7,12 +7,27 @@
   width: 100%;
   border-bottom: 1px solid gray;
   padding: 284px 516px 282px 516px;
-  background-image: url("../images/hero_img.jpg");
-  background-color: rgba(217, 217, 217, 0.5);
+  /* background-color: rgba(217, 217, 217, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 900px;
+  /* overflow: hidden; */
+}
+
+.video-main video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-main h1,
+.video-main h2 {
+  position: relative;
+  z-index: 1;
 }
 
 .video-main h1 {
