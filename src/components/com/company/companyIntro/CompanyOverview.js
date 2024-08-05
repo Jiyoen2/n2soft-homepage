@@ -1,5 +1,4 @@
 import React from "react";
-// import N2softLogoRdImg from "./images/N2SOFTlogo-Rd.png";
 import N2LogoImg from "../../../images/n2-logo.png";
 
 const CompanyOverview = () => {

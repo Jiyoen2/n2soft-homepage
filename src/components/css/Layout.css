@@ -289,7 +289,7 @@
   background-color: #fff;
 }
 
-.news-text-date {
+/* .news-text-date {
   width: 101px;
   height: 34px;
   margin: 0 227px 30px 3px;
@@ -337,7 +337,7 @@
 .news-text-num {
   width: 22px;
   height: 34px;
-  margin: 34px 309px 0 0;
+  margin: 34px 0 0 0;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: 500;
@@ -347,7 +347,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #bdbdbd;
-}
+} */
 
 .news-stick-com {
   padding: 0 320px 84px 755px;
@@ -459,12 +459,12 @@
 /******************** CompanyGoal.css ********************/
 .goal-bg {
   background-image: url("../images/bg_company.png");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: top center;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   width: 100%;
-  height: 754px;
+  /* height: 754px; */
 }
 
 .goal-main {
@@ -706,7 +706,7 @@
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
-  background-image: url("../images/top01.jpg");
+  background-image: url("../images/top01.png");
   background-color: rgba(217, 217, 217, 0.5);
   height: 372px;
   background-size: cover;
@@ -826,7 +826,7 @@
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
-  background-image: url("../images/top04.jpg");
+  background-image: url("../images/top04.png");
   background-color: rgba(217, 217, 217, 0.5);
   height: 372px;
   background-size: cover;
@@ -834,14 +834,14 @@
 }
 
 .contactus-con {
-  display: flex; /* 자식 요소들을 수평으로 배치 */
-  flex-wrap: wrap; /* 줄 바꿈을 허용 */
-  gap: 20px; /* 자식 요소들 사이의 간격 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 40px 0 60px 0;
 }
 
 .contactus-con > div {
-  flex: 1 1 45%; /* 각 항목이 적당히 너비를 가지도록 설정 */
+  flex: 1 1 45%;
 }
 
 .com-tit {
@@ -974,8 +974,183 @@
   cursor: pointer;
 }
 
-/******************** MainContactUs.css ********************/
-/******************** MainContactUs.css ********************/
+/******************** MainSolution.css ********************/
+.solution-bg {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-image: url("../images/top02.png");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/******************** MainNotice.css ********************/
+
+.notice-main {
+  padding: 120px 320px 60px 320px;
+}
+
+.notice-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.notice-bg {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-image: url("../images/top03.png");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.notice-tit-1 {
+  padding-bottom: 60px;
+}
+
+.notice-tit-1 h1 {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 300;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.notice-tit-1 span {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.notice-tit-1 p {
+  font-family: Pretendard;
+  font-size: 28px;
+  font-weight: 300;
+  padding-top: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+}
+
+/* .notice-rect-1,
+.notice-rect-2 {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.notice-rect {
+  min-width: 411px;
+  height: 506px;
+  margin: 0 15px 60px 0;
+  padding: 60px 43px 60px 42px;
+  border-radius: 30px;
+  border: solid 3px #d31f24;
+  background-color: #fff;
+} */
+
+.notice-rect-1,
+.notice-rect-2 {
+  display: flex;
+  /* flex-wrap: wrap; 요소들이 줄 바꿈할 수 있도록 설정 */
+  justify-content: center;
+  width: 100%;
+}
+
+.notice-rect {
+  flex: 1 1 calc(33% - 30px); /* 3개의 열을 만들고, 여백을 고려한 너비 설정 */
+  max-width: 416px;
+  /* max-height: 506px; */
+  /* min-width: 250px; */
+  /* width: 100%; */
+  /* height: auto; */
+  margin: 0 15px 60px 0;
+  padding: 50px 35px 50px 35px;
+  border-radius: 30px;
+  border: solid 3px #d31f24;
+  background-color: #fff;
+}
+
+.news-text-date {
+  /* width: 100%; */
+  height: 34px;
+  margin: 0 0 30px 3px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #da1c3e;
+}
+
+.news-text-tit {
+  /* width: 100%; */
+  height: 99px;
+  margin-top: 30px;
+  font-family: Pretendard;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #101010;
+}
+
+.news-text-cont {
+  /* width: 100%; */
+  height: 85px; /*이거 늘리면 num 여백 생김*/
+  margin: 83px 0 34px;
+  font-family: Pretendard;
+  font-size: 19px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #101010;
+}
+
+.news-text-num {
+  /* width: 100%; */
+  height: 34 px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bdbdbd;
+}
+
 /******************** MainContactUs.css ********************/
 /******************** MainContactUs.css ********************/
 /******************** MainContactUs.css ********************/

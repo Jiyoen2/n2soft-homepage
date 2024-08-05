@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
-import HomeNewsList from "./homeNews/HomeNewsList";
-import ArrRight from "../../images/arr_right.png";
-import ArrLeft from "../../images/arr_left.png";
+import NoticeNewsList from "./NoticeNews/NoticeNewsList";
 
 const data = [
   {
@@ -60,6 +58,9 @@ const data = [
     date: "2024.04.13",
     num: "03",
   },
+];
+
+const data1 = [
   {
     title: (
       <>
@@ -117,57 +118,19 @@ const data = [
 ];
 
 const HomeNews = () => {
-  const containerRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: -containerRef.current.offsetWidth / 2, // 한 번에 화면의 절반 너비만큼 스크롤
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: containerRef.current.offsetWidth / 2, // 한 번에 화면의 절반 너비만큼 스크롤
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
-    <div className="news-main">
-      <div className="news-feature">
-        <div className="news-com">
-          <div className="news-tit-2">
-            <h2>
-              <span>N2SOFT </span>
-              NEWS
-            </h2>
-            <p>엔투소프트의</p>
-            <p>최신 근황을 알려드립니다.</p>
-          </div>
-          <div className="news-arr">
-            <img
-              src={ArrLeft}
-              alt="더보기"
-              className="newsArrLeft"
-              onClick={scrollLeft}
-            />
-            <img
-              src={ArrRight}
-              alt="더보기"
-              className="newsArrRight"
-              onClick={scrollRight}
-            />
-          </div>
-        </div>
-        <div className="rectangle-com" ref={containerRef}>
+    <div className="notice-main">
+      <div className="notice-tit-1">
+        <h1>
+          <span>금융IT시장을 이끄는</span> 금융솔루션 전문기업
+        </h1>
+        <p>엔투소프트의 사업 근황과 최신 소식을 알려드립니다.</p>
+      </div>
+      <div className="notice-feature">
+        <div className="notice-rect-1">
           {data.map((News, i) => (
-            <div key={i} className="rectangle">
-              <HomeNewsList
+            <div key={i} className="notice-rect">
+              <NoticeNewsList
                 date={News.date}
                 title={News.title}
                 content={News.content}
@@ -176,10 +139,17 @@ const HomeNews = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="news-stick-com">
-        <div class="news-stick-gr">
-          <div class="news-stick-rd"></div>
+        <div className="notice-rect-2">
+          {data1.map((News, i) => (
+            <div key={i} className="notice-rect">
+              <NoticeNewsList
+                date={News.date}
+                title={News.title}
+                content={News.content}
+                num={News.num}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>
