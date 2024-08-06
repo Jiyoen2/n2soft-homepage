@@ -1,13 +1,14 @@
 import React from "react";
 
-const SolutionDetail = ({ title, content, num }) => {
+const SolutionList = ({ num, title, content, golink }) => {
   return (
     <div className="solu-text">
-      <div className="solu-text-tit">{title}</div>
-      <div className="solu-text-cont">{content}</div>
-      <div className="solu-text-num">{num}</div>
+      <p className="solu-text-num">{num}</p>
+      <p className="solu-text-tit">{title}</p>
+      <p className="solu-text-cont">{content}</p>
+      <p className="solu-text-link">{golink}</p>
     </div>
   );
 };
 
-export default SolutionDetail;
+export default SolutionList;

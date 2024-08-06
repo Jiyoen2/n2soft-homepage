@@ -5,23 +5,23 @@
   height: 160px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; 자식 요소들을 양쪽 끝으로 정렬 */
-  padding: 0 320px;
 }
 
 .footer-info {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
+  justify-content: space-between;
   width: 100%;
   color: white;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .footer-info img {
-  margin-right: auto; /* 이미지를 왼쪽으로 정렬 */
+  margin-right: auto;
 }
 
 .footer-info p {
   text-align: right;
-  margin-left: auto; /* 텍스트를 오른쪽으로 정렬 */
+  margin-left: auto;
 }

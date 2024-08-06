@@ -7,7 +7,7 @@ import CompanyContact from "../company/companyIntro/CompanyContact";
 
 const MainHome = () => {
   return (
-    <div>
+    <div className="company-main">
       <div>
         <CompanyOverview />
       </div>

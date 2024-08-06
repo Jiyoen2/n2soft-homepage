@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
-  padding: 284px 516px 282px 516px;
+  padding: 284px 516px 282.7px 516px;
   /* background-color: rgba(217, 217, 217, 0.5); */
   display: flex;
   flex-direction: column;
@@ -31,9 +31,21 @@
 }
 
 .video-main h1 {
-  font-size: 62px;
+  /* font-size: 70px;
   font-family: Pretendard;
   text-align: left;
+  color: #fff; */
+  height: 176px;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 62px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
   color: #fff;
 }
 
@@ -59,7 +71,9 @@
 
 .contents-cont {
   display: flex;
-  padding: 0 320px 0 320px;
+  /* padding: 0 320px 0 320px; */
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .contents-arr {
@@ -72,6 +86,7 @@
 
 .arr-right {
   cursor: pointer;
+  padding-left: 20px;
 }
 
 .arr-right-red {
@@ -290,6 +305,7 @@
   display: flex;
   width: 100%;
   margin: 0;
+  padding-bottom: 60px;
   overflow-x: hidden; /* 가로 스크롤을 숨깁니다 */
   /* scroll-behavior: smooth; 부드러운 스크롤링 */
 }
@@ -376,12 +392,130 @@
   background-color: #d73a3e;
 }
 
-/******************** HomeCertifiy.css ********************/
+/* HomeCertifiy.css */
 
-/******************** CompanyOverview.css ********************/
+/******************** MainCompany.css ********************/
+
+.company-main {
+  /* display: flex; */
+  padding: 0 320px 0 320px;
+  flex-direction: column;
+  align-items: center;
+}
+.company-img {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-image: url("../../assets/images/top01.png");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.company-title h1 {
+  font-size: 45px;
+  font-family: Pretendard;
+  padding-bottom: 35px;
+}
+
+.company-content p {
+  height: 80px;
+  margin: 24px 487px 24px 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 64px;
+  font-family: Pretendard;
+  font-weight: bold;
+  color: #303030;
+}
+
+.company-com {
+  padding-bottom: 22px;
+}
+
+.company-num {
+  font-family: SpoqaHanSansNeo;
+  font-size: 18px;
+  font-family: Pretendard;
+  padding-right: 16px;
+  font-weight: bold;
+  color: #bc1d22;
+}
+
+.company-num-inside {
+  font-weight: bold;
+}
+
+.company-text,
+.company-text-inside {
+  font-size: 18px;
+  font-family: Pretendard;
+  /* padding-bottom: 12px; */
+  color: #424242;
+}
+
+.company-text-inside {
+  font-weight: normal;
+}
+
+.company-s {
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.company-s .company-text-inside {
+  padding: 0 0 0 25px;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-items2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 345px;
+  padding-left: 79px;
+}
+
+.line-long {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1px;
+  margin: 95px 0 0 0;
+  height: 2153px;
+  background-color: #cdcdcd;
+}
+
+.line-dot-1 {
+  width: 640px;
+  height: 1px;
+  flex-grow: 0;
+  margin: 46px 0 0 0;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
+}
+
+.line-dot-2 {
+  width: 640px;
+  height: 1px;
+  flex-grow: 0;
+  margin: 46px 0 0 -79px;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
+}
+
+/* CompanyOverview.css */
 
 .overview-main {
-  padding: 120px 320px 200px 320px;
+  padding: 120px 0 200px 0;
 }
 
 .overview-main h1 {
@@ -469,16 +603,16 @@
 /******************** CompanyGoal.css ********************/
 .goal-bg {
   background-image: url("../../assets/images/bg_company.png");
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   /* background-attachment: fixed; */
   width: 100%;
-  /* height: 754px; */
+  height: 950px;
 }
 
 .goal-main {
-  padding: 0 320px 0 320px;
+  /* padding: 0 320px 0 320px; */
 }
 .goal-tit-1 {
   padding-bottom: 60px;
@@ -523,7 +657,7 @@
 
 .goal-Rec {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .goal-rec {
@@ -585,7 +719,7 @@
 /******************** CompanyContact.css ********************/
 
 .contact-main {
-  padding: 276px 320px 120px 320px;
+  padding: 176px 0 120px 0;
 }
 
 .contact-title h2 {
@@ -708,126 +842,6 @@
   justify-content: center;
   border-style: solid;
   border-width: 0px;
-}
-
-/******************** MainCompany.css ********************/
-
-.company-img {
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid gray;
-  background-image: url("../../assets/images/top01.png");
-  background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.company-main {
-  display: flex;
-  padding: 100px 320px 166px 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.company-title h1 {
-  font-size: 45px;
-  font-family: Pretendard;
-  padding-bottom: 35px;
-}
-
-.company-content p {
-  height: 80px;
-  margin: 24px 487px 24px 0;
-  font-family: SpoqaHanSansNeo;
-  font-size: 64px;
-  font-family: Pretendard;
-  font-weight: bold;
-  color: #303030;
-}
-
-.company-com {
-  padding-bottom: 22px;
-}
-
-.company-num {
-  font-family: SpoqaHanSansNeo;
-  font-size: 18px;
-  font-family: Pretendard;
-  padding-right: 16px;
-  font-weight: bold;
-  color: #bc1d22;
-}
-
-.company-num-inside {
-  font-weight: bold;
-}
-
-.company-text,
-.company-text-inside {
-  font-size: 18px;
-  font-family: Pretendard;
-  /* padding-bottom: 12px; */
-  color: #424242;
-}
-
-.company-text-inside {
-  font-weight: normal;
-}
-
-.company-s {
-  margin-bottom: 12px;
-  white-space: pre-line;
-}
-
-.company-s .company-text-inside {
-  padding: 0 0 0 25px;
-}
-
-.timeline-container {
-  display: flex;
-  align-items: flex-start;
-}
-
-.timeline-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline-items2 {
-  display: flex;
-  flex-direction: column;
-  padding-top: 345px;
-  padding-left: 79px;
-}
-
-.line-long {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1px;
-  margin: 95px 0 0 0;
-  height: 2153px;
-  background-color: #cdcdcd;
-}
-
-.line-dot-1 {
-  width: 640px;
-  height: 1px;
-  flex-grow: 0;
-  margin: 46px 0 0 0;
-  border: 1px dashed #fff;
-  background-color: #e3e3e3;
-}
-
-.line-dot-2 {
-  width: 640px;
-  height: 1px;
-  flex-grow: 0;
-  margin: 46px 0 0 -79px;
-  border: 1px dashed #fff;
-  background-color: #e3e3e3;
 }
 
 /******************** MainContactUs.css ********************/
@@ -999,6 +1013,9 @@
 /******************** MainNotice.css ********************/
 
 .notice-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 120px 320px 60px 320px;
 }
 
@@ -1069,6 +1086,7 @@
   /* flex-wrap: wrap; 요소들이 줄 바꿈할 수 있도록 설정 */
   justify-content: center;
   width: 100%;
+  justify-content: space-between;
 }
 
 .notice-rect {
@@ -1132,7 +1150,7 @@
 
 .news-text-num {
   /* width: 100%; */
-  height: 34 px;
+  height: 34px;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: 500;
@@ -1149,18 +1167,23 @@
 /* SolutionService.css */
 
 .solu-main {
-  padding: 150px 320px 200px 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 320px 60px 320px;
 }
-.solu-feature {
-}
+
 .solu-text {
-  width: 600px;
-  padding-right: 104px;
+  /* width: 510px; */
+  width: 510px;
+  word-wrap: break-word;
+  /* padding-right: 104px; */
 }
 
 .solu-text-tit {
-  height: 45px;
+  /* height: 45px; */
   width: 100%;
+  margin-bottom: 40px;
   align-self: stretch;
   font-family: SpoqaHanSansNeo;
   font-size: 36px;
@@ -1169,15 +1192,49 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
+  /* text-align: left; */
   color: #212121;
+}
+
+.solu-text-link {
+  font-size: 28px;
+  padding-top: 42.5px;
+}
+
+.solu-text-link p {
+  flex-grow: 0;
+  display: inline-flex;
+  align-items: center;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #bc1d22;
+  cursor: pointer;
+}
+
+.solu-text-link span {
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
 }
 
 .solu-text-cont {
   width: 100%;
   height: 100px;
   align-self: stretch;
-  padding-top: 24px;
+  margin-bottom: -42.5px;
   font-family: SpoqaHanSansNeo;
   font-size: 20px;
   font-weight: normal;
@@ -1185,21 +1242,21 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
+  /* text-align: left; */
   color: #212121;
 }
 
 .solu-text-img {
   width: 100%;
-  height: 100%;
+  height: 374%;
   object-fit: contain;
   border-radius: 8px;
 }
 
 .solu-text-num {
   width: 100%;
-  height: 30px;
-  margin-top: 200px;
+  /* height: 24px; */
+  margin-bottom: 80px;
   font-family: SpoqaHanSansNeo;
   font-size: 24px;
   font-weight: bold;
@@ -1207,13 +1264,38 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
+  /* text-align: left; */
   color: #bc1d22;
 }
 
 .solu-rect {
   display: flex;
   padding-bottom: 140px;
+}
+
+.solu-img-R {
+  padding-right: 100px;
+}
+
+.solu-img-L {
+  padding-left: 100px;
+}
+
+.text-left .solu-text-L {
+  order: 1; /* 텍스트를 왼쪽에 배치 */
+}
+
+.text-left .solu-img-L {
+  order: 2; /* 이미지를 오른쪽에 배치 */
+}
+
+.text-right .solu-text-R {
+  order: 2; /* 텍스트를 오른쪽에 배치 */
+  text-align: right;
+}
+
+.text-right .solu-img-R {
+  order: 1; /* 이미지를 왼쪽에 배치 */
 }
 
 /******************** MainContactUs.css ********************/
