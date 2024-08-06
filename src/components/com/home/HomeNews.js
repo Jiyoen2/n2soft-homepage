@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import HomeNewsList from "./homeNews/HomeNewsList";
-import ArrRight from "../../images/arr_right.png";
-import ArrLeft from "../../images/arr_left.png";
+import ArrRight from "../../../assets/images/arr_right.png";
+import ArrLeft from "../../../assets/images/arr_left.png";
 
 const data = [
   {

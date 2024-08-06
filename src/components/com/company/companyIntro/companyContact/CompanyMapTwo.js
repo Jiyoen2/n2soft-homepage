@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import PhoneImage from "../../../../images/phone.png";
-import PrinterImage from "../../../../images/printer.png";
+import PhoneImage from "../../../../../assets/images/phone.png";
+import PrinterImage from "../../../../../assets/images/printer.png";
 
 const ContactMapOne = () => {
   //스크립트 파일 읽어오기

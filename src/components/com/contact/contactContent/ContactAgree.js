@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CheckGrImg from "../../../images/check-circle-Gr.png";
-import CheckRdImg from "../../../images/check-circle-Rd.png";
+import CheckGrImg from "../../../../assets/images/check-circle-Gr.png";
+import CheckRdImg from "../../../../assets/images/check-circle-Rd.png";
 
 const ContactAgree = ({ onAgreeChange, isChecked }) => {
   // isChecked를 props로 받음

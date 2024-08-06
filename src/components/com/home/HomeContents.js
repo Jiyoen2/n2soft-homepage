@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import HomeFeature from "./homeContent/HomeFeature";
-import ServiceImage1 from "./../../images/main_service_01.png";
-import ServiceImage2 from "./../../images/main_service_02.png";
-import ServiceImage3 from "./../../images/main_service_03.png";
-import ServiceImage4 from "./../../images/main_service_04.png";
-import ArrRight from "./../../images/arr_right.png";
-import ArrLeft from "./../../images/arr_left.png";
-import ArrRightRd from "./../../images/arr_right_red.png";
+import ServiceImage1 from "../../../assets/images/main_service_01.png";
+import ServiceImage2 from "../../../assets/images/main_service_02.png";
+import ServiceImage3 from "../../../assets/images/main_service_03.png";
+import ServiceImage4 from "../../../assets/images/main_service_04.png";
+import ArrRight from "../../../assets/images/arr_right.png";
+import ArrLeft from "../../../assets/images/arr_left.png";
+import ArrRightRd from "../../../assets/images/arr_right_red.png";
 
 const data = [
   {

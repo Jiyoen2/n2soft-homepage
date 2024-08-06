@@ -1,5 +1,5 @@
 import "../components/css/Footer.css";
-import N2softLogoWhImg from "./images/N2SOFTlogo-Wh.png";
+import N2softLogoWhImg from "../assets/images/N2SOFTlogo-Wh.png";
 
 const Footer = () => {
   return (

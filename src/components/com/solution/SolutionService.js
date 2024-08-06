@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import SolutionList from "./SolutionService/SolutionList";
+import SolutionImage from "./SolutionService/SolutionImage";
 import SoluImg01 from "../../../assets/images/solution01.png";
 import SoluImg02 from "../../../assets/images/solution02.png";
 import SoluImg03 from "../../../assets/images/solution03.png";
@@ -20,8 +21,25 @@ const data = [
         </p>
       </>
     ),
+    num: "01.",
     image: SoluImg01,
-    num: "01",
+  },
+  {
+    title: (
+      <>
+        <p>QUPID 서비스</p>
+      </>
+    ),
+    content: (
+      <>
+        <p>
+          고객들에게 발송하는 문서를 전자우편 전자문서의형태로 발송하고
+          배달이력을 전산화하여관리하는 서비스
+        </p>
+      </>
+    ),
+    num: "02.",
+    image: SoluImg02,
   },
   {
     title: (
@@ -37,28 +55,8 @@ const data = [
         </p>
       </>
     ),
+    num: "03.",
     image: SoluImg03,
-    num: "03",
-  },
-];
-
-const data2 = [
-  {
-    title: (
-      <>
-        <p>QUPID 서비스</p>
-      </>
-    ),
-    content: (
-      <>
-        <p>
-          고객들에게 발송하는 문서를 전자우편 전자문서의형태로 발송하고
-          배달이력을 전산화하여관리하는 서비스
-        </p>
-      </>
-    ),
-    image: SoluImg02,
-    num: "02",
   },
   {
     title: (
@@ -74,8 +72,8 @@ const data2 = [
         </p>
       </>
     ),
+    num: "04.",
     image: SoluImg04,
-    num: "04",
   },
 ];
 
@@ -83,27 +81,15 @@ const SolutionService = () => {
   return (
     <div className="solu-main">
       <div className="solu-feature">
-        <div className="solu-rect-1">
+        <div className="solu-rect-com">
           {data.map((solu, i) => (
             <div key={i} className="solu-rect">
               <SolutionList
                 title={solu.title}
                 content={solu.content}
-                image={solu.image}
                 num={solu.num}
               />
-            </div>
-          ))}
-        </div>
-        <div className="solu-rect-2">
-          {data2.map((solu, i) => (
-            <div key={i} className="solu-rect">
-              <SolutionList
-                title={solu.title}
-                content={solu.content}
-                image={solu.image}
-                num={solu.num}
-              />
+              <SolutionImage image={solu.image} />
             </div>
           ))}
         </div>

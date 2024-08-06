@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SolutionList = ({ title, content, image, num }) => {
+const SolutionDetail = ({ title, content, num }) => {
   return (
     <div className="solu-text">
-      <p className="solu-text-tit">{title}</p>
-      <p className="solu-text-cont">{content}</p>
-      <img src={image} alt="Solution" className="solu-text-img" />
-      <p className="solu-text-num">{num}</p>
+      <div className="solu-text-tit">{title}</div>
+      <div className="solu-text-cont">{content}</div>
+      <div className="solu-text-num">{num}</div>
     </div>
   );
 };
 
-export default SolutionList;
+export default SolutionDetail;

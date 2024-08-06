@@ -1,5 +1,5 @@
 import React from "react";
-import N2LogoImg from "../../../images/n2-logo.png";
+import N2LogoImg from "../../../../assets/images/n2-logo.png";
 
 const CompanyOverview = () => {
   return (

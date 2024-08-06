@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../components/css/Header.css";
-import N2softLogoWhImg from "./images/N2SOFTlogo-Wh.png";
-import N2softLogoRdImg from "./images/N2SOFTlogo-Rd.png";
+import N2softLogoWhImg from "../assets/images/N2SOFTlogo-Wh.png";
+import N2softLogoRdImg from "../assets/images/N2SOFTlogo-Rd.png";
 
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
