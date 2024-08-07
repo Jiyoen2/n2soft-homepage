@@ -1,8 +1,8 @@
 import React from "react";
 
-const TimelineItem = ({ date, items }) => (
+const TimelineItem = ({ date, items, isNotLineDot }) => (
   <div className="company-com-1">
-    <div class="line-dot-1"></div>
+    {!isNotLineDot && <div className="line-dot-1"></div>}
     <p>{date}</p>
     {items.map((item, index) => (
       <div className="company-s" key={index}>
@@ -249,9 +249,14 @@ const CompanyHistory = () => {
         </div>
         <div className="timeline-container">
           <div className="timeline-items">
-            <div style={{ paddingBottom: "14px" }}></div>
+            <div style={{ paddingBottom: "60px" }}></div>
             {historyData.map((data, index) => (
-              <TimelineItem key={index} date={data.date} items={data.items} />
+              <TimelineItem
+                key={index}
+                date={data.date}
+                items={data.items}
+                isNotLineDot={index === 0}
+              />
             ))}
           </div>
           <div className="line-long"></div>

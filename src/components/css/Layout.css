@@ -604,10 +604,14 @@
 
 /******************** MainCompany.css ********************/
 
+/* Company.css */
+
 .company-main {
   max-width: 1280px;
   margin: 0 auto;
   padding: 120px 0;
+  /* position: relative; */
+  overflow: hidden;
 }
 .company-img {
   position: relative;
@@ -622,10 +626,8 @@
 
 .company-title h1 {
   padding-bottom: 60px;
-
   width: 100%;
   height: 57px;
-  /* margin: 120px 538px 60px 320px; */
   font-family: Pretendard;
   font-size: 48px;
   font-weight: bold;
@@ -639,7 +641,7 @@
 
 .company-content p {
   height: 80px;
-  margin: 24px 487px 24px 0;
+  margin: 0 487px 40px 0;
   font-family: SpoqaHanSansNeo;
   font-size: 64px;
   font-family: Pretendard;
@@ -672,7 +674,6 @@
 .company-text-inside {
   font-size: 18px;
   font-family: Pretendard;
-  /* padding-bottom: 12px; */
   color: #424242;
 }
 
@@ -708,37 +709,29 @@
 /* 중간의 선을 위한 스타일 */
 .line-long {
   position: absolute;
-  /* top: 0; */
   left: 50%;
-  /* height: 100%;   */
   margin-top: 60px;
   width: 2px;
-  height: 2281px;
-  /* padding: 0 0 2075px; */
-  /* transform: rotate(-270deg); */
+  height: 100%;
+  height: calc(100% - 60px);
   background-color: #cdcdcd;
-  /* transform: translateX(-50%); */
 }
 
 /* 각 타임라인 항목의 스타일 */
 .line-dot-1 {
   width: 100%;
   height: 1px;
-  margin: 46px 0 0 0;
+  margin: 60px 0 59px;
   border: 1px dashed #fff;
   background-color: #e3e3e3;
-  /* transform: rotate(-180deg); */
-  /* background-color: #e3e3e3; */
 }
 
 .line-dot-2 {
   width: 100%;
   height: 1px;
-  margin: 60px 0 50px -78px;
+  margin: 60px 0 59px -78px;
   border: 1px dashed #fff;
   background-color: #e3e3e3;
-  /* transform: rotate(-180deg); */
-  /* background-color: #e3e3e3; */
 }
 
 /* CompanyOverview.css */
