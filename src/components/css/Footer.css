@@ -24,4 +24,14 @@
 .footer-info p {
   text-align: right;
   margin-left: auto;
+  width: 309px;
+  height: 24px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #bdbdbd;
 }

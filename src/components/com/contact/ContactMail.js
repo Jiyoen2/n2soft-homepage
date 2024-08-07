@@ -61,9 +61,9 @@ export const ContactMail = () => {
       })
       .then(
         () => {
-          alert("제출이 완료되었습니다."); // 성공적으로 제출되었을 때 알림창 표시
-          form.current.reset(); // 폼 초기화 (옵션)
-          resetAgree(); // 동의 상태 초기화
+          alert("제출이 완료되었습니다.");
+          form.current.reset();
+          resetAgree();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -73,8 +73,8 @@ export const ContactMail = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail}>
-      <div className="com-main">
-        <div className="com-tit">
+      <div className="contactus-main">
+        <div className="contactus-tit">
           <h1>문의내용</h1>
           <span className="contactus-tit-2">
             <span className="contactus-st">* </span>

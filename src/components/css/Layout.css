@@ -613,126 +613,6 @@
   /* position: relative; */
   overflow: hidden;
 }
-.company-img {
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid gray;
-  background-image: url("../../assets/images/top01.png");
-  background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.company-title h1 {
-  padding-bottom: 60px;
-  width: 100%;
-  height: 57px;
-  font-family: Pretendard;
-  font-size: 48px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #212121;
-}
-
-.company-content p {
-  height: 80px;
-  margin: 0 487px 40px 0;
-  font-family: SpoqaHanSansNeo;
-  font-size: 64px;
-  font-family: Pretendard;
-  font-weight: bold;
-  color: #303030;
-}
-
-.company-com-1 {
-  padding: 0 0 22px 7px;
-}
-
-.company-com-2 {
-  padding-bottom: 22px;
-}
-
-.company-num {
-  font-family: SpoqaHanSansNeo;
-  font-size: 18px;
-  font-family: Pretendard;
-  padding-right: 16px;
-  font-weight: bold;
-  color: #bc1d22;
-}
-
-.company-num-inside {
-  font-weight: bold;
-}
-
-.company-text,
-.company-text-inside {
-  font-size: 18px;
-  font-family: Pretendard;
-  color: #424242;
-}
-
-.company-text-inside {
-  font-weight: normal;
-}
-
-.company-s {
-  margin-bottom: 12px;
-  white-space: pre-line;
-}
-
-.company-s .company-text-inside {
-  padding: 0 0 0 25px;
-}
-
-.timeline-container {
-  display: flex;
-  align-items: flex-start;
-  position: relative; /* 타임라인 컨테이너를 기준으로 위치 설정 */
-}
-
-.timeline-items,
-.timeline-items2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline-items2 {
-  padding-left: 78px; /* 기존 padding 유지 */
-}
-
-/* 중간의 선을 위한 스타일 */
-.line-long {
-  position: absolute;
-  left: 50%;
-  margin-top: 60px;
-  width: 2px;
-  height: 100%;
-  height: calc(100% - 60px);
-  background-color: #cdcdcd;
-}
-
-/* 각 타임라인 항목의 스타일 */
-.line-dot-1 {
-  width: 100%;
-  height: 1px;
-  margin: 60px 0 59px;
-  border: 1px dashed #fff;
-  background-color: #e3e3e3;
-}
-
-.line-dot-2 {
-  width: 100%;
-  height: 1px;
-  margin: 60px 0 59px -78px;
-  border: 1px dashed #fff;
-  background-color: #e3e3e3;
-}
 
 /* CompanyOverview.css */
 
@@ -740,43 +620,11 @@
   padding-bottom: 200px;
 }
 
-.overview-main h1 {
-  font-family: Pretendard;
-  font-size: 48px;
-  font-weight: 500;
-  padding-bottom: 20px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #212121;
-}
-
-.overview-main h1 span {
-  font-family: Pretendard;
-  font-size: 48px;
-  font-weight: bold;
-  padding-bottom: 60px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #212121;
-}
-
-.overview-image {
-  /* width: 370px;
-  height: 51px; */
-  padding-bottom: 60px;
-}
-
 .overview-main p {
   font-family: Pretendard;
   font-size: 24px;
   font-weight: 300;
-  margin-bottom: 60px;
+  margin: 40px 0 60px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -822,7 +670,7 @@
   color: #212121;
 }
 
-/******************** CompanyGoal.css ********************/
+/* CompanyGoal.css */
 .goal-bg {
   background-image: url("../../assets/images/bg_company.png");
   background-repeat: no-repeat;
@@ -843,7 +691,6 @@
 .goal-tit-1 h1 {
   font-family: Pretendard;
   font-size: 48px;
-  font-weight: 300;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -877,15 +724,16 @@
   color: #212121;
 }
 
-.goal-Rec {
+.goal-rec-com {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .goal-rec {
   width: 100%;
   height: 308px;
-  margin: 20px 20px 0 0;
+  margin-top: 20px;
   padding: 40px 0 40px 40px;
   justify-content: space-between;
   border-radius: 30px;
@@ -980,19 +828,35 @@
 
 .map-black {
   background-color: #101010;
-  color: #fff;
-  font-weight: 500;
-  font-family: Pretendard;
+  /* font-weight: 500; */
   padding: 13px 45px;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
 }
 
 .map-white {
   background-color: #fff;
-  border: solid 1px #101010;
-  color: #101010;
-  font-weight: bold;
-  font-family: Pretendard;
+  border: solid 1px #212121;
+  /* font-weight: bold; */
+  font-weight: 500;
   padding: 13px 48px 13px 42px;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: #212121;
 }
 
 .contact-stick {
@@ -1066,161 +930,145 @@
   border-width: 0px;
 }
 
-/******************** MainContactUs.css ********************/
+/* CompanyHistory.css */
 
-.contactus-img {
+.company-img {
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
-  background-image: url("../../assets/images/top04.png");
+  background-image: url("../../assets/images/top01.png");
   background-color: rgba(217, 217, 217, 0.5);
   height: 372px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.contactus-con {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 40px 0 60px 0;
-}
-
-.contactus-con > div {
-  flex: 1 1 45%;
-}
-
-.com-tit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contactus-tit-2 {
-  /* height: 19px; */
-  /* padding: 0 5px 0 0px; */
-  font-size: 16px;
+.company-title h1 {
+  padding-bottom: 60px;
+  width: 100%;
+  height: 57px;
   font-family: Pretendard;
-  color: #9e9e9e;
-}
-
-.contactus-tit-3 {
-  /* height: 19px; */
-  /* padding: 0 5px 0 0px; */
-  font-size: 20px;
-  font-family: Pretendard;
-  color: #212121;
-  text-align: left;
-}
-
-.contactus-tit-4 {
-  font-size: 28px;
-  font-family: Pretendard;
+  font-size: 48px;
   font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: left;
   color: #212121;
 }
 
-.contactus-st {
-  font-family: Pretendard;
-  color: #eb5757;
-}
-
-.contactus-box {
-  width: 100%;
-  height: 60px;
-  margin: 20px 0;
-  padding: 20px 18px;
-  border-radius: 4px;
-  font-size: 18px;
-  font-family: Pretendard;
-  border: solid 1px #eee;
-  background-color: #fff;
-}
-
-.contactus-text {
-  width: 100%;
-  height: 200px;
-  margin-top: 20px;
-  padding: 20px 20px 156px 20px;
-  border-radius: 10px;
-  border: solid 1px #eee;
-  background-color: #fff;
-  box-sizing: border-box;
-  font-size: 18px;
-  font-family: Pretendard;
-  line-height: 1.5;
-  resize: none;
-  overflow-y: hidden;
-}
-
-.contactus-button {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.button-sub {
-  width: 176px;
-  height: 54px;
-  background-color: #101010;
-  font-size: 20px;
+.company-content p {
+  height: 80px;
+  margin: 0 487px 40px 0;
+  font-size: 64px;
   font-family: Pretendard;
   font-weight: bold;
-  line-height: 1.7;
-  color: #fff;
-  cursor: pointer;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
 }
 
-.contactus-agree {
-  width: 100%;
-  margin: 20px 0 28px 0;
-  padding: 40px;
-  border-radius: 10px;
-  background-color: #f5f5f5;
+.company-com-1 {
+  padding: 0 0 22px 7px;
 }
 
-.agree-cont {
-  font-size: 20px;
+.company-com-2 {
+  padding-bottom: 22px;
+}
+
+.company-num {
+  font-size: 18px;
   font-family: Pretendard;
+  padding-right: 16px;
+  font-weight: bold;
+  color: #bc1d22;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.company-num-inside {
+  font-weight: bold;
+}
+
+.company-text,
+.company-text-inside {
+  font-size: 18px;
+  font-family: Pretendard;
+  color: #424242;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #424242;
-  padding-bottom: 20px;
 }
 
-.contactus-agree span {
-  font-size: 20px;
-  font-family: Pretendard;
-  font-weight: bold;
-  text-align: left;
-  color: #424242;
+.company-text-inside {
+  font-weight: normal;
 }
 
-.contactus-check {
+.company-s {
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.company-s .company-text-inside {
+  padding: 0 0 0 25px;
+}
+
+.timeline-container {
   display: flex;
-  align-items: center;
-  padding-bottom: 40px;
-  width: 400px;
+  align-items: flex-start;
+  position: relative; /* 타임라인 컨테이너를 기준으로 위치 설정 */
 }
 
-.contactus-check p {
-  font-size: 20px;
-  font-family: Pretendard;
-  font-weight: bold;
-  text-align: left;
-  color: #424242;
+.timeline-items,
+.timeline-items2 {
+  display: flex;
+  flex-direction: column;
 }
 
-.check-circle-Gr {
-  margin-right: 23.3px;
-  cursor: pointer;
+.timeline-items2 {
+  padding-left: 78px; /* 기존 padding 유지 */
+}
+
+/* 중간의 선을 위한 스타일 */
+.line-long {
+  position: absolute;
+  left: 50%;
+  margin-top: 60px;
+  width: 2px;
+  height: 100%;
+  height: calc(100% - 60px);
+  background-color: #cdcdcd;
+}
+
+/* 각 타임라인 항목의 스타일 */
+.line-dot-1 {
+  width: 100%;
+  height: 1px;
+  margin: 60px 0 59px;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
+}
+
+.line-dot-2 {
+  width: 100%;
+  height: 1px;
+  margin: 60px 0 59px -78px;
+  border: 1px dashed #fff;
+  background-color: #e3e3e3;
 }
 
 /******************** MainSolution.css ********************/
+
 .solution-bg {
   position: relative;
   width: 100%;
@@ -1232,13 +1080,158 @@
   background-repeat: no-repeat;
 }
 
+/* SolutionService.css */
+
+.solu-main {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* padding: 150px 320px 60px 320px; */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 150px 0 60px;
+}
+
+.solu-com {
+  justify-content: space-between;
+}
+
+.solu-text {
+  width: 510px;
+  /* width: 100%; */
+  word-wrap: break-word;
+  /* padding-right: 104px; */
+}
+
+.solu-text-tit {
+  /* height: 45px; */
+  width: 100%;
+  margin-bottom: 40px;
+  align-self: stretch;
+  font-family: SpoqaHanSansNeo;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  /* text-align: left; */
+  color: #212121;
+}
+
+.solu-text-link {
+  /* font-size: 28px; */
+  padding-top: 31.5px;
+}
+
+.solu-text-link p {
+  flex-grow: 0;
+  display: inline-flex;
+  align-items: center;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #bc1d22;
+  cursor: pointer;
+}
+
+.solu-text-link span {
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
+}
+
+.solu-text-cont {
+  width: 100%;
+  /* height: 100px; */
+  align-self: stretch;
+  margin-bottom: -42.5px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-bottom: 31.5px;
+  /* text-align: left; */
+  color: #212121;
+}
+
+.solu-img {
+  width: 100%;
+  height: 374%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.solu-text-num {
+  width: 100%;
+  /* height: 24px; */
+  margin-bottom: 80px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  /* text-align: left; */
+  color: #bc1d22;
+}
+
+.solu-rect {
+  display: flex;
+  padding-bottom: 140px;
+  justify-content: space-between;
+}
+
+.solu-img-R {
+  /* padding-right: 100px; */
+}
+
+.solu-img-L {
+  /* padding-left: 100px; */
+}
+
+.text-left .solu-text-L {
+  order: 1; /* 텍스트를 왼쪽에 배치 */
+}
+
+.text-left .solu-img-L {
+  order: 2; /* 이미지를 오른쪽에 배치 */
+}
+
+.text-right .solu-text-R {
+  order: 2; /* 텍스트를 오른쪽에 배치 */
+  text-align: right;
+}
+
+.text-right .solu-img-R {
+  order: 1; /* 이미지를 왼쪽에 배치 */
+}
+
 /******************** MainNotice.css ********************/
 
 .notice-main {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 120px 320px 60px 320px;
+  align-items: center; */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 0 60px;
 }
 
 .notice-feature {
@@ -1384,140 +1377,202 @@
   color: #bdbdbd;
 } */
 
-/******************** MainSolution.css ********************/
+/******************** MainContactUs.css ********************/
 
-/* SolutionService.css */
-
-.solu-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 150px 320px 60px 320px;
+.contactus-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 0;
 }
 
-.solu-text {
-  /* width: 510px; */
-  width: 510px;
-  word-wrap: break-word;
-  /* padding-right: 104px; */
-}
-
-.solu-text-tit {
-  /* height: 45px; */
-  width: 100%;
-  margin-bottom: 40px;
-  align-self: stretch;
-  font-family: SpoqaHanSansNeo;
-  font-size: 36px;
+.contactus-tit h1 {
+  font-size: 48px;
+  font-family: Pretendard;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* text-align: left; */
+  text-align: left;
   color: #212121;
 }
 
-.solu-text-link {
-  font-size: 28px;
-  padding-top: 42.5px;
-}
-
-.solu-text-link p {
-  flex-grow: 0;
-  display: inline-flex;
-  align-items: center;
-  font-family: SpoqaHanSansNeo;
-  font-size: 28px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: right;
-  color: #bc1d22;
-  cursor: pointer;
-}
-
-.solu-text-link span {
-  flex-grow: 0;
-  font-family: SpoqaHanSansNeo;
-  font-size: 28px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: right;
-  color: #000000;
-}
-
-.solu-text-cont {
+.contactus-img {
+  position: relative;
   width: 100%;
-  height: 100px;
-  align-self: stretch;
-  margin-bottom: -42.5px;
-  font-family: SpoqaHanSansNeo;
-  font-size: 20px;
+  border-bottom: 1px solid gray;
+  background-image: url("../../assets/images/top04.png");
+  background-color: rgba(217, 217, 217, 0.5);
+  height: 372px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contactus-con {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 0 60px 0;
+}
+
+.contactus-con > div {
+  flex: 1 1 45%;
+}
+
+.contactus-tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactus-tit-2 {
+  font-size: 16px;
+  font-family: Pretendard;
+  color: #9e9e9e;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* text-align: left; */
-  color: #212121;
+  text-align: left;
+  color: #9e9e9e;
 }
 
-.solu-text-img {
-  width: 100%;
-  height: 374%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.solu-text-num {
-  width: 100%;
-  /* height: 24px; */
-  margin-bottom: 80px;
-  font-family: SpoqaHanSansNeo;
-  font-size: 24px;
+.contactus-tit-3 {
+  font-size: 20px;
+  font-family: Pretendard;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* text-align: left; */
-  color: #bc1d22;
+  text-align: left;
+  color: #212121;
 }
 
-.solu-rect {
+.contactus-tit-4 {
+  font-size: 28px;
+  font-family: Pretendard;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+}
+
+.contactus-st {
+  font-family: Pretendard;
+  color: #eb5757;
+}
+
+.contactus-box {
+  width: 100%;
+  height: 60px;
+  margin: 20px 0;
+  padding: 20px 18px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: Pretendard;
+  border: solid 1px #eee;
+  background-color: #fff;
+}
+
+.contactus-text {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  padding: 20px 20px 156px 20px;
+  border-radius: 10px;
+  border: solid 1px #eee;
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Pretendard;
+  line-height: 1.5;
+  resize: none;
+  overflow-y: hidden;
+}
+
+.contactus-button {
   display: flex;
-  padding-bottom: 140px;
+  justify-content: flex-end;
 }
 
-.solu-img-R {
-  padding-right: 100px;
+.button-sub {
+  width: 176px;
+  height: 54px;
+  background-color: #101010;
+  font-size: 20px;
+  font-weight: bold;
+  flex-grow: 0;
+  font-family: SpoqaHanSansNeo;
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 
-.solu-img-L {
-  padding-left: 100px;
+.contactus-agree {
+  width: 100%;
+  margin: 20px 0 28px 0;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-.text-left .solu-text-L {
-  order: 1; /* 텍스트를 왼쪽에 배치 */
+.agree-cont {
+  font-size: 20px;
+  font-family: Pretendard;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+  padding-bottom: 20px;
 }
 
-.text-left .solu-img-L {
-  order: 2; /* 이미지를 오른쪽에 배치 */
+.contactus-agree span {
+  font-size: 20px;
+  font-family: Pretendard;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
 }
 
-.text-right .solu-text-R {
-  order: 2; /* 텍스트를 오른쪽에 배치 */
-  text-align: right;
+.contactus-check {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  width: 400px;
 }
 
-.text-right .solu-img-R {
-  order: 1; /* 이미지를 왼쪽에 배치 */
+.contactus-check p {
+  font-size: 20px;
+  font-family: Pretendard;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #424242;
+}
+
+.check-circle-Gr {
+  margin-right: 23.3px;
+  cursor: pointer;
 }
 
 /******************** MainContactUs.css ********************/

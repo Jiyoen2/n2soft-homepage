@@ -1,52 +1,54 @@
 import React from "react";
+import CompanyOne from "../company/companyHist/CompanyOne";
+import CompanyTwo from "../company/companyHist/CompanyTwo";
 
-const TimelineItem = ({ date, items, isNotLineDot }) => (
-  <div className="company-com-1">
-    {!isNotLineDot && <div className="line-dot-1"></div>}
-    <p>{date}</p>
-    {items.map((item, index) => (
-      <div className="company-s" key={index}>
-        <span
-          className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
-        >
-          {item.num}
-        </span>
-        <span
-          className={`company-text ${
-            item.isInside ? "company-text-inside" : ""
-          }`}
-          style={{ whiteSpace: "pre-wrap" }}
-        >
-          {item.text}
-        </span>
-      </div>
-    ))}
-  </div>
-);
+// const TimelineItem = ({ date, items, isNotLineDot }) => (
+//   <div className="company-com-1">
+//     {!isNotLineDot && <div className="line-dot-1"></div>}
+//     <p>{date}</p>
+//     {items.map((item, index) => (
+//       <div className="company-s" key={index}>
+//         <span
+//           className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
+//         >
+//           {item.num}
+//         </span>
+//         <span
+//           className={`company-text ${
+//             item.isInside ? "company-text-inside" : ""
+//           }`}
+//           style={{ whiteSpace: "pre-wrap" }}
+//         >
+//           {item.text}
+//         </span>
+//       </div>
+//     ))}
+//   </div>
+// );
 
-const TimelineItem2 = ({ date, items }) => (
-  <div className="company-com-2">
-    <div class="line-dot-2"></div>
-    <p>{date}</p>
-    {items.map((item, index) => (
-      <div className="company-s" key={index}>
-        <span
-          className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
-        >
-          {item.num}
-        </span>
-        <span
-          className={`company-text ${
-            item.isInside ? "company-text-inside" : ""
-          }`}
-          style={{ whiteSpace: "pre-wrap" }}
-        >
-          {item.text}
-        </span>
-      </div>
-    ))}
-  </div>
-);
+// const TimelineItem2 = ({ date, items }) => (
+//   <div className="company-com-2">
+//     <div class="line-dot-2"></div>
+//     <p>{date}</p>
+//     {items.map((item, index) => (
+//       <div className="company-s" key={index}>
+//         <span
+//           className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
+//         >
+//           {item.num}
+//         </span>
+//         <span
+//           className={`company-text ${
+//             item.isInside ? "company-text-inside" : ""
+//           }`}
+//           style={{ whiteSpace: "pre-wrap" }}
+//         >
+//           {item.text}
+//         </span>
+//       </div>
+//     ))}
+//   </div>
+// );
 
 const CompanyHistory = () => {
   const historyData = [
@@ -91,7 +93,7 @@ const CompanyHistory = () => {
       items: [
         {
           num: "06.",
-          text: "2020기술역량 우수기업 인증서 획득\n        (우수기술:저축은행 통합여신관리시스템 개발 기술)",
+          text: "2020기술역량 우수기업 인증서 획득\n       (우수기술:저축은행 통합여신관리시스템 개발 기술)",
         },
         {
           num: "05.",
@@ -147,7 +149,7 @@ const CompanyHistory = () => {
           text: "주식회사엔투소프트 설립",
         },
         {
-          text: "통합여신관리시스템(nTree) Ver 1.0 개발\n        (스타, 예가람, 모아, 고려저축은행 등 공급)",
+          text: "통합여신관리시스템(nTree) Ver 1.0 개발\n       (스타, 예가람, 모아, 고려저축은행 등 공급)",
           isInside: true,
         },
       ],
@@ -213,7 +215,7 @@ const CompanyHistory = () => {
       items: [
         {
           num: "11.",
-          text: "nTree.Works 공급\n        (IBK, 한국투자, 모아, 유진, 머스트삼일, 융창저축은행 등 공급)",
+          text: "nTree.Works 공급\n       (IBK, 한국투자, 모아, 유진, 머스트삼일, 융창저축은행 등 공급)",
         },
       ],
     },
@@ -235,7 +237,7 @@ const CompanyHistory = () => {
       items: [
         {
           num: "12.",
-          text: "통합여신관리시스템(nTree) Ver 2.0 개발\n        (한국투자, 모아, 현대, 예가람, 고려, IBK, NH농협, BNK, MS, 신한,\n        조은, 동원제일 저축은행 등 공급)",
+          text: "통합여신관리시스템(nTree) Ver 2.0 개발\n       (한국투자, 모아, 현대, 예가람, 고려, IBK, NH농협, BNK, MS,\n       신한, 조은, 동원제일 저축은행 등 공급)",
         },
       ],
     },
@@ -251,7 +253,7 @@ const CompanyHistory = () => {
           <div className="timeline-items">
             <div style={{ paddingBottom: "60px" }}></div>
             {historyData.map((data, index) => (
-              <TimelineItem
+              <CompanyOne
                 key={index}
                 date={data.date}
                 items={data.items}
@@ -263,7 +265,7 @@ const CompanyHistory = () => {
           <div className="timeline-items2">
             <div style={{ paddingBottom: "266px" }}></div>
             {historyData2.map((data, index) => (
-              <TimelineItem2 key={index} date={data.date} items={data.items} />
+              <CompanyTwo key={index} date={data.date} items={data.items} />
             ))}
           </div>
         </div>

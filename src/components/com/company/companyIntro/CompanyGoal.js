@@ -1,9 +1,23 @@
 import React, { useRef } from "react";
 import CompanyGoalList from "../companyIntro/companyGoal/CompanyGoalList";
+import IcoCompany01 from "../../../../assets/images/ico_company_01.png";
+import IcoCompany02 from "../../../../assets/images/ico_company_02.png";
+import IcoCompany03 from "../../../../assets/images/ico_company_03.png";
+import IcoCompany04 from "../../../../assets/images/ico_company_04.png";
 
 const data = [
   {
-    sub: "Experience",
+    sub: (
+      <p>
+        <img
+          src={IcoCompany01}
+          alt="Experience"
+          className="ico-company"
+          style={{ width: "48px", height: "48px" }}
+        />
+        Experience
+      </p>
+    ),
     title: <p>시스템 구축</p>,
     content: (
       <>
@@ -15,7 +29,17 @@ const data = [
     ),
   },
   {
-    sub: "Understand",
+    sub: (
+      <p>
+        <img
+          src={IcoCompany02}
+          alt="Understand"
+          className="ico-company"
+          style={{ width: "48px", height: "48px" }}
+        />
+        Understand
+      </p>
+    ),
     title: <p>업무 이해도</p>,
     content: (
       <>
@@ -29,7 +53,17 @@ const data = [
 
 const data1 = [
   {
-    sub: "Organization",
+    sub: (
+      <p>
+        <img
+          src={IcoCompany03}
+          alt="Organization"
+          className="ico-company"
+          style={{ width: "48px", height: "48px" }}
+        />
+        Organization
+      </p>
+    ),
     title: <p>전문 인력 및 조직</p>,
     content: (
       <>
@@ -40,7 +74,17 @@ const data1 = [
     ),
   },
   {
-    sub: "Technology",
+    sub: (
+      <p>
+        <img
+          src={IcoCompany04}
+          alt="Technology"
+          className="ico-company"
+          style={{ width: "48px", height: "48px" }}
+        />
+        Technology
+      </p>
+    ),
     title: <p>운영 및 기술</p>,
     content: (
       <>
@@ -63,7 +107,7 @@ const CompanyGoal = () => {
           </h1>
           <p>고객사의 사업 목표를 성공적으로 수행합니다.</p>
         </div>
-        <div className="goal-Rec">
+        <div className="goal-rec-com">
           {data.map((Goal, i) => (
             <div key={i} className="goal-rec">
               <CompanyGoalList
@@ -74,7 +118,7 @@ const CompanyGoal = () => {
             </div>
           ))}
         </div>
-        <div className="goal-Rec">
+        <div className="goal-rec-com">
           {data1.map((Goal, i) => (
             <div key={i} className="goal-rec">
               <CompanyGoalList

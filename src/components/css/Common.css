@@ -47,13 +47,17 @@
 /******************** 하위 메뉴바 css ********************/
 
 .top-tit h1 {
-  color: #fff;
-  font-size: 40px;
   font-family: Pretendard;
   font-weight: bold;
-  padding: 170px 0 96px;
+  padding: 170px 0 86px;
   max-width: 1280px;
   margin: 0 auto;
+  font-size: 48px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
 }
 
 .top-stick {
@@ -74,13 +78,18 @@
   z-index: 2;
   font-size: 20px;
   font-family: Pretendard;
-  font-weight: bold;
   text-align: center;
   align-items: center;
   justify-content: center;
   bottom: -1px;
-  cursor: pointer;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
   color: #fff;
+  cursor: pointer;
 }
 
 /*미디어 쿼리 쓰기ㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣㅣ*/
@@ -100,16 +109,24 @@
 .top-menu-2.active,
 .top-menu-3.active {
   background-color: #fff;
-  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #202020;
 }
 
 /******************** 하위 메뉴 페이지 css ********************/
 
-.com-main {
+/* .com-main {
   padding: 120px 320px 120px 320px;
 }
 
 .com-tit h1 {
   font-size: 48px;
   font-family: Pretendard;
-}
+} */

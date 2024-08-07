@@ -5,9 +5,6 @@ const CompanyOverview = () => {
   return (
     <div className="overview-main">
       <img src={N2LogoImg} alt="N2soft 빨로고" className="overview-image" />
-      <h1>
-        금융IT시장을 이끄는 <span> 금융솔루션 전문기업</span>
-      </h1>
       <p>
         (주)엔투소프트는 저축은행을 비롯한 여러 금융기관에 금융시스템 구축
         경험을 바탕으로 성공적인 사업을 수행합니다.
