@@ -29,7 +29,7 @@ const Header = () => {
       }
     } else {
       setBackground("rgba(0, 0, 0, 0)");
-      setColor("white");
+      setColor("#fff");
       setBoxShadow("none");
       setLogo(N2softLogoWhImg);
       if (menu1Ref.current) {

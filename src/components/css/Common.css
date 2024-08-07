@@ -18,7 +18,7 @@
   padding: 0 173px 0 320px;
 } */
 
-.main-tit-2 h2 {
+/* .main-tit-2 h2 {
   font-size: 48px;
   font-family: Pretendard;
 }
@@ -41,8 +41,8 @@
   align-items: center;
   text-align: center;
   padding-top: 200px;
-  /* justify-content: space-between; */
-}
+  justify-content: space-between;
+} */
 
 /******************** 하위 메뉴바 css ********************/
 

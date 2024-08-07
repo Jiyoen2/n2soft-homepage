@@ -65,7 +65,7 @@ const HomeContents = () => {
   return (
     <div className="contents-main">
       <div className="contents-cont">
-        <div className="main-tit-2">
+        <div className="contents-tit">
           <h2>
             <span>OUR </span>
             SERVICE

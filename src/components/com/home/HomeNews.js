@@ -141,9 +141,9 @@ const HomeNews = () => {
     <div className="news-main">
       <div className="news-feature">
         <div className="news-com">
-          <div className="news-tit-2">
+          <div className="news-tit">
             <h2>
-              <span>N2SOFT </span>
+              <span style={{ fontWeight: 500 }}>N2SOFT </span>
               NEWS
             </h2>
             <p>엔투소프트의</p>
