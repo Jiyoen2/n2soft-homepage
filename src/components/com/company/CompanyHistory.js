@@ -1,7 +1,7 @@
 import React from "react";
 
 const TimelineItem = ({ date, items }) => (
-  <div className="company-com">
+  <div className="company-com-1">
     <div class="line-dot-1"></div>
     <p>{date}</p>
     {items.map((item, index) => (
@@ -25,7 +25,7 @@ const TimelineItem = ({ date, items }) => (
 );
 
 const TimelineItem2 = ({ date, items }) => (
-  <div className="company-com">
+  <div className="company-com-2">
     <div class="line-dot-2"></div>
     <p>{date}</p>
     {items.map((item, index) => (
@@ -244,31 +244,19 @@ const CompanyHistory = () => {
   return (
     <div className="company-main">
       <div className="company-content">
+        <div className="company-title">
+          <h1>연혁</h1>
+        </div>
         <div className="timeline-container">
           <div className="timeline-items">
-            <div className="company-title">
-              <h1>연혁</h1>
-            </div>
+            <div style={{ paddingBottom: "14px" }}></div>
             {historyData.map((data, index) => (
               <TimelineItem key={index} date={data.date} items={data.items} />
             ))}
           </div>
-          <div className="line-long">
-            <div className="Ellipse-1"></div>
-            <div className="Ellipse-2"></div>
-            <div className="Ellipse-3"></div>
-            <div className="Ellipse-4"></div>
-            <div className="Ellipse-5"></div>
-            <div className="Ellipse-6"></div>
-            <div className="Ellipse-7"></div>
-            <div className="Ellipse-8"></div>
-            <div className="Ellipse-9"></div>
-            <div className="Ellipse-10"></div>
-            <div className="Ellipse-11"></div>
-            <div className="Ellipse-12"></div>
-            <div className="Ellipse-13"></div>
-          </div>
+          <div className="line-long"></div>
           <div className="timeline-items2">
+            <div style={{ paddingBottom: "266px" }}></div>
             {historyData2.map((data, index) => (
               <TimelineItem2 key={index} date={data.date} items={data.items} />
             ))}
