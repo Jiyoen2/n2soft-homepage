@@ -181,7 +181,6 @@
 .slider-container {
   position: relative;
   width: 100%;
-  max-height: 960px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -507,7 +506,7 @@ input[type="range"]::-webkit-slider-thumb {
   min-width: 390px; /* min-width를 사용하여 크기 고정 */
   height: 506px;
   margin: 0 20px 0 0;
-  padding: 60px 43px 60px 42px;
+  padding: 60px 35px 60px 35px;
   border-radius: 30px;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
@@ -541,6 +540,7 @@ input[type="range"]::-webkit-slider-thumb {
   letter-spacing: normal;
   text-align: left;
   color: #101010;
+  white-space: pre-line;
 }
 
 .news-text-cont {
