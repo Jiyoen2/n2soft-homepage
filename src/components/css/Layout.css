@@ -204,32 +204,32 @@
   display: flex; /* 슬라이드의 정렬을 보장합니다 */
 }
 
-/* 전체 슬라이더의 스타일을 조정합니다 */
+/* 전체 슬라이더 스타일 */
 input[type="range"] {
-  -webkit-appearance: none; /* 웹킷 기반 브라우저에서 기본 스타일 제거 */
-  width: 100%; /* 슬라이더의 너비를 설정합니다 */
-  max-width: 1280px; /* 최대 너비를 설정합니다 */
-  margin: 0 auto; /* 중앙 정렬을 설정합니다 */
-  background: transparent; /* 배경을 투명하게 설정합니다 */
-  display: block; /* 중앙 정렬을 위한 블록 디스플레이 설정 */
+  -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
+  width: 100%; /* 슬라이더의 너비 */
+  max-width: 1280px; /* 최대 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  background: transparent;
+  display: block;
 }
 
-/* 슬라이더의 트랙(슬라이더 바) 스타일 */
+/* 슬라이더 트랙(슬라이더 바) 스타일 */
 input[type="range"]::-webkit-slider-runnable-track {
-  width: 50%; /* 트랙의 너비를 설정합니다 */
-  height: 4px; /* 트랙의 높이를 설정합니다 */
-  background: #e0e0e0; /* 트랙의 배경색을 설정합니다 */
-  border-radius: 0px; /* 트랙의 모서리를 둥글게 설정합니다 */
+  width: 50%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 0px;
 }
 
-/* 슬라이더의 핸들 스타일 */
+/* 슬라이더 핸들 스타일 */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* 웹킷 기반 브라우저에서 기본 스타일 제거 */
-  width: 25%; /* 핸들의 너비를 설정합니다 */
-  height: 8px; /* 핸들의 높이를 설정합니다 */
-  background: #d31f24; /* 핸들의 배경색을 설정합니다 */
-  border: none; /* 핸들의 테두리 제거 */
-  cursor: pointer; /* 핸들을 클릭할 때 커서를 포인터로 변경합니다 */
+  -webkit-appearance: none;
+  width: 25%;
+  height: 8px;
+  background: #d31f24;
+  border: none;
+  cursor: pointer;
 }
 
 /******************** HomeCust.css ********************/
@@ -395,7 +395,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 754px;
 }
 
-.news-main::before,
+/* .news-main::before,
 .news-main::after {
   content: "";
   position: absolute;
@@ -404,22 +404,40 @@ input[type="range"]::-webkit-slider-thumb {
   height: 70px;
   background: inherit;
   filter: blur(50px);
-}
+} */
 
 .news-feature {
-  display: flex;
+  /* display: flex; */
+  position: relative;
   padding: 100px 0 0 311.5px;
 }
 
 .news-com {
-  padding-right: 94px;
+  float: left;
+  width: calc(100% - 1250px); /* rectangle-com의 너비를 고려하여 조정 */
+  margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
+}
+
+.rectangle-com {
+  float: left;
+  width: 400px; /* 원하는 너비로 조정 */
 }
 
 .news-arr {
+  position: absolute;
   margin-top: 200px;
   display: flex;
   justify-content: space-between;
   width: 20px; /* 버튼 사이 간격 조정 */
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.newsArrLeft,
+.newsArrRight {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
 }
 
 .news-tit h2 {
@@ -469,11 +487,12 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 0;
   padding-bottom: 60px;
   overflow-x: hidden; /* 가로 스크롤을 숨깁니다 */
-  /* scroll-behavior: smooth; 부드러운 스크롤링 */
+  position: relative; /* position 속성 추가 */
+  z-index: 1; /* z-index 값을 높여서 news-feature 위에 표시되도록 설정 */
 }
 
 .rectangle {
-  min-width: 416px; /* min-width를 사용하여 크기 고정 */
+  min-width: 390px; /* min-width를 사용하여 크기 고정 */
   height: 506px;
   margin: 0 20px 0 0;
   padding: 60px 43px 60px 42px;
@@ -561,6 +580,61 @@ input[type="range"]::-webkit-slider-thumb {
   width: 315px;
   height: 4px;
   background-color: #d73a3e;
+}
+
+/***************************캐러셀2*************************/
+
+/* 새로운 캐러셀 스타일 */
+.slider-container-2 {
+  position: relative;
+  width: 100%;
+  /* max-height: 960px; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* .slick-slide-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list-2 {
+  overflow: hidden;
+  border-radius: 8px; 
+}
+
+.slick-track-2 {
+  display: flex;
+} */
+
+/* 전체 슬라이더 스타일 */
+input[type="range"].slider-range-2 {
+  -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
+  width: 100%; /* 슬라이더의 너비 */
+  max-width: 1280px; /* 최대 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding-left: 360px;
+  padding-right: 130px;
+  background: transparent;
+  display: block;
+}
+
+/* 슬라이더 트랙(슬라이더 바) 스타일 */
+input[type="range"].slider-range-2::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 0px;
+}
+
+/* 슬라이더 핸들 스타일 */
+input[type="range"].slider-range-2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16%;
+  height: 4px;
+  background: #d31f24;
+  border: none;
+  cursor: pointer;
 }
 
 /* HomeCertifiy.css */

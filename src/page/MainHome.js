@@ -5,9 +5,10 @@ import "../components/css/Common.css";
 import "../components/css/Layout.css";
 import HomeVideo from "../components/com/home/HomeVideo";
 // import HomeContents from "../components/com/home/HomeContents";
-import CarouselSlide from "../components/com/home/homeContent/CarouselSlide";
+import HomeContCarousel from "../components/com/home/HomeContCarousel";
 import HomeCust from "../components/com/home/HomeCust";
-import HomeNews from "../components/com/home/HomeNews";
+import HomeNewsCarousel from "../components/com/home/HomeNewsCarousel";
+// import HomeNews from "../components/com/home/HomeNews";
 import HomeCertifiy from "../components/com/home/HomeCertifiy";
 // import { useMediaQuery, MediaQuery } from "react-responsive";
 
@@ -19,13 +20,13 @@ const MainHome = () => {
         <HomeVideo />
       </div>
       <div>
-        <CarouselSlide />
+        <HomeContCarousel />
       </div>
       <div>
         <HomeCust />
       </div>
       <div>
-        <HomeNews />
+        <HomeNewsCarousel />
       </div>
       <div>
         <HomeCertifiy />
