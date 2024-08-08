@@ -839,23 +839,48 @@
 
 .map-button {
   display: flex;
-  width: 450px;
+  width: 440px;
   height: 60px;
-  font-size: 25px;
-  font-family: Pretendard;
-  align-items: center; /* 수직 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
-  text-align: center;
-  align-content: center;
-  cursor: pointer;
-  border: none; /* 버튼의 기본 테두리 제거 */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #fff;
+  border: solid 1px #212121;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-.map-black {
+.map-go {
   background-color: #101010;
-  /* font-weight: 500; */
-  padding: 13px 45px;
+  padding-bottom: 60px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.map-button button {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: SpoqaHanSansNeo;
+  line-height: 1.21;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: #212121;
+}
+
+.map-button button.active {
   flex-grow: 0;
   font-family: SpoqaHanSansNeo;
   font-size: 28px;
@@ -868,22 +893,10 @@
   color: #fff;
 }
 
-.map-white {
-  background-color: #fff;
-  border: solid 1px #212121;
-  /* font-weight: bold; */
-  font-weight: 500;
-  padding: 13px 48px 13px 42px;
-  flex-grow: 0;
-  font-family: SpoqaHanSansNeo;
-  font-size: 28px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  text-align: center;
-  color: #212121;
-}
+/* .map-button .map-button-text {
+  position: relative;
+  z-index: 2;
+} */
 
 .contact-stick {
   width: 26px;
@@ -1328,7 +1341,6 @@
 .notice-rect-1,
 .notice-rect-2 {
   display: flex;
-  /* flex-wrap: wrap; 요소들이 줄 바꿈할 수 있도록 설정 */
   justify-content: center;
   width: 100%;
   justify-content: space-between;
@@ -1337,10 +1349,6 @@
 .notice-rect {
   flex: 1 1 calc(33% - 30px); /* 3개의 열을 만들고, 여백을 고려한 너비 설정 */
   max-width: 416px;
-  /* max-height: 506px; */
-  /* min-width: 250px; */
-  /* width: 100%; */
-  /* height: auto; */
   margin: 0 15px 60px 0;
   border-radius: 30px;
   padding: 60px 44px 60px 41px;
@@ -1350,7 +1358,7 @@
 }
 
 .notice-rect:hover {
-  border: solid 3px #d31f24; /* 호버 시 테두리 색상 및 두께 설정 */
+  border: solid 3px #d31f24;
 }
 
 .noti-text-date {

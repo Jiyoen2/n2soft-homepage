@@ -3,12 +3,14 @@ import ContactMapOne from "../companyIntro/companyContact/CompanyMapOne";
 import ContactMapTwo from "../companyIntro/companyContact/CompanyMapTwo";
 
 const HomeContact = () => {
-  // 상태를 정의합니다. 초기값은 'ContactMapOne'입니다.
   const [activeMap, setActiveMap] = useState("ContactMapOne");
+  const [mapPosition, setMapPosition] = useState("0px");
+  const [activeButton, setActiveButton] = useState("ContactMapOne");
 
-  // 버튼 클릭 시 호출되는 함수입니다.
-  const handleButtonClick = (mapType) => {
+  const handleButtonClick = (mapType, position) => {
     setActiveMap(mapType);
+    setMapPosition(position);
+    setActiveButton(mapType);
   };
 
   return (
@@ -24,20 +26,21 @@ const HomeContact = () => {
         <div className="map-button">
           <button
             className={`map-button ${
-              activeMap === "ContactMapOne" ? "map-black" : "map-white"
+              activeButton === "ContactMapOne" ? "active" : ""
             }`}
-            onClick={() => handleButtonClick("ContactMapOne")}
+            onClick={() => handleButtonClick("ContactMapOne", "0px")}
           >
-            성남 본사
+            <span className="map-button-text">성남 본사</span>
           </button>
           <button
             className={`map-button ${
-              activeMap === "ContactMapTwo" ? "map-black" : "map-white"
+              activeButton === "ContactMapTwo" ? "active" : ""
             }`}
-            onClick={() => handleButtonClick("ContactMapTwo")}
+            onClick={() => handleButtonClick("ContactMapTwo", "220px")}
           >
-            동천 사옥
+            <span className="map-button-text">동천 사옥</span>
           </button>
+          <div className="map-go" style={{ left: mapPosition }} />
         </div>
       </div>
       <div className="contact-com">

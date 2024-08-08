@@ -2,54 +2,6 @@ import React from "react";
 import CompanyOne from "../company/companyHist/CompanyOne";
 import CompanyTwo from "../company/companyHist/CompanyTwo";
 
-// const TimelineItem = ({ date, items, isNotLineDot }) => (
-//   <div className="company-com-1">
-//     {!isNotLineDot && <div className="line-dot-1"></div>}
-//     <p>{date}</p>
-//     {items.map((item, index) => (
-//       <div className="company-s" key={index}>
-//         <span
-//           className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
-//         >
-//           {item.num}
-//         </span>
-//         <span
-//           className={`company-text ${
-//             item.isInside ? "company-text-inside" : ""
-//           }`}
-//           style={{ whiteSpace: "pre-wrap" }}
-//         >
-//           {item.text}
-//         </span>
-//       </div>
-//     ))}
-//   </div>
-// );
-
-// const TimelineItem2 = ({ date, items }) => (
-//   <div className="company-com-2">
-//     <div class="line-dot-2"></div>
-//     <p>{date}</p>
-//     {items.map((item, index) => (
-//       <div className="company-s" key={index}>
-//         <span
-//           className={`company-num ${item.isInside ? "company-num-inside" : ""}`}
-//         >
-//           {item.num}
-//         </span>
-//         <span
-//           className={`company-text ${
-//             item.isInside ? "company-text-inside" : ""
-//           }`}
-//           style={{ whiteSpace: "pre-wrap" }}
-//         >
-//           {item.text}
-//         </span>
-//       </div>
-//     ))}
-//   </div>
-// );
-
 const CompanyHistory = () => {
   const historyData = [
     {
