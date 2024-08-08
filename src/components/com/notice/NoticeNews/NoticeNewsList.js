@@ -3,10 +3,10 @@ import React, { useState } from "react";
 const NoticeNewsList = ({ title, content, date, num }) => {
   return (
     <div className="news-text">
-      <p className="news-text-date">{date}</p>
-      <p className="news-text-tit">{title}</p>
-      <p className="news-text-cont">{content}</p>
-      <p className="news-text-num">{num}</p>
+      <div className="news-text-date">{date}</div>
+      <div className="news-text-tit">{title}</div>
+      <div className="news-text-cont">{content}</div>
+      <div className="news-text-num">{num}</div>
     </div>
   );
 };

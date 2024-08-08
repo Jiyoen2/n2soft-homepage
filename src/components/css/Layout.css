@@ -609,15 +609,12 @@
 .company-main {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 120px 0;
-  /* position: relative; */
-  overflow: hidden;
 }
 
 /* CompanyOverview.css */
 
 .overview-main {
-  padding-bottom: 200px;
+  padding: 120px 0 200px;
 }
 
 .overview-main p {
@@ -641,16 +638,15 @@
 }
 
 .overview-cont p {
-  /* width: 110px; */
-  height: 29px;
   margin-bottom: 20px;
+  height: 29px;
   font-family: Pretendard;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
-  /* font-style: normal; */
-  /* line-height: normal; */
-  /* letter-spacing: normal; */
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: left;
   color: #bc1d22;
 }
@@ -658,19 +654,19 @@
 .overview-cont span {
   width: 125px;
   height: 115px;
-  /* margin: 20px 308px 200px 0; */
   font-family: Pretendard;
   font-size: 96px;
   font-weight: bold;
   font-stretch: normal;
-  /* font-style: normal; */
-  /* line-height: normal; */
-  /* letter-spacing: normal; */
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   text-align: left;
   color: #212121;
 }
 
 /* CompanyGoal.css */
+
 .goal-bg {
   background-image: url("../../assets/images/bg_company.png");
   background-repeat: no-repeat;
@@ -678,12 +674,9 @@
   background-size: cover;
   /* background-attachment: fixed; */
   width: 100%;
-  height: 950px;
+  height: 844px;
 }
 
-.goal-main {
-  /* padding: 0 320px 0 320px; */
-}
 .goal-tit-1 {
   padding-bottom: 60px;
 }
@@ -760,6 +753,7 @@
 .goal-text-tit {
   height: 43px;
   margin-bottom: 40px;
+  margin-left: 65px;
   align-self: stretch;
   flex-grow: 0;
   font-family: Pretendard;
@@ -775,7 +769,7 @@
 
 .goal-text-cont {
   height: 111px;
-  margin: 40px 0 0 10zpx;
+  margin: 40px 0 0 10px;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: normal;
@@ -786,10 +780,16 @@
   text-align: left;
   color: #424242;
 }
-/******************** CompanyContact.css ********************/
+
+.ico-com {
+  display: flex;
+  align-items: center;
+}
+
+/* CompanyContact.css */
 
 .contact-main {
-  padding-top: 176px;
+  padding: 200px 0 120px;
 }
 
 .contact-title h2 {
@@ -931,6 +931,10 @@
 }
 
 /* CompanyHistory.css */
+
+.company-content {
+  padding: 120px 0 120px;
+}
 
 .company-img {
   position: relative;
@@ -1350,7 +1354,7 @@
 
 .news-text-cont {
   width: 100%;
-  height: 85px; 이거 늘리면 num 여백 생김
+  height: 85px;
   margin: 83px 0 34px;
   font-family: Pretendard;
   font-size: 19px;

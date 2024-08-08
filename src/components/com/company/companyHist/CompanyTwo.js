@@ -2,7 +2,7 @@ import React from "react";
 
 const CompanyTwo = ({ date, items }) => (
   <div className="company-com-2">
-    <div class="line-dot-2"></div>
+    <div className="line-dot-2"></div>
     <p>{date}</p>
     {items.map((item, index) => (
       <div className="company-s" key={index}>

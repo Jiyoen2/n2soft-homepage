@@ -22,7 +22,7 @@ const data = [
     golink: (
       <>
         <p>
-          큐피드 서비스 <span>바로가기</span>
+          큐피드 서비스 <span>&nbsp;바로가기</span>
           <img
             src={ArrRightRd}
             alt="오른쪽 화살표"

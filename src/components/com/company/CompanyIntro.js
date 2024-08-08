@@ -7,17 +7,19 @@ import CompanyContact from "../company/companyIntro/CompanyContact";
 
 const MainHome = () => {
   return (
-    <div className="company-main">
-      <div>
+    <>
+      <div className="company-main">
         <CompanyOverview />
       </div>
-      <div>
-        <CompanyGoal />
+      <div className="goal-bg">
+        <div className="company-main">
+          <CompanyGoal />
+        </div>
       </div>
-      <div>
+      <div className="company-main">
         <CompanyContact />
       </div>
-    </div>
+    </>
   );
 };
 

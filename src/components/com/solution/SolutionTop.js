@@ -7,18 +7,15 @@ const SolutionTop = ({ setActiveTab, activeTab }) => {
         <h1>SOLUTION</h1>
       </div>
       <div>
-        <div>
-          <div className="top-stick">
-            <div
-              className={`top-menu-1 ${
-                activeTab === "solution" ? "active" : ""
-              }`}
-              onClick={() => setActiveTab("solution")}
-            >
-              솔루션
-            </div>
+        <div className="top-menu-com">
+          <div
+            className={`top-menu-1 ${activeTab === "solution" ? "active" : ""}`}
+            onClick={() => setActiveTab("solution")}
+          >
+            솔루션
           </div>
         </div>
+        <div className="top-stick"></div>
       </div>
     </div>
   );

@@ -5,9 +5,7 @@ const HomeFeature = ({ title, content, image }) => {
     <div className="contents-feature">
       <img src={image} alt="회사 특징 이미지" />
       <h2>{title}</h2>
-      <div className="contents-text">
-        <p>{content}</p>
-      </div>
+      <div className="contents-text">{content}</div>
     </div>
   );
 };

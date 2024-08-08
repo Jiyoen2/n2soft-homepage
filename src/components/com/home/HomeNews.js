@@ -178,8 +178,8 @@ const HomeNews = () => {
         </div>
       </div>
       <div className="news-stick-com">
-        <div class="news-stick-gr">
-          <div class="news-stick-rd"></div>
+        <div className="news-stick-gr">
+          <div className="news-stick-rd"></div>
         </div>
       </div>
     </div>
