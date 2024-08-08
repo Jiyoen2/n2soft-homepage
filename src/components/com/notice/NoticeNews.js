@@ -126,30 +126,32 @@ const HomeNews = () => {
         </h1>
         <p>엔투소프트의 사업 근황과 최신 소식을 알려드립니다.</p>
       </div>
-      <div className="notice-feature">
-        <div className="notice-rect-1">
-          {data.map((News, i) => (
-            <div key={i} className="notice-rect">
-              <NoticeNewsList
-                date={News.date}
-                title={News.title}
-                content={News.content}
-                num={News.num}
-              />
-            </div>
-          ))}
-        </div>
-        <div className="notice-rect-2">
-          {data1.map((News, i) => (
-            <div key={i} className="notice-rect">
-              <NoticeNewsList
-                date={News.date}
-                title={News.title}
-                content={News.content}
-                num={News.num}
-              />
-            </div>
-          ))}
+      <div className="slide-up">
+        <div className="notice-feature">
+          <div className="notice-rect-1">
+            {data.map((News, i) => (
+              <div key={i} className="notice-rect">
+                <NoticeNewsList
+                  date={News.date}
+                  title={News.title}
+                  content={News.content}
+                  num={News.num}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="notice-rect-2">
+            {data1.map((News, i) => (
+              <div key={i} className="notice-rect">
+                <NoticeNewsList
+                  date={News.date}
+                  title={News.title}
+                  content={News.content}
+                  num={News.num}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

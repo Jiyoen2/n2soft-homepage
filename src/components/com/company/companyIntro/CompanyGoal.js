@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CompanyGoalList from "../companyIntro/companyGoal/CompanyGoalList";
 import IcoCompany01 from "../../../../assets/images/ico_company_01.png";
 import IcoCompany02 from "../../../../assets/images/ico_company_02.png";
@@ -106,28 +106,48 @@ const CompanyGoal = () => {
         </h1>
         <p>고객사의 사업 목표를 성공적으로 수행합니다.</p>
       </div>
-      <div className="goal-rec-com">
-        {data.map((Goal, i) => (
-          <div key={i} className="goal-rec">
-            <CompanyGoalList
-              sub={Goal.sub}
-              title={Goal.title}
-              content={Goal.content}
-            />
-          </div>
-        ))}
+      <div className="slide-up">
+        <div className="goal-rec-com">
+          {data.map((Goal, i) => (
+            <GoalItem key={i} {...Goal} />
+          ))}
+        </div>
+        <div className="goal-rec-com">
+          {data1.map((Goal, i) => (
+            <GoalItem key={i} {...Goal} />
+          ))}
+        </div>
       </div>
-      <div className="goal-rec-com">
-        {data1.map((Goal, i) => (
-          <div key={i} className="goal-rec">
-            <CompanyGoalList
-              sub={Goal.sub}
-              title={Goal.title}
-              content={Goal.content}
-            />
-          </div>
-        ))}
-      </div>
+    </div>
+  );
+};
+
+// 애니메이션 적용
+const GoalItem = ({ sub, title, content }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    const rect = ref.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false); // 요소가 뷰포트에서 벗어나면 애니메이션을 다시 시작하도록 설정
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // 초기 렌더링 시 체크
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div ref={ref} className={`goal-rec ${isVisible ? "animate" : ""}`}>
+      <CompanyGoalList sub={sub} title={title} content={content} />
     </div>
   );
 };

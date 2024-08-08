@@ -78,3 +78,45 @@
   text-align: center;
   color: #202020;
 }
+
+/******************** 공통 애니메이션 css ********************/
+
+/* @keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+.slide-up {
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.goal-rec {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.goal-rec.animate {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-up 1s ease forwards;
+}

@@ -17,16 +17,16 @@ import Client15 from "../../../../assets/images/client_15.png";
 import Client16 from "../../../../assets/images/client_16.png";
 import Client17 from "../../../../assets/images/client_17.png";
 import Client18 from "../../../../assets/images/client_18.png";
-// import Client19 from "../../../../assetsimages/client_19.png";
-// import Client20 from "../../../../assetsimages/client_20.png";
-// import Client21 from "../../../../assetsimages/client_21.png";
-// import Client22 from "../../../../assetsimages/client_22.png";
-// import Client23 from "../../../../assetsimages/client_23.png";
-// import Client24 from "../../../../assetsimages/client_24.png";
-// import Client25 from "../../../../assetsimages/client_25.png";
-// import Client26 from "../../../../assetsimages/client_26.png";
-// import Client27 from "../../../../assetsimages/client_27.png";
-// import Client28 from "../../../../assetsimages/client_28.png";
+import Client19 from "../../../../assets/images/client_19.png";
+import Client20 from "../../../../assets/images/client_20.png";
+import Client21 from "../../../../assets/images/client_21.png";
+import Client22 from "../../../../assets/images/client_22.png";
+import Client23 from "../../../../assets/images/client_23.png";
+import Client24 from "../../../../assets/images/client_24.png";
+import Client25 from "../../../../assets/images/client_25.png";
+import Client26 from "../../../../assets/images/client_26.png";
+import Client27 from "../../../../assets/images/client_27.png";
+import Client28 from "../../../../assets/images/client_28.png";
 // import Client29 from "../../../../assetsimages/client_29.png";
 // import Client30 from "../../../../assetsimages/client_30.png";
 // import Client31 from "../../../../assetsimages/client_31.png";
@@ -64,12 +64,6 @@ const CustImg = () => {
           <li className="client-1">
             <img src={Client09} alt="Client" className="Client-image" />
           </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
-          </li>
         </ul>
         <ul className="list2">
           <li className="client-1">
@@ -95,12 +89,6 @@ const CustImg = () => {
           </li>
           <li className="client-1">
             <img src={Client08} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
             <img src={Client09} alt="Client" className="Client-image" />
@@ -167,126 +155,72 @@ const CustImg = () => {
           </li>
         </ul>
       </div>
-      {/* <div className="cust-img-group odd">
+      <div className="cust-img-group odd">
         <ul className="list1">
           <li className="client-1">
-            <img src={Client01} alt="Client" className="Client-image" />
+            <img src={Client19} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client02} alt="Client" className="Client-image" />
+            <img src={Client20} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client03} alt="Client" className="Client-image" />
+            <img src={Client21} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client04} alt="Client" className="Client-image" />
+            <img src={Client22} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client05} alt="Client" className="Client-image" />
+            <img src={Client23} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client06} alt="Client" className="Client-image" />
+            <img src={Client24} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client07} alt="Client" className="Client-image" />
+            <img src={Client25} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client08} alt="Client" className="Client-image" />
+            <img src={Client26} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
+            <img src={Client27} alt="Client" className="Client-image" />
+          </li>
+          <li className="client-1">
+            <img src={Client28} alt="Client" className="Client-image" />
           </li>
         </ul>
         <ul className="list2">
           <li className="client-1">
-            <img src={Client01} alt="Client" className="Client-image" />
+            <img src={Client19} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client02} alt="Client" className="Client-image" />
+            <img src={Client20} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client03} alt="Client" className="Client-image" />
+            <img src={Client21} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client04} alt="Client" className="Client-image" />
+            <img src={Client22} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client05} alt="Client" className="Client-image" />
+            <img src={Client23} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client06} alt="Client" className="Client-image" />
+            <img src={Client24} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client07} alt="Client" className="Client-image" />
+            <img src={Client25} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client08} alt="Client" className="Client-image" />
+            <img src={Client26} alt="Client" className="Client-image" />
           </li>
           <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
+            <img src={Client27} alt="Client" className="Client-image" />
+          </li>
+          <li className="client-1">
+            <img src={Client28} alt="Client" className="Client-image" />
           </li>
         </ul>
       </div>
-      <div className="cust-img-group even">
-        <ul className="list1">
-          <li className="client-1">
-            <img src={Client01} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client02} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client03} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client04} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client05} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client06} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client07} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client08} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
-          </li>
-        </ul>
-        <ul className="list2">
-          <li className="client-1">
-            <img src={Client01} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client02} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client03} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client04} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client05} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client06} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client07} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client08} alt="Client" className="Client-image" />
-          </li>
-          <li className="client-1">
-            <img src={Client09} alt="Client" className="Client-image" />
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 };
