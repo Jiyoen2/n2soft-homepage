@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
-// import { baseUrl } from "./config";
 import ServiceImage1 from "../../../../assets/images/main_service_01.png";
 import ServiceImage2 from "../../../../assets/images/main_service_02.png";
 import ServiceImage3 from "../../../../assets/images/main_service_03.png";
@@ -11,16 +10,23 @@ import ArrRightRd from "../../../../assets/images/arr_right_red.png";
 
 function CarouselSlide() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [updateCount, setUpdateCount] = useState(0);
-  let sliderRef = useRef(null);
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // afterChange: () => setUpdateCount(updateCount + 1),
     beforeChange: (current, next) => setSlideIndex(next),
+  };
+
+  const goToPrev = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const goToNext = () => {
+    sliderRef.current.slickNext();
   };
 
   return (
@@ -38,18 +44,23 @@ function CarouselSlide() {
             </p>
           </div>
           <div className="contents-arr">
-            <img src={ArrLeft} alt="왼쪽 화살표" className="arr-left" />
-            <img src={ArrRight} alt="오른쪽 화살표" className="arr-right" />
+            <img
+              src={ArrLeft}
+              alt="왼쪽 화살표"
+              className="arr-left"
+              onClick={goToPrev}
+            />
+            <img
+              src={ArrRight}
+              alt="오른쪽 화살표"
+              className="arr-right"
+              onClick={goToNext}
+            />
           </div>
         </div>
-        <Slider
-          ref={(slider) => {
-            sliderRef = slider;
-          }}
-          {...settings}
-        >
+        <Slider ref={sliderRef} {...settings}>
           <div className="contents-feature">
-            <img src={ServiceImage1} alt="Service2" />
+            <img src={ServiceImage1} alt="Service1" />
             <h2>통합여신관리 시스템</h2>
             <div className="contents-text">
               <p>금융기관 마다 필수로 사용 되어지는 채권관리를 중심으로 하여</p>
@@ -73,7 +84,7 @@ function CarouselSlide() {
             </div>
           </div>
           <div className="contents-feature">
-            <img src={ServiceImage3} alt="Service2" />
+            <img src={ServiceImage3} alt="Service3" />
             <h2>가상 FAX 시스템</h2>
             <div className="contents-text">
               <p>상담사별 혹은 고객별 가상 FAX번호를 부여하여</p>
@@ -81,7 +92,7 @@ function CarouselSlide() {
             </div>
           </div>
           <div className="contents-feature">
-            <img src={ServiceImage2} alt="Service2" />
+            <img src={ServiceImage4} alt="Service4" />
             <h2>MO 서비스</h2>
             <div className="contents-text">
               <p>문자내용 및 이미지를 전산으로 받아</p>
@@ -91,7 +102,7 @@ function CarouselSlide() {
         </Slider>
       </div>
       <input
-        onChange={(e) => sliderRef.slickGoTo(e.target.value)}
+        onChange={(e) => sliderRef.current.slickGoTo(e.target.value)}
         value={slideIndex}
         type="range"
         min={0}
