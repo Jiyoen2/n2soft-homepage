@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import "../components/css/Common.css";
 import "../components/css/Layout.css";
 import HomeVideo from "../components/com/home/HomeVideo";
-import HomeContents from "../components/com/home/HomeContents";
+// import HomeContents from "../components/com/home/HomeContents";
+import CarouselSlide from "../components/com/home/homeContent/CarouselSlide";
 import HomeCust from "../components/com/home/HomeCust";
 import HomeNews from "../components/com/home/HomeNews";
 import HomeCertifiy from "../components/com/home/HomeCertifiy";
@@ -18,7 +19,7 @@ const MainHome = () => {
         <HomeVideo />
       </div>
       <div>
-        <HomeContents />
+        <CarouselSlide />
       </div>
       <div>
         <HomeCust />
