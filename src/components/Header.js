@@ -29,7 +29,7 @@ const Header = () => {
       }
     } else {
       setBackground("rgba(0, 0, 0, 0)");
-      setColor("#fff");
+      setColor("white");
       setBoxShadow("none");
       setLogo(N2softLogoWhImg);
       if (menu1Ref.current) {
@@ -62,7 +62,11 @@ const Header = () => {
           <li className="menu">
             <Link
               to="/company"
-              style={{ color: activeMenu === "/company" ? "#ff0000" : color }}
+              style={{
+                color: activeMenu === "/company" ? "#ff0000" : color,
+                backgroundColor:
+                  activeMenu === "/company" ? background : "transparent",
+              }}
             >
               COMPANY
             </Link>
@@ -71,7 +75,11 @@ const Header = () => {
           <li className="menu">
             <Link
               to="/solution"
-              style={{ color: activeMenu === "/solution" ? "#ff0000" : color }}
+              style={{
+                color: activeMenu === "/solution" ? "#ff0000" : color,
+                backgroundColor:
+                  activeMenu === "/solution" ? background : "transparent",
+              }}
             >
               SOLUTION
             </Link>
@@ -80,7 +88,11 @@ const Header = () => {
           <li className="menu">
             <Link
               to="/notice"
-              style={{ color: activeMenu === "/notice" ? "#ff0000" : color }}
+              style={{
+                color: activeMenu === "/notice" ? "#ff0000" : color,
+                backgroundColor:
+                  activeMenu === "/notice" ? background : "transparent",
+              }}
             >
               NOTICE
             </Link>
@@ -90,7 +102,11 @@ const Header = () => {
         <div className="menu1" ref={menu1Ref}>
           <Link
             to="/contact"
-            style={{ color: activeMenu === "/contact" ? "#ff0000" : color }}
+            style={{
+              color: activeMenu === "/contact" ? "#ff0000" : color,
+              backgroundColor:
+                activeMenu === "/contact" ? background : "transparent",
+            }}
           >
             CONTACT US
           </Link>

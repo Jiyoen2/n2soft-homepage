@@ -51,11 +51,8 @@
   height: 40px;
 }
 
-.header .menu {
-  margin: 0 24px;
-}
-
 .header .menu1 {
+  position: relative;
   width: 108px;
   height: 38px;
   display: flex;
@@ -68,10 +65,6 @@
 .header .menu {
   position: relative;
   margin: 0 24px;
-}
-
-.header .menu1 {
-  position: relative;
 }
 
 .header .menu a,
@@ -99,17 +92,3 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* .Rectangle-3498 {
-  width: 20px;
-  height: 2px;
-  margin: 3px 630px 25px 334px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  background-color: #f00;
-} */
-
-/* @media (min-width: 1024px) and (max-width: 1366px) {
-  .header ul {
-    padding-right: 0;
-  }
-} */

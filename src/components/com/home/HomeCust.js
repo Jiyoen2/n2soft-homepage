@@ -3,8 +3,8 @@ import HomeCustImg from "./homeCust/HomeCustImg";
 
 const HomeCust = () => {
   return (
-    <div className="main-common">
-      <div className="cust-main">
+    <div className="cust-main">
+      <div className="cust-com">
         <div className="cust-tit">
           <h2>
             <span>OUR </span>

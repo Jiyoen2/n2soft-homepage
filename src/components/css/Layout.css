@@ -214,6 +214,10 @@
 /******************** HomeCust.css ********************/
 
 .cust-main {
+  padding-bottom: 200px;
+}
+
+.cust-com {
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 200px;
@@ -367,6 +371,17 @@
   background-attachment: fixed;
   width: 100%;
   height: 754px;
+}
+
+.news-main::before,
+.news-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: inherit;
+  filter: blur(50px);
 }
 
 .news-feature {
@@ -675,6 +690,17 @@
   /* background-attachment: fixed; */
   width: 100%;
   height: 844px;
+}
+
+.goal-bg::before,
+.goal-bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: inherit;
+  filter: blur(50px);
 }
 
 .goal-tit-1 {
@@ -1316,13 +1342,18 @@
   /* width: 100%; */
   /* height: auto; */
   margin: 0 15px 60px 0;
-  padding: 50px 35px 50px 35px;
   border-radius: 30px;
-  border: solid 3px #d31f24;
+  padding: 60px 44px 60px 41px;
+  border-radius: 30px;
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
 }
 
-/* .news-text-date {
+.notice-rect:hover {
+  border: solid 3px #d31f24; /* 호버 시 테두리 색상 및 두께 설정 */
+}
+
+.noti-text-date {
   width: 100%;
   height: 34px;
   margin: 0 0 30px 3px;
@@ -1337,7 +1368,7 @@
   color: #da1c3e;
 }
 
-.news-text-tit {
+.noti-text-tit {
   width: 100%;
   height: 99px;
   margin-top: 30px;
@@ -1352,7 +1383,7 @@
   color: #101010;
 }
 
-.news-text-cont {
+.noti-text-cont {
   width: 100%;
   height: 85px;
   margin: 83px 0 34px;
@@ -1367,7 +1398,7 @@
   color: #101010;
 }
 
-.news-text-num {
+.noti-text-num {
   width: 100%;
   height: 34px;
   font-family: Pretendard;
@@ -1379,7 +1410,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #bdbdbd;
-} */
+}
 
 /******************** MainContactUs.css ********************/
 
