@@ -24,6 +24,51 @@ function HomeNewsCarousel() {
     sliderRef.current.slickNext();
   };
 
+  const slides = [
+    {
+      date: "2024.05.17",
+      title: "스마트저축은행 여신관리시스템 고도화 프로젝트 수주",
+      content:
+        "사용자에 최적화된 화면 제공과 엔투소프트의 기술력이 더하여 소비자 채권관리 시스템의 High-end 버전을 목표로 합니다.",
+      num: "01",
+    },
+    {
+      date: "2024.04.25",
+      title: "상상인플러스저축은행 통합여신관리 시스템 개발 수주",
+      content:
+        "통합여신관리시스템을 n.Tree솔루션으로 전환하여 소비자 채권관리에 업무효율성 향상을 목표로 합니다.",
+      num: "02",
+    },
+    {
+      date: "2024.04.13",
+      title: "HB저축은행 NPL 채권관리시스템 구축",
+      content:
+        "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+      num: "03",
+    },
+    {
+      date: "2024.03.17",
+      title: "HB저축은행 NPL 채권관리시스템 구축",
+      content:
+        "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+      num: "04",
+    },
+    {
+      date: "2024.02.15",
+      title: "HB저축은행 NPL 채권관리시스템 구축",
+      content:
+        "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+      num: "05",
+    },
+    {
+      date: "2024.01.20",
+      title: "HB저축은행 NPL 채권관리시스템 구축",
+      content:
+        "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+      num: "06",
+    },
+  ];
+
   return (
     <div className="slider-container-2">
       <div className="news-main">
@@ -40,75 +85,34 @@ function HomeNewsCarousel() {
             <div className="news-arr">
               <img
                 src={ArrLeft}
-                alt="이전 슬라이드"
+                alt="더보기"
                 className="newsArrLeft"
                 onClick={goToPrev}
               />
               <img
                 src={ArrRight}
-                alt="다음 슬라이드"
+                alt="더보기"
                 className="newsArrRight"
                 onClick={goToNext}
               />
             </div>
           </div>
           <Slider ref={sliderRef} {...settings}>
-            {[
-              {
-                date: "2024.05.17",
-                title: "스마트저축은행 여신관리시스템 고도화 프로젝트 수주",
-                content:
-                  "사용자에 최적화된 화면 제공과 엔투소프트의 기술력이 더하여 소비자 채권관리 시스템의 High-end 버전을 목표로 합니다.",
-                num: "01",
-              },
-              {
-                date: "2024.04.25",
-                title: "상상인플러스저축은행 통합여신관리 시스템 개발 수주",
-                content:
-                  "통합여신관리시스템을 n.Tree솔루션으로 전환하여 소비자 채권관리에 업무효율성 향상을 목표로 합니다.",
-                num: "02",
-              },
-              {
-                date: "2024.04.13",
-                title: "HB저축은행 NPL 채권관리시스템 구축",
-                content:
-                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
-                num: "03",
-              },
-              {
-                date: "2024.03.17",
-                title: "HB저축은행 NPL 채권관리시스템 구축",
-                content:
-                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
-                num: "04",
-              },
-              {
-                date: "2024.02.15",
-                title: "HB저축은행 NPL 채권관리시스템 구축",
-                content:
-                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
-                num: "05",
-              },
-              {
-                date: "2024.01.20",
-                title: "HB저축은행 NPL 채권관리시스템 구축",
-                content:
-                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
-                num: "06",
-              },
-            ].map((item, index) => (
+            {slides.map((item, index) => (
               <div
                 key={index}
                 className={`rectangle-com ${
-                  slideIndex === index ? "first-slide" : ""
+                  slideIndex === index ? "first-slide" : "tilted-slide"
                 }`}
               >
                 <div className="rectangle">
                   <div className="news-text-date">{item.date}</div>
                   <div className="news-text-tit">
-                    <p>{item.title.split(" ")[0]}</p>
+                    {item.title}
+                    {/* <p>{item.title.split(" ")[0]}</p>
                     <p>{item.title.split(" ")[1]}</p>
                     <p>{item.title.split(" ")[2]}</p>
+                    <p>{item.title.split(" ")[3]}</p> */}
                     <div className="news-text-cont">
                       <p>{item.content}</p>
                     </div>
@@ -125,7 +129,7 @@ function HomeNewsCarousel() {
           value={slideIndex}
           type="range"
           min={0}
-          max={5}
+          max={slides.length - 1}
         />
       </div>
     </div>

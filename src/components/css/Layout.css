@@ -414,7 +414,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .news-com {
   float: left;
-  width: calc(100% - 1250px); /* rectangle-com의 너비를 고려하여 조정 */
+  width: calc(100% - 1240px); /* rectangle-com의 너비를 고려하여 조정 */
   margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
 }
 
@@ -426,6 +426,13 @@ input[type="range"]::-webkit-slider-thumb {
 .first-slide .rectangle {
   border: solid 3px #d31f24;
   box-shadow: none;
+}
+
+.rectangle-com:not(.first-slide) .rectangle {
+  transform: perspective(2000px) rotateY(-25deg) scaleY(0.92); /* 좌측으로 기울이기 */
+  transform-origin: left center; /* 좌측 중앙을 기준점으로 설정 */
+  transition: transform 0.3s ease-in-out;
+  /* width: 416px; */
 }
 
 .news-arr {
