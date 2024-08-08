@@ -420,7 +420,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 .rectangle-com {
   float: left;
-  width: 400px; /* 원하는 너비로 조정 */
+  width: 400px;
+}
+
+.first-slide .rectangle {
+  border: solid 3px #d31f24;
+  box-shadow: none;
 }
 
 .news-arr {
@@ -497,7 +502,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 0 20px 0 0;
   padding: 60px 43px 60px 42px;
   border-radius: 30px;
-  border: solid 3px #d31f24;
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
 }
 

@@ -1,12 +1,7 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
-// import ServiceImage1 from "../../../assets/images/main_service_01.png";
-// import ServiceImage2 from "../../../assets/images/main_service_02.png";
-// import ServiceImage3 from "../../../assets/images/main_service_03.png";
-// import ServiceImage4 from "../../../assets/images/main_service_04.png";
 import ArrRight from "../../../assets/images/arr_right.png";
 import ArrLeft from "../../../assets/images/arr_left.png";
-import ArrRightRd from "../../../assets/images/arr_right_red.png";
 
 function HomeNewsCarousel() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -22,11 +17,11 @@ function HomeNewsCarousel() {
   };
 
   const goToPrev = () => {
-    sliderRef.current.slickPrev(); // 슬라이드를 이전으로 이동
+    sliderRef.current.slickPrev();
   };
 
   const goToNext = () => {
-    sliderRef.current.slickNext(); // 슬라이드를 다음으로 이동
+    sliderRef.current.slickNext();
   };
 
   return (
@@ -45,117 +40,83 @@ function HomeNewsCarousel() {
             <div className="news-arr">
               <img
                 src={ArrLeft}
-                alt="이전"
+                alt="이전 슬라이드"
                 className="newsArrLeft"
                 onClick={goToPrev}
               />
               <img
                 src={ArrRight}
-                alt="다음"
+                alt="다음 슬라이드"
                 className="newsArrRight"
                 onClick={goToNext}
               />
             </div>
           </div>
           <Slider ref={sliderRef} {...settings}>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.05.17</div>
-                <div className="news-text-tit">
-                  <p>스마트저축은행</p>
-                  <p>여신관리시스템 고도화</p>
-                  <p>프로젝트 수주</p>
-                  <div className="news-text-cont">
-                    <p>
-                      사용자에 최적화된 화면 제공과 엔투소프트의 기술력이 더하여
-                      소비자 채권관리 시스템의 High-end 버전을 목표로 합니다.
-                    </p>
+            {[
+              {
+                date: "2024.05.17",
+                title: "스마트저축은행 여신관리시스템 고도화 프로젝트 수주",
+                content:
+                  "사용자에 최적화된 화면 제공과 엔투소프트의 기술력이 더하여 소비자 채권관리 시스템의 High-end 버전을 목표로 합니다.",
+                num: "01",
+              },
+              {
+                date: "2024.04.25",
+                title: "상상인플러스저축은행 통합여신관리 시스템 개발 수주",
+                content:
+                  "통합여신관리시스템을 n.Tree솔루션으로 전환하여 소비자 채권관리에 업무효율성 향상을 목표로 합니다.",
+                num: "02",
+              },
+              {
+                date: "2024.04.13",
+                title: "HB저축은행 NPL 채권관리시스템 구축",
+                content:
+                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+                num: "03",
+              },
+              {
+                date: "2024.03.17",
+                title: "HB저축은행 NPL 채권관리시스템 구축",
+                content:
+                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+                num: "04",
+              },
+              {
+                date: "2024.02.15",
+                title: "HB저축은행 NPL 채권관리시스템 구축",
+                content:
+                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+                num: "05",
+              },
+              {
+                date: "2024.01.20",
+                title: "HB저축은행 NPL 채권관리시스템 구축",
+                content:
+                  "NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼 수 있도록 시스템을 구축합니다.",
+                num: "06",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`rectangle-com ${
+                  slideIndex === index ? "first-slide" : ""
+                }`}
+              >
+                <div className="rectangle">
+                  <div className="news-text-date">{item.date}</div>
+                  <div className="news-text-tit">
+                    <p>{item.title.split(" ")[0]}</p>
+                    <p>{item.title.split(" ")[1]}</p>
+                    <p>{item.title.split(" ")[2]}</p>
+                    <div className="news-text-cont">
+                      <p>{item.content}</p>
+                    </div>
+                    <div className="news-text-num">{item.num}</div>
                   </div>
-                  <div className="news-text-num">01</div>
                 </div>
               </div>
-            </div>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.04.25</div>
-                <div className="news-text-tit">
-                  <p>상상인플러스저축은행</p>
-                  <p> 통합여신관리 시스템</p>
-                  <p> 개발 수주</p>
-                  <div className="news-text-cont">
-                    <p>
-                      통합여신관리시스템을 n.Tree솔루션으로 전환하여 소비자
-                      채권관리에 업무효율성 향상을 목표로 합니다.
-                    </p>
-                  </div>
-                  <div className="news-text-num">02</div>
-                </div>
-              </div>
-            </div>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.04.13</div>
-                <div className="news-text-tit">
-                  <p>HB저축은행</p>
-                  <p> NPL 채권관리시스템 구축</p>
-                  <div className="news-text-cont">
-                    <p>
-                      NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼
-                      수 있도록 시스템을 구축합니다.
-                    </p>
-                  </div>
-                  <div className="news-text-num">03</div>
-                </div>
-              </div>
-            </div>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.03.17</div>
-                <div className="news-text-tit">
-                  <p>HB저축은행</p>
-                  <p> NPL 채권관리시스템 구축</p>
-                  <div className="news-text-cont">
-                    <p>
-                      NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼
-                      수 있도록 시스템을 구축합니다.
-                    </p>
-                  </div>
-                  <div className="news-text-num">04</div>
-                </div>
-              </div>
-            </div>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.02.15</div>
-                <div className="news-text-tit">
-                  <p>HB저축은행</p>
-                  <p> NPL 채권관리시스템 구축</p>
-                  <div className="news-text-cont">
-                    <p>
-                      NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼
-                      수 있도록 시스템을 구축합니다.
-                    </p>
-                  </div>
-                  <div className="news-text-num">05</div>
-                </div>
-              </div>
-            </div>
-            <div className="rectangle-com">
-              <div className="rectangle">
-                <div className="news-text-date">2024.01.20</div>
-                <div className="news-text-tit">
-                  <p>HB저축은행</p>
-                  <p> NPL 채권관리시스템 구축</p>
-                  <div className="news-text-cont">
-                    <p>
-                      NPL채권관리를 전산화 하여 최소한의 인력으로 최대 효율을 낼
-                      수 있도록 시스템을 구축합니다.
-                    </p>
-                  </div>
-                  <div className="news-text-num">06</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </Slider>
         </div>
         <input
