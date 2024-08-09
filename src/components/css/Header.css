@@ -72,23 +72,3 @@
   text-decoration: none;
   color: inherit;
 }
-
-.stick-header {
-  width: 20px;
-  height: 2px;
-  background-color: #ff0000;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.stick-header-1 {
-  width: 20px;
-  height: 2px;
-  background-color: #ff0000;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-}

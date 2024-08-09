@@ -176,7 +176,7 @@
   color: #424242;
 }
 
-/****************************************************/
+/*************************** 캐러셀 - 1 *************************/
 
 .slider-container {
   position: relative;
@@ -417,6 +417,14 @@ input[type="range"]::-webkit-slider-thumb {
   margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
 }
 
+@media (min-width: 2331px) {
+  .news-com {
+    float: left;
+    width: calc(100% - 1700px); /* rectangle-com의 너비를 고려하여 조정 */
+    margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
+  }
+}
+
 .rectangle-com {
   float: left;
   width: 400px;
@@ -428,8 +436,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .rectangle-com:not(.first-slide) .rectangle {
-  transform: perspective(2000px) rotateY(-25deg) scaleY(0.92); /* 좌측으로 기울이기 */
-  transform-origin: left center; /* 좌측 중앙을 기준점으로 설정 */
+  transform: perspective(2000px) rotateY(-25deg) scaleY(0.92);
+  transform-origin: left center;
   transition: transform 0.3s ease-in-out;
   /* width: 416px; */
 }
@@ -594,7 +602,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #d73a3e;
 }
 
-/***************************캐러셀2*************************/
+/*************************** 캐러셀 - 2 *************************/
 
 /* 새로운 캐러셀 스타일 */
 .slider-container-2 {
@@ -605,30 +613,29 @@ input[type="range"]::-webkit-slider-thumb {
   overflow: hidden;
 }
 
-/* .slick-slide-2 {
-  display: flex;
-  justify-content: center;
-}
-
-.slick-list-2 {
-  overflow: hidden;
-  border-radius: 8px; 
-}
-
-.slick-track-2 {
-  display: flex;
-} */
-
 /* 전체 슬라이더 스타일 */
 input[type="range"].slider-range-2 {
   -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
   width: 100%; /* 슬라이더의 너비 */
   max-width: 1280px; /* 최대 너비 */
   margin: 0 auto; /* 중앙 정렬 */
-  padding-left: 360px;
+  padding-left: 375px;
   padding-right: 130px;
   background: transparent;
   display: block;
+}
+
+@media (min-width: 2331px) {
+  input[type="range"].slider-range-2 {
+    -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
+    width: 100%; /* 슬라이더의 너비 */
+    max-width: 1280px; /* 최대 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding-left: 240px;
+    padding-right: 130px;
+    background: transparent;
+    display: block;
+  }
 }
 
 /* 슬라이더 트랙(슬라이더 바) 스타일 */
