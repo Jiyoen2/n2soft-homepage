@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CompanyOne from "../company/companyHist/CompanyOne";
 import CompanyTwo from "../company/companyHist/CompanyTwo";
 
 const CompanyHistory = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial call to set scroll position
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const historyData = [
     {
       date: "2024",
@@ -213,7 +230,23 @@ const CompanyHistory = () => {
               />
             ))}
           </div>
-          <div className="line-long"></div>
+          <div className="line-long">
+            <div
+              className="line-red"
+              style={{
+                height: `${Math.max(0, scrollY * 0.995)}px`, // 스크롤 값에 따라 height 조절
+              }}
+            >
+              <div
+                className="cir-big"
+                style={{
+                  transform: `translateY(${scrollY * 0.5}px)`, // 스크롤 비율에 따라 이동
+                }}
+              >
+                <div class="cir-sm"></div>
+              </div>
+            </div>
+          </div>
           <div className="timeline-items2">
             <div style={{ paddingBottom: "266px" }}></div>
             {historyData2.map((data, index) => (

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import NoticeNewsList from "./NoticeNews/NoticeNewsList";
 
 const data = [
@@ -129,31 +129,51 @@ const HomeNews = () => {
       <div className="slide-up">
         <div className="notice-feature">
           <div className="notice-rect-1">
-            {data.map((News, i) => (
+            {data.map((news, i) => (
               <div key={i} className="notice-rect">
-                <NoticeNewsList
-                  date={News.date}
-                  title={News.title}
-                  content={News.content}
-                  num={News.num}
-                />
+                <NewItem key={i} {...news} />
               </div>
             ))}
           </div>
           <div className="notice-rect-2">
-            {data1.map((News, i) => (
+            {data1.map((news, i) => (
               <div key={i} className="notice-rect">
-                <NoticeNewsList
-                  date={News.date}
-                  title={News.title}
-                  content={News.content}
-                  num={News.num}
-                />
+                <NewItem key={i} {...news} />
               </div>
             ))}
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+// 애니메이션 적용
+const NewItem = ({ date, title, content, num }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    const rect = ref.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false); // 요소가 뷰포트에서 벗어나면 애니메이션을 다시 시작하도록 설정
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // 초기 렌더링 시 체크
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div ref={ref} className={`ani-rec ${isVisible ? "animate" : ""}`}>
+      <NoticeNewsList date={date} title={title} content={content} num={num} />
     </div>
   );
 };

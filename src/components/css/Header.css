@@ -37,7 +37,6 @@
   z-index: 100;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -51,24 +50,70 @@
   height: 40px;
 }
 
-.header .menu1 {
-  position: relative;
-  width: 108px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
+.menu1 {
+  font-family: Pretendard;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu2 {
+  font-family: Pretendard;
+  background-color: #f5f5f5;
 }
 
 .header .menu {
   position: relative;
   margin: 0 24px;
+  font-weight: 500;
 }
 
 .header .menu a,
 .header .menu1 a {
+  font-weight: 600;
   text-decoration: none;
   color: inherit;
+}
+
+.header .menu2 a {
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+.header .menu a:hover {
+  color: #bc1d22 !important;
+}
+
+.header .menu1:hover {
+  background-color: #bc1d22;
+}
+
+.header .menu1:hover span {
+  color: #fff !important;
+}
+
+.header .menu2:hover {
+  background-color: #bc1d22;
+}
+
+.header .menu2:hover span {
+  color: #fff !important;
+}
+
+/* .stick-header {
+  width: 20px;
+  height: 2px;
+  background-color: #ff0000;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+.stick-header-1 {
+  /* width: 20px; */
+  /* height: 2px; */
+  background-color: white;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }

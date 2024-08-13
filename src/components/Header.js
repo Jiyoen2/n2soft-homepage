@@ -6,45 +6,142 @@ import N2softLogoRdImg from "../assets/images/N2SOFTlogo-Rd.png";
 
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
+  const [color, setColor] = useState("white");
+  const [boxShadow, setBoxShadow] = useState("none");
+  const [activeMenu, setActiveMenu] = useState("");
+  const [logo, setLogo] = useState(N2softLogoWhImg);
+  const [isScroll, setIsScroll] = useState("menu1");
 
-  const handleScroll = () => {
+  const location = useLocation();
+  const menu1Ref = useRef(null);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    setActiveMenu(location.pathname);
+  }, [location]);
+
+  const updateStyles = () => {
     if (window.scrollY > 50) {
       setBackground("#FFFFFF");
+      setColor("black");
+      setBoxShadow("0 2px 6px rgba(0, 0, 0, 0.12)");
+      setLogo(N2softLogoRdImg);
+      setIsScroll("menu2");
     } else {
       setBackground("rgba(0, 0, 0, 0)");
+      setColor("white");
+      setBoxShadow("none");
+      setLogo(N2softLogoWhImg);
+      setIsScroll("menu1");
     }
+  };
+
+  const handleScroll = () => {
+    updateStyles();
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    updateStyles();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
+
+  useEffect(() => {
+    updateStyles();
+  }, [activeMenu]);
+
   return (
     <header
       className="header"
+      ref={headerRef}
       style={{
         backgroundColor: background,
+        color: color,
+        boxShadow: boxShadow,
       }}
     >
       <div className="header-com">
         <Link to="/" className="logo-link">
-          <img src={N2softLogoRdImg} alt="N2soft 로고" className="logo-image" />
+          <img src={logo} alt="N2soft 로고" className="logo-image" />
         </Link>
         <ul className="menu-li">
           <li className="menu">
-            <Link to="/company">COMPANY</Link>
+            <Link
+              to="/company"
+              style={{
+                color: activeMenu === "/company" ? "#ff0000" : color,
+                backgroundColor:
+                  activeMenu === "/company" ? background : "transparent",
+              }}
+              onClick={() => setActiveMenu("/company")}
+            >
+              COMPANY
+            </Link>
+            {activeMenu === "/company" && <div className="stick-header"></div>}
           </li>
           <li className="menu">
-            <Link to="/solution">SOLUTION</Link>
+            <Link
+              to="/solution"
+              style={{
+                color: activeMenu === "/solution" ? "#bc1d22" : color,
+                backgroundColor:
+                  activeMenu === "/solution" ? background : "transparent",
+              }}
+              onClick={() => setActiveMenu("/solution")}
+            >
+              SOLUTION
+            </Link>
+            {activeMenu === "/solution" && <div className="stick-header"></div>}
           </li>
           <li className="menu">
-            <Link to="/notice">NOTICE</Link>
+            <Link
+              to="/notice"
+              style={{
+                color: activeMenu === "/notice" ? "#bc1d22" : color,
+                backgroundColor:
+                  activeMenu === "/notice" ? background : "transparent",
+              }}
+              onClick={() => setActiveMenu("/notice")}
+            >
+              NOTICE
+            </Link>
+            {activeMenu === "/notice" && <div className="stick-header"></div>}
           </li>
         </ul>
-        <div className="menu1">
-          <Link to="/contact">CONTACT US</Link>
+        <div className={isScroll} ref={menu1Ref}>
+          <Link
+            to="/contact"
+            style={{
+              textDecoration: "none",
+            }}
+            onClick={() => setActiveMenu("/contact")}
+          >
+            <div
+              style={{
+                position: "relative",
+                width: "109px",
+                height: "37px",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                padding: "10px",
+                fontFamily: "Pretendard",
+                backgroundColor:
+                  activeMenu === "/contact" ? "#bc1d22" : "transparent",
+              }}
+            >
+              <span
+                style={{
+                  color: activeMenu === "/contact" ? "#fff" : color,
+                }}
+              >
+                CONTACT US
+              </span>
+            </div>
+          </Link>
+          {activeMenu === "/contact" && <div className="stick-header-1"></div>}
         </div>
       </div>
     </header>

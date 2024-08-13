@@ -41,7 +41,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  bottom: -52px;
+  bottom: -53px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -109,6 +109,18 @@
   }
 }
 
+.ani-rec {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.ani-rec.animate {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-up 1s ease forwards;
+}
+
 .goal-rec {
   opacity: 0;
   transform: translateY(20px);
@@ -116,6 +128,18 @@
 }
 
 .goal-rec.animate {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-up 1s ease forwards;
+}
+
+.contactus-main {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contactus-main.animate {
   opacity: 1;
   transform: translateY(0);
   animation: slide-up 1s ease forwards;

@@ -6,13 +6,12 @@
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
-  padding: 284px 516px 282.7px 516px;
+  padding: 284px 516px 0 516px;
   /* background-color: rgba(217, 217, 217, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 900px;
-  /* overflow: hidden; */
 }
 
 .video-main video {
@@ -55,8 +54,33 @@
 .video-stick {
   width: 32px;
   height: 4px;
-  background: #fff;
+  padding: 0.3px;
   margin: 56px 0 60px 0;
+  background: #fff;
+}
+
+.scroll {
+  width: 74px;
+  height: 34px;
+  margin-top: 188px;
+  font-family: SpoqaHanSansNeo;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.video-stick-wh {
+  width: 3px;
+  height: 50px;
+  padding-bottom: 1px;
+  margin: 10px 34px 0 37px;
+  z-index: 1;
+  background: #fff;
 }
 
 /* HomeContents.css */
@@ -349,7 +373,6 @@ input[type="range"]::-webkit-slider-thumb {
     }
     li {
       list-style: none;
-      /* line-height: 100px; */
       text-align: center;
       color: #fff;
     }
@@ -378,8 +401,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .client-1 img {
   padding-left: 20px;
-  /* width: 300px; */
-  /* height: 150px; */
 }
 
 /******************** HomeNews.css ********************/
@@ -394,19 +415,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 754px;
 }
 
-/* .news-main::before,
-.news-main::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: inherit;
-  filter: blur(50px);
-} */
-
 .news-feature {
-  /* display: flex; */
   position: relative;
   padding: 100px 0 0 311.5px;
 }
@@ -414,7 +423,7 @@ input[type="range"]::-webkit-slider-thumb {
 .news-com {
   float: left;
   width: calc(100% - 1240px); /* rectangle-com의 너비를 고려하여 조정 */
-  margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
+  margin-right: 20px;
 }
 
 @media (min-width: 2331px) {
@@ -439,7 +448,6 @@ input[type="range"]::-webkit-slider-thumb {
   transform: perspective(2000px) rotateY(-25deg) scaleY(0.92);
   transform-origin: left center;
   transition: transform 0.3s ease-in-out;
-  /* width: 416px; */
 }
 
 .news-arr {
@@ -447,7 +455,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 200px;
   display: flex;
   justify-content: space-between;
-  width: 20px; /* 버튼 사이 간격 조정 */
+  width: 20px;
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -487,7 +495,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .news-tit p {
-  /* font-size: 23.8px; */
   width: 100%;
   font-family: Pretendard;
   font-size: 28px;
@@ -505,13 +512,13 @@ input[type="range"]::-webkit-slider-thumb {
   width: 100%;
   margin: 0;
   padding-bottom: 60px;
-  overflow-x: hidden; /* 가로 스크롤을 숨깁니다 */
-  position: relative; /* position 속성 추가 */
-  z-index: 1; /* z-index 값을 높여서 news-feature 위에 표시되도록 설정 */
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .rectangle {
-  min-width: 390px; /* min-width를 사용하여 크기 고정 */
+  min-width: 390px;
   height: 506px;
   margin: 0 20px 0 0;
   padding: 60px 35px 60px 35px;
@@ -581,9 +588,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .news-stick-com {
-  /* padding: 0 311.5px 84px 670px; */
-  /* max-width: 1280px;
-  margin: 0 auto; */
   max-width: 1280px;
   margin: 0 auto;
   margin-right: 311.5px;
@@ -675,7 +679,6 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* text-align: center; */
   color: #212121;
 }
 
@@ -689,7 +692,6 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* text-align: center; */
   color: #212121;
   font-weight: 500;
 }
@@ -714,23 +716,59 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
 }
 
 .certi-list img {
-  width: 100%;
+  width: 305px;
   height: 442px;
-  margin-bottom: 30px;
+  margin: 0 10px 30px 10px;
+  gap: 20px;
   border-radius: 10px;
   border: solid 1px #bdbdbd;
 }
 
-/* .specialStyle {
-  width: 310px;
-  height: 450px;
-  flex-grow: 0;
-  margin: 60px 15px 32px 20px;
-  padding: 211px 58px 215px 52px;
+.detail-com {
+  display: flex;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 305px;
+  height: 442px;
+  margin: 0 10px 30px 10px;
+  display: flex;
+  font-family: Pretendard;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   border: solid 1px #bdbdbd;
   background-color: rgba(0, 0, 0, 0.5);
-}; */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certi-ani-rec.animate {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slide-up 1s ease forwards;
+}
+
+.certi-ani-rec {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.certi-ani-rec:hover .overlay-text {
+  opacity: 1;
+}
 
 /******************** MainCompany.css ********************/
 
@@ -802,7 +840,6 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  /* background-attachment: fixed; */
   width: 100%;
   height: 844px;
 }
@@ -1008,11 +1045,6 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   color: #fff;
 }
 
-/* .map-button .map-button-text {
-  position: relative;
-  z-index: 2;
-} */
-
 .contact-stick {
   width: 26px;
   height: 2px;
@@ -1184,7 +1216,7 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
 .timeline-container {
   display: flex;
   align-items: flex-start;
-  position: relative; /* 타임라인 컨테이너를 기준으로 위치 설정 */
+  position: relative;
 }
 
 .timeline-items,
@@ -1194,21 +1226,48 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
 }
 
 .timeline-items2 {
-  padding-left: 78px; /* 기존 padding 유지 */
+  padding-left: 78px;
 }
 
-/* 중간의 선을 위한 스타일 */
 .line-long {
   position: absolute;
   left: 50%;
   margin-top: 60px;
   width: 2px;
   height: 100%;
-  height: calc(100% - 60px);
+  /* height: calc(100% - 60px); */
   background-color: #cdcdcd;
 }
+.line-red {
+  position: absolute;
+  left: 49%;
+  width: 2px;
+  background-color: #bc1d22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+.cir-big {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: rgba(188, 29, 34, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.2s ease;
+}
 
-/* 각 타임라인 항목의 스타일 */
+.cir-sm {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #bc1d22;
+}
+
 .line-dot-1 {
   width: 100%;
   height: 1px;
@@ -1469,11 +1528,14 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   padding: 60px 44px 60px 41px;
   border-radius: 30px;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.16);
+  border: solid 3px transparent;
+  transition: border 0.3s ease;
   background-color: #fff;
 }
 
 .notice-rect:hover {
   border: solid 3px #d31f24;
+  box-shadow: none;
 }
 
 .noti-text-date {

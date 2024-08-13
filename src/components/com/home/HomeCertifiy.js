@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import HomeCertiImg from "./homeCerti/HomeCertiImg";
 import Crti01 from "../../../assets/images/crti_01.jpg";
 import Crti02 from "../../../assets/images/crti_02.jpg";
@@ -10,30 +10,18 @@ import Crti07 from "../../../assets/images/crti_07.jpg";
 import Crti08 from "../../../assets/images/crti_08.jpg";
 
 const data = [
-  { image: Crti01 },
-  { image: Crti02 },
-  { image: Crti03 },
-  { image: Crti04 },
+  { image: Crti01, text: "혁신성장형 벤처기업 인증" },
+  { image: Crti02, text: "기술연구소 인증서" },
+  { image: Crti03, text: "한국산업기술진흥협회 회원증" },
+  { image: Crti04, text: "강소기업확인서" },
 ];
 
 const data1 = [
-  { image: Crti05 },
-  { image: Crti06 },
-  { image: Crti07 },
-  { image: Crti08 },
+  { image: Crti05, text: "특허증" },
+  { image: Crti06, text: "경영혁신 중소기업 확인서" },
+  { image: Crti07, text: "2020 기술역량우수기업인증서" },
+  { image: Crti08, text: "ISO27001 인증" },
 ];
-
-const specialStyle = {
-  width: "100%",
-  height: "450px",
-  borderRadius: "10px",
-  border: "solid 1px #bdbdbd",
-  backgroundColor: "black",
-  boxShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)",
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  // zIndex: 10, // 앞으로 오도록 설정
-  // position: "relative", // z-index와 함께 사용
-};
 
 const HomeCertifiy = () => {
   return (
@@ -44,21 +32,56 @@ const HomeCertifiy = () => {
           CERTIFICATION
         </h2>
         <p>주요 기술에 대한 특허와 인증서를 보유하고 있습니다</p>
+        <div className="detail-com">
+          {data.map((certi, i) => (
+            <CertItem key={i} image={certi.image}>
+              {certi.text}
+            </CertItem>
+          ))}
+        </div>
+        <div className="detail-com">
+          {data1.map((certi, i) => (
+            <CertItem key={i} image={certi.image}>
+              {certi.text}
+            </CertItem>
+          ))}
+        </div>
       </div>
-      <div className="certi-list-com">
-        {data.map((certi, i) => (
-          <HomeCertiImg
-            key={i}
-            image={certi.image}
-            style={certi.image === Crti01 ? specialStyle : {}}
-          />
-        ))}
-      </div>
-      <div className="certi-list-com">
-        {data1.map((certi, i) => (
-          <HomeCertiImg key={i} image={certi.image} />
-        ))}
-      </div>
+    </div>
+  );
+};
+
+// 애니메이션 적용
+const CertItem = ({ image, children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  const handleScroll = () => {
+    const rect = ref.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`certi-ani-rec ${isVisible ? "animate" : ""}`}
+      style={{ position: "relative" }}
+    >
+      <HomeCertiImg image={image} />
+      {children && <div className="overlay-text">{children}</div>}
     </div>
   );
 };
