@@ -11,7 +11,6 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
   const [isScroll, setIsScroll] = useState("menu1");
-  const [opacity, setOpacity] = useState("");
 
   const location = useLocation();
   const menu1Ref = useRef(null);
@@ -21,7 +20,7 @@ const Header = () => {
     setActiveMenu(location.pathname);
   }, [location]);
 
-  const updateStyles = () => {
+  const handleScroll = () => {
     if (window.scrollY > 50) {
       setBackground("#FFFFFF");
       setColor("black");
@@ -37,21 +36,12 @@ const Header = () => {
     }
   };
 
-  const handleScroll = () => {
-    updateStyles();
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    updateStyles();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
-
-  useEffect(() => {
-    updateStyles();
-  }, [activeMenu]);
+  }, []);
 
   return (
     <header
