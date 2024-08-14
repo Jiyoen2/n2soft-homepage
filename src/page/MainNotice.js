@@ -20,7 +20,6 @@ const MainNotice = () => {
 
   return (
     <div className="main">
-      <Header />
       <NoticeTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
       <NoticeNews />

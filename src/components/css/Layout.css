@@ -30,7 +30,6 @@
 }
 
 .video-main h1 {
-  height: 176px;
   align-self: stretch;
   flex-grow: 0;
   font-family: SpoqaHanSansNeo;
@@ -59,10 +58,28 @@
   background: #fff;
 }
 
+.video-tit {
+  height: 176px;
+}
+
+.video-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.video-bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .scroll {
   width: 74px;
   height: 34px;
-  margin-top: 188px;
   font-family: SpoqaHanSansNeo;
   font-size: 20px;
   font-weight: normal;

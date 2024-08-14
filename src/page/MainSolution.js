@@ -20,7 +20,6 @@ const MainSolution = () => {
 
   return (
     <div className="main">
-      <Header />
       <SolutionTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
       <SolutionService />

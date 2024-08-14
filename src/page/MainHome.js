@@ -15,7 +15,6 @@ import HomeCertifiy from "../components/com/home/HomeCertifiy";
 const MainHome = () => {
   return (
     <div>
-      <Header />
       <div>
         <HomeVideo />
       </div>

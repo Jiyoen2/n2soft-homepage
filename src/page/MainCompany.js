@@ -23,7 +23,6 @@ const MainCompany = () => {
 
   return (
     <div className="main">
-      <Header />
       <CompanyTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
       <Footer />

@@ -11,6 +11,7 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
   const [isScroll, setIsScroll] = useState("menu1");
+  const [opacity, setOpacity] = useState("");
 
   const location = useLocation();
   const menu1Ref = useRef(null);
@@ -72,8 +73,7 @@ const Header = () => {
               to="/company"
               style={{
                 color: activeMenu === "/company" ? "#ff0000" : color,
-                backgroundColor:
-                  activeMenu === "/company" ? background : "transparent",
+                backgroundColor: activeMenu === "/company" && background,
               }}
               onClick={() => setActiveMenu("/company")}
             >
@@ -86,8 +86,7 @@ const Header = () => {
               to="/solution"
               style={{
                 color: activeMenu === "/solution" ? "#bc1d22" : color,
-                backgroundColor:
-                  activeMenu === "/solution" ? background : "transparent",
+                backgroundColor: activeMenu === "/solution" && background,
               }}
               onClick={() => setActiveMenu("/solution")}
             >
@@ -100,8 +99,7 @@ const Header = () => {
               to="/notice"
               style={{
                 color: activeMenu === "/notice" ? "#bc1d22" : color,
-                backgroundColor:
-                  activeMenu === "/notice" ? background : "transparent",
+                backgroundColor: activeMenu === "/notice" && background,
               }}
               onClick={() => setActiveMenu("/notice")}
             >

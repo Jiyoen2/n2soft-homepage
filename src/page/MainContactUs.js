@@ -20,7 +20,6 @@ const MainContactUs = () => {
 
   return (
     <div className="main">
-      <Header />
       <ContactTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
       <ContactMail />
