@@ -18,8 +18,8 @@
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.21);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
 }
 
 .header-com {
@@ -83,7 +83,7 @@
 }
 
 .header .menu1:hover span {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .header .menu2:hover {
@@ -91,7 +91,7 @@
 }
 
 .header .menu2:hover span {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 /* .stick-header {
@@ -107,7 +107,7 @@
 .stick-header-1 {
   /* width: 20px; */
   /* height: 2px; */
-  background-color: white;
+  background-color: #fff;
   position: absolute;
   bottom: 5px;
   left: 50%;

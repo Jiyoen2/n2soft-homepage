@@ -6,7 +6,7 @@ import N2softLogoRdImg from "../assets/images/N2SOFTlogo-Rd.png";
 
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("#ffffff");
   const [boxShadow, setBoxShadow] = useState("none");
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
@@ -23,13 +23,13 @@ const Header = () => {
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setBackground("#FFFFFF");
-      setColor("black");
+      setColor("#000000");
       setBoxShadow("0 2px 6px rgba(0, 0, 0, 0.12)");
       setLogo(N2softLogoRdImg);
       setIsScroll("menu2");
     } else {
       setBackground("rgba(0, 0, 0, 0)");
-      setColor("white");
+      setColor("#ffffff");
       setBoxShadow("none");
       setLogo(N2softLogoWhImg);
       setIsScroll("menu1");
@@ -62,7 +62,7 @@ const Header = () => {
             <Link
               to="/company"
               style={{
-                color: activeMenu === "/company" ? "#ff0000" : color,
+                color: activeMenu === "/company" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/company" && background,
               }}
               onClick={() => setActiveMenu("/company")}
@@ -122,7 +122,7 @@ const Header = () => {
             >
               <span
                 style={{
-                  color: activeMenu === "/contact" ? "#fff" : color,
+                  color: activeMenu === "/contact" ? "#ffffff" : color,
                 }}
               >
                 CONTACT US

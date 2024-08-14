@@ -150,20 +150,11 @@
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  justify-content: space-between;
 }
 
 .contents-arr {
-  padding: 0 0 0 144.5px;
-}
-
-.arr-left {
   cursor: pointer;
-}
-
-.arr-right {
-  cursor: pointer;
-  padding-left: 20px;
-  width: 100px;
 }
 
 .arr-right-red {
@@ -475,14 +466,15 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   transform: translateY(-50%);
   z-index: 10;
+  cursor: pointer;
 }
 
-.newsArrLeft,
+/* .newsArrLeft,
 .newsArrRight {
   cursor: pointer;
   width: 80px;
   height: 80px;
-}
+} */
 
 .news-tit h2 {
   width: 100%;
