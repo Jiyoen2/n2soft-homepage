@@ -12,7 +12,6 @@ const CompanyHistory = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Initial call to set scroll position
     handleScroll();
 
     return () => {
@@ -20,7 +19,7 @@ const CompanyHistory = () => {
     };
   }, []);
 
-  const historyData = [
+  const historyL = [
     {
       date: "2024",
       items: [
@@ -125,7 +124,7 @@ const CompanyHistory = () => {
     },
   ];
 
-  const historyData2 = [
+  const historyR = [
     {
       date: "2023",
       items: [
@@ -219,38 +218,40 @@ const CompanyHistory = () => {
           <h1>연혁</h1>
         </div>
         <div className="timeline-container">
-          <div className="timeline-items">
-            <div style={{ paddingBottom: "60px" }}></div>
-            {historyData.map((data, index) => (
-              <CompanyOne
-                key={index}
-                date={data.date}
-                items={data.items}
-                isNotLineDot={index === 0}
-              />
+          <div className="timeline-item1">
+            {historyL.map((data, index) => (
+              <div className="timeline-com1" key={index}>
+                <CompanyOne
+                  date={data.date}
+                  items={data.items}
+                  isNotLineDot={index === 0}
+                />
+              </div>
             ))}
           </div>
           <div className="line-long">
             <div
               className="line-red"
               style={{
-                height: `${Math.max(0, scrollY * 0.995)}px`, // 스크롤 값에 따라 height 조절
+                height: `${Math.max(0, scrollY * 0.995)}px`,
               }}
             >
               <div
                 className="cir-big"
                 style={{
-                  transform: `translateY(${scrollY * 0.5}px)`, // 스크롤 비율에 따라 이동
+                  transform: `translateY(${scrollY * 0.5}px)`,
                 }}
               >
-                <div class="cir-sm"></div>
+                <div className="cir-sm"></div>
               </div>
             </div>
           </div>
-          <div className="timeline-items2">
-            <div style={{ paddingBottom: "266px" }}></div>
-            {historyData2.map((data, index) => (
-              <CompanyTwo key={index} date={data.date} items={data.items} />
+          <div className="timeline-item2">
+            <div style={{ paddingBottom: "206px" }}></div>
+            {historyR.map((data, index) => (
+              <div className="timeline-com2" key={index}>
+                <CompanyTwo date={data.date} items={data.items} />
+              </div>
             ))}
           </div>
         </div>

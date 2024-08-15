@@ -2,7 +2,6 @@ import React from "react";
 
 const CompanyOne = ({ date, items, isNotLineDot }) => (
   <div className="company-com-1">
-    {!isNotLineDot && <div className="line-dot-1"></div>}
     <p>{date}</p>
     {items.map((item, index) => (
       <div className="company-s" key={index}>

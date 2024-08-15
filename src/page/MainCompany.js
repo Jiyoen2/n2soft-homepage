@@ -22,7 +22,7 @@ const MainCompany = () => {
   };
 
   return (
-    <div className="main">
+    <div className="main" style={{ height: "900px" }}>
       <CompanyTop setActiveTab={setActiveTab} activeTab={activeTab} />
       {renderContent()}
       <Footer />
