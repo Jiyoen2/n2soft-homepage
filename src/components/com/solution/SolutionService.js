@@ -21,15 +21,22 @@ const data = [
     title: "QUPID 서비스",
     golink: (
       <>
-        <p>
-          큐피드 서비스 <span>&nbsp;바로가기</span>
-          <img
-            src={ArrRightRd}
-            alt="오른쪽 화살표"
-            className="arr-right-red"
-            style={{ width: "40px", height: "40px" }}
-          />
-        </p>
+        <a
+          href="https://www.qupid.co.kr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>
+            큐피드 서비스
+            <span>&nbsp;바로가기</span>
+            <img
+              src={ArrRightRd}
+              alt="오른쪽 화살표"
+              className="arr-right-red"
+              style={{ width: "40px", height: "40px" }}
+            />
+          </p>
+        </a>
       </>
     ),
     content:

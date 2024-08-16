@@ -43,6 +43,11 @@ const Header = () => {
     };
   }, []);
 
+  const handleLinkClick = (e, path) => {
+    e.preventDefault(); // 기본 링크 동작 방지
+    window.location.href = path; // 페이지 새로고침
+  };
+
   return (
     <header
       className="header"
@@ -54,7 +59,11 @@ const Header = () => {
       }}
     >
       <div className="header-com">
-        <Link to="/" className="logo-link">
+        <Link
+          to="/"
+          className="logo-link"
+          onClick={(e) => handleLinkClick(e, "/")}
+        >
           <img src={logo} alt="N2soft 로고" className="logo-image" />
         </Link>
         <ul className="menu-li">
@@ -65,7 +74,7 @@ const Header = () => {
                 color: activeMenu === "/company" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/company" && background,
               }}
-              onClick={() => setActiveMenu("/company")}
+              onClick={(e) => handleLinkClick(e, "/company")}
             >
               COMPANY
             </Link>
@@ -78,7 +87,7 @@ const Header = () => {
                 color: activeMenu === "/solution" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/solution" && background,
               }}
-              onClick={() => setActiveMenu("/solution")}
+              onClick={(e) => handleLinkClick(e, "/solution")}
             >
               SOLUTION
             </Link>
@@ -91,7 +100,7 @@ const Header = () => {
                 color: activeMenu === "/notice" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/notice" && background,
               }}
-              onClick={() => setActiveMenu("/notice")}
+              onClick={(e) => handleLinkClick(e, "/notice")}
             >
               NOTICE
             </Link>
@@ -104,7 +113,7 @@ const Header = () => {
             style={{
               textDecoration: "none",
             }}
-            onClick={() => setActiveMenu("/contact")}
+            onClick={(e) => handleLinkClick(e, "/contact")}
           >
             <div
               style={{
