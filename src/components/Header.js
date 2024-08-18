@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import "../components/css/Header.css";
 import N2softLogoWhImg from "../assets/images/N2SOFTlogo-Wh.png";
 import N2softLogoRdImg from "../assets/images/N2SOFTlogo-Rd.png";
-
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
   const [color, setColor] = useState("#ffffff");
@@ -11,15 +10,12 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
   const [isScroll, setIsScroll] = useState("menu1");
-
   const location = useLocation();
   const menu1Ref = useRef(null);
   const headerRef = useRef(null);
-
   useEffect(() => {
     setActiveMenu(location.pathname);
   }, [location]);
-
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setBackground("#FFFFFF");
@@ -43,11 +39,6 @@ const Header = () => {
     };
   }, []);
 
-  const handleLinkClick = (e, path) => {
-    e.preventDefault(); // 기본 링크 동작 방지
-    window.location.href = path; // 페이지 새로고침
-  };
-
   return (
     <header
       className="header"
@@ -59,11 +50,7 @@ const Header = () => {
       }}
     >
       <div className="header-com">
-        <Link
-          to="/"
-          className="logo-link"
-          onClick={(e) => handleLinkClick(e, "/")}
-        >
+        <Link to="/" className="logo-link">
           <img src={logo} alt="N2soft 로고" className="logo-image" />
         </Link>
         <ul className="menu-li">
@@ -74,7 +61,7 @@ const Header = () => {
                 color: activeMenu === "/company" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/company" && background,
               }}
-              onClick={(e) => handleLinkClick(e, "/company")}
+              onClick={() => setActiveMenu("/company")}
             >
               COMPANY
             </Link>
@@ -87,7 +74,7 @@ const Header = () => {
                 color: activeMenu === "/solution" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/solution" && background,
               }}
-              onClick={(e) => handleLinkClick(e, "/solution")}
+              onClick={() => setActiveMenu("/solution")}
             >
               SOLUTION
             </Link>
@@ -100,7 +87,7 @@ const Header = () => {
                 color: activeMenu === "/notice" ? "#bc1d22" : color,
                 backgroundColor: activeMenu === "/notice" && background,
               }}
-              onClick={(e) => handleLinkClick(e, "/notice")}
+              onClick={() => setActiveMenu("/notice")}
             >
               NOTICE
             </Link>
@@ -113,7 +100,7 @@ const Header = () => {
             style={{
               textDecoration: "none",
             }}
-            onClick={(e) => handleLinkClick(e, "/contact")}
+            onClick={() => setActiveMenu("/contact")}
           >
             <div
               style={{
@@ -144,5 +131,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;

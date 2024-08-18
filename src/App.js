@@ -7,13 +7,10 @@ import MainNotice from "./page/MainNotice";
 import MainSolution from "./page/MainSolution";
 import MainContactUs from "./page/MainContactUs";
 import Header from "./components/Header";
-import ScrollTop from "./components/com/common/ScrollTop";
-
 function App() {
   return (
     <div>
       <Header />
-      <ScrollTop />
       <Routes>
         <Route path="/" element={<MainHome />} />
         <Route path="/company" element={<MainCompany />} />
@@ -24,5 +21,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
