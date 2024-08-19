@@ -1,20 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../components/css/Header.css";
 import N2softLogoWhImg from "../assets/images/N2SOFTlogo-Wh.png";
 import N2softLogoRdImg from "../assets/images/N2SOFTlogo-Rd.png";
+import N2softLogoMWh from "../assets/images/n2soft-logo-wh.png";
+import N2softLogoMRd from "../assets/images/n2soft-logo-rd.png";
 import MenuImg from "../assets/images/menu.png";
+import MenuBkImg from "../assets/images/menu-bk.png";
+import IcoClosed from "../assets/images/ico-closed.png";
+import IcoMore from "../assets/images/ico-more.png";
+import IcoMinus from "../assets/images/ico-minus.png";
 
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
   const [color, setColor] = useState("#ffffff");
+  const [colorM, setColorM] = useState("#212121");
   const [boxShadow, setBoxShadow] = useState("none");
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
+  const [logoM, setLogoM] = useState(N2softLogoMWh);
   const [Menu, setMenu] = useState(MenuImg);
+  const [IcoPC, setIcoPC] = useState(IcoMore);
   const [isScroll, setIsScroll] = useState("menu1");
-  const [menuOpen, setMenuOpen] = useState(false); // 모바일 메뉴 열림 상태
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const menu1Ref = useRef(null);
   const headerRef = useRef(null);
 
@@ -26,24 +36,25 @@ const Header = () => {
   const handleScroll = () => {
     console.log("Scroll position:", window.scrollY);
     if (window.scrollY > 50) {
-      console.log("Scrolled more than 50px, updating header style.");
       setBackground("#FFFFFF");
       setColor("#000000");
       setBoxShadow("0 2px 6px rgba(0, 0, 0, 0.12)");
       setLogo(N2softLogoRdImg);
+      setLogoM(N2softLogoMRd);
+      setMenu(MenuBkImg);
       setIsScroll("menu2");
     } else {
-      console.log("Scrolled less than 50px, resetting header style.");
       setBackground("rgba(0, 0, 0, 0)");
       setColor("#ffffff");
       setBoxShadow("none");
       setLogo(N2softLogoWhImg);
+      setLogoM(N2softLogoMWh);
+      setMenu(MenuImg);
       setIsScroll("menu1");
     }
   };
 
   useEffect(() => {
-    console.log("Adding scroll event listener.");
     window.addEventListener("scroll", handleScroll);
     return () => {
       console.log("Removing scroll event listener.");
@@ -53,7 +64,12 @@ const Header = () => {
 
   const handleMenuToggle = () => {
     setMenuOpen((prevState) => !prevState);
-    console.log("Menu toggle clicked, new state:", !menuOpen);
+  };
+
+  const handleNavigation = (path) => {
+    setActiveMenu(path);
+    navigate(path);
+    if (menuOpen) setMenuOpen(false);
   };
 
   return (
@@ -80,7 +96,6 @@ const Header = () => {
                   activeMenu === "/company" ? background : "transparent",
               }}
               onClick={() => {
-                console.log("Menu clicked: COMPANY");
                 setActiveMenu("/company");
               }}
             >
@@ -97,7 +112,6 @@ const Header = () => {
                   activeMenu === "/solution" ? background : "transparent",
               }}
               onClick={() => {
-                console.log("Menu clicked: SOLUTION");
                 setActiveMenu("/solution");
               }}
             >
@@ -160,11 +174,11 @@ const Header = () => {
           {activeMenu === "/contact" && <div className="stick-header-1"></div>}
         </div>
         <Link to="/" className="logo-link-m">
-          <img src={logo} alt="N2soft 로고" className="logo-image" />
+          <img src={logoM} alt="N2soft M로고" className="logo-image-m" />
         </Link>
         <div className="menu-icon" id="menu-toggle" onClick={handleMenuToggle}>
           <img
-            src={MenuImg}
+            src={Menu}
             alt="Menu"
             className="menu-toggle-btn"
             id="menu-icon"
@@ -173,34 +187,94 @@ const Header = () => {
         <div className={`gnb-m-toggle ${menuOpen ? "open" : ""}`}>
           {menuOpen && (
             <div className="gnb-m-toggle-com">
-              <img
-                src={N2softLogoRdImg}
-                alt="Menu Toggle"
-                className="menu-toggle-img"
-              />
+              <div>
+                <Link to="/" className="logo-link-m">
+                  <img
+                    src={N2softLogoMRd}
+                    alt="Menu Toggle"
+                    className="menu-toggle-img"
+                    onClick={() => setMenuOpen(false)}
+                  />
+                </Link>
+              </div>
+              <div>
+                <img
+                  src={IcoClosed}
+                  alt="Menu Toggle"
+                  className="menu-toggle-img"
+                  onClick={() => setMenuOpen(false)}
+                />
+              </div>
             </div>
           )}
           <div className="container">
             <ul className="gnb-m">
               <li>
-                <Link
-                  to="/company"
-                  onClick={() => {
-                    console.log("Mobile menu clicked: COMPANY");
-                    setActiveMenu("/company");
-                    setMenuOpen(false); // 메뉴 클릭 시 닫기
-                  }}
-                >
-                  COMPANY
-                </Link>
+                <div className="gnb-company">
+                  <div
+                    onClick={() => handleNavigation("/company")}
+                    style={{
+                      color: activeMenu === "/company" ? "#bc1d22" : colorM,
+                      backgroundColor:
+                        activeMenu === "/company" ? background : "transparent",
+                    }}
+                  >
+                    COMPANY
+                  </div>
+                  {activeMenu === "/company"}
+                  <img
+                    src={IcoPC}
+                    alt="N2soft M로고"
+                    className="logo-image-m"
+                  />
+                </div>
+                <ul className="gnb-m">
+                  <li
+                    onClick={() => {
+                      navigate("/company?tab=intro");
+                      setActiveMenu("/company?tab=intro");
+                      setMenuOpen(false);
+                    }}
+                    style={{
+                      color:
+                        activeMenu === "/company?tab=intro"
+                          ? "#bc1d22"
+                          : colorM,
+                      backgroundColor:
+                        activeMenu === "/company?tab=intro"
+                          ? background
+                          : "transparent",
+                    }}
+                  >
+                    회사소개
+                  </li>
+                  <li
+                    onClick={() => {
+                      navigate("/company?tab=history");
+                      setActiveMenu("/company?tab=history");
+                      setMenuOpen(false);
+                    }}
+                    style={{
+                      color:
+                        activeMenu === "/company?tab=history"
+                          ? "#bc1d22"
+                          : colorM,
+                      backgroundColor:
+                        activeMenu === "/company?tab=history"
+                          ? background
+                          : "transparent",
+                    }}
+                  >
+                    연혁
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link
                   to="/solution"
                   onClick={() => {
-                    console.log("Mobile menu clicked: SOLUTION");
                     setActiveMenu("/solution");
-                    setMenuOpen(false); // 메뉴 클릭 시 닫기
+                    setMenuOpen(false);
                   }}
                 >
                   SOLUTION
@@ -210,9 +284,8 @@ const Header = () => {
                 <Link
                   to="/notice"
                   onClick={() => {
-                    console.log("Mobile menu clicked: NOTICE");
                     setActiveMenu("/notice");
-                    setMenuOpen(false); // 메뉴 클릭 시 닫기
+                    setMenuOpen(false);
                   }}
                 >
                   NOTICE
@@ -222,9 +295,8 @@ const Header = () => {
                 <Link
                   to="/contact"
                   onClick={() => {
-                    console.log("Mobile menu clicked: CONTACT US");
                     setActiveMenu("/contact");
-                    setMenuOpen(false); // 메뉴 클릭 시 닫기
+                    setMenuOpen(false);
                   }}
                 >
                   CONTACT US
