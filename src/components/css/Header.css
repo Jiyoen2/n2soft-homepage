@@ -113,3 +113,101 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* 모바일 반응형 스타일 */
+.menu-icon {
+  display: none;
+}
+
+.logo-link-m {
+  display: none;
+}
+
+.gnb-m-toggle {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 264px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); /* 기본 상태에서 화면 밖으로 이동 */
+}
+
+/* 메뉴가 열릴 때의 상태 */
+.gnb-m-toggle.open {
+  display: flex; /* 열릴 때 보이도록 설정 */
+  flex-direction: column;
+  transform: translateX(0); /* 화면에 보이도록 이동 */
+  height: 301px;
+}
+
+.gnb-m-toggle-com {
+  padding: 8px 24px 27px;
+}
+
+/* 모바일 메뉴의 링크 스타일 */
+.gnb-m {
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px 0 41px; */
+  background-color: #fff;
+  height: 100%;
+}
+
+.gnb-m li {
+  padding: 22px 24px 0;
+}
+
+.gnb-m a {
+  width: 76px;
+  height: 18px;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+  text-decoration: none;
+}
+
+/* 모바일 메뉴 아이콘 표시 */
+@media (max-width: 766px) and (min-width: 250px) {
+  /* 숨김 */
+  .logo-link {
+    display: none;
+  }
+
+  .menu-li {
+    display: none !important;
+  }
+
+  .contact-link {
+    display: none;
+  }
+
+  /* 보임 */
+
+  .header {
+    height: 87px;
+  }
+
+  .header-com {
+    padding: 0 24px 0 24px;
+    height: 87px;
+  }
+
+  .menu-icon {
+    display: flex;
+    cursor: pointer; /* 클릭 가능한 아이콘 표시 */
+  }
+
+  .logo-link-m {
+    display: flex;
+    cursor: pointer;
+  }
+}
