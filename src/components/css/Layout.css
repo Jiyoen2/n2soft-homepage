@@ -1329,7 +1329,7 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   border-bottom: 1px solid gray;
   background-image: url("../../assets/images/top02.png");
   background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
+  /* height: 372px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
