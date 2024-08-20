@@ -20,9 +20,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* 검은색 반투명 블러 처리 */
-  backdrop-filter: blur(2px); /* 블러 효과 */
-  z-index: 0; /* 비디오와 텍스트 위로 배치 */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
 .video-main video {
@@ -1144,13 +1144,13 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   overflow: hidden;
 }
 
-.company-img {
+.company-bg {
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
   background-image: url("../../assets/images/top01.png");
   background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
+  /* height: 372px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1500,7 +1500,7 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   border-bottom: 1px solid gray;
   background-image: url("../../assets/images/top03.png");
   background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
+  /* height: 372px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1652,13 +1652,13 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   color: #212121;
 }
 
-.contactus-img {
+.contactus-bg {
   position: relative;
   width: 100%;
   border-bottom: 1px solid gray;
   background-image: url("../../assets/images/top04.png");
   background-color: rgba(217, 217, 217, 0.5);
-  height: 372px;
+  /* height: 372px; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1849,7 +1849,7 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
     padding: 60px 24px 60px;
   }
 
-  .contactus-img {
+  .contactus-bg {
     background-image: url("../../assets/images/top04-m.png");
     height: 200px;
   }

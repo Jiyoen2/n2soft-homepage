@@ -2,7 +2,7 @@ import React from "react";
 
 const CompanyTop = ({ setActiveTab, activeTab }) => {
   return (
-    <div className="company-img">
+    <div className="company-bg">
       <div className="top-tit">
         <h1>COMPANY</h1>
       </div>

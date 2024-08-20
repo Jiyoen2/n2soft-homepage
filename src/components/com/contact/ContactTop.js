@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactTop = ({ setActiveTab, activeTab }) => {
   return (
-    <div className="contactus-img">
+    <div className="contactus-bg">
       <div className="top-tit">
         <h1>CONTACT US</h1>
       </div>
