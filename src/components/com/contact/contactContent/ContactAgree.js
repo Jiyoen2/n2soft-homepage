@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CheckGrImg from "../../../../assets/images/check-circle-Gr.png";
 import CheckRdImg from "../../../../assets/images/check-circle-Rd.png";
+import CheckGrMImg from "../../../../assets/images/check-circle-Gr-m.png";
+import CheckBkMImg from "../../../../assets/images/check-circle-Bk-m.png";
 
 const ContactAgree = ({ onAgreeChange, isChecked }) => {
   // isChecked를 props로 받음
@@ -35,6 +37,11 @@ const ContactAgree = ({ onAgreeChange, isChecked }) => {
             src={isChecked ? CheckRdImg : CheckGrImg}
             alt={isChecked ? "빨간 체크" : "회색 체크"}
             className="check-circle-Gr"
+          />
+          <img
+            src={isChecked ? CheckBkMImg : CheckGrMImg}
+            alt={isChecked ? "검정 체크" : "회색 체크"}
+            className="check-circle-Gr-m"
           />
           <p>개인정보 수집 및 이용에 동의합니다.</p>
         </div>

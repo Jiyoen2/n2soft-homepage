@@ -1763,7 +1763,6 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   font-weight: bold;
   flex-grow: 0;
   font-family: SpoqaHanSansNeo;
-  font-size: 20px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.7;
@@ -1830,9 +1829,17 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   cursor: pointer;
 }
 
+.check-circle-Gr-m {
+  display: none;
+}
+
 /* 모바일 */
 @media (max-width: 766px) and (min-width: 250px) {
   /* 숨김 */
+
+  .check-circle-Gr {
+    display: none;
+  }
 
   /* 보임 */
 
@@ -1902,20 +1909,8 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
 
   .button-sub {
     width: 176px;
-    height: 54px;
-    background-color: #101010;
-    font-size: 20px;
-    font-weight: bold;
-    flex-grow: 0;
-    font-family: SpoqaHanSansNeo;
-    font-size: 20px;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.7;
-    letter-spacing: normal;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
+    height: 50px;
+    font-size: 15px;
   }
 
   .contactus-agree {
@@ -1935,12 +1930,11 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   .contactus-check {
     display: flex;
     align-items: center;
-    padding-bottom: 40px;
-    width: 400px;
+    padding-bottom: 32px;
   }
 
   .contactus-check p {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     color: #424242;
   }
@@ -1948,6 +1942,11 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   .check-circle-Gr {
     margin-right: 23.3px;
     cursor: pointer;
+  }
+
+  .check-circle-Gr-m {
+    display: flex;
+    padding-right: 12px;
   }
 }
 

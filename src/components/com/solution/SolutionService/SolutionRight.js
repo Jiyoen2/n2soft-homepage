@@ -2,7 +2,7 @@ import React from "react";
 import SolutionList from "./SolutionList";
 import SolutionImage from "./SolutionImage";
 
-const SolutionRight = ({ num, title, content, golink, image }) => {
+const SolutionRight = ({ title, content, golink, image }) => {
   return (
     <>
       <div className="solu-img-R">
@@ -10,7 +10,7 @@ const SolutionRight = ({ num, title, content, golink, image }) => {
       </div>
       <div className="solu-text-R">
         <SolutionList
-          num={num}
+          // num={num}
           title={title}
           content={content}
           golink={golink}

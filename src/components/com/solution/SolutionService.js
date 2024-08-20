@@ -9,7 +9,7 @@ import ArrRightRd from "../../../assets/images/arr_right_red.png";
 
 const data = [
   {
-    num: "01.",
+    // num: "01.",
     title: "통합여신관리 시스템",
     content:
       "금융기관 마다 필수로 사용 되어지는 채권관리를 중심으로 하여 다양한 금융상품들을 관리하고 업무를 편리하게 하는 시스템",
@@ -17,7 +17,7 @@ const data = [
     layout: "text-left", // 왼쪽에 텍스트, 오른쪽에 이미지
   },
   {
-    num: "02.",
+    // num: "02.",
     title: "QUPID 서비스",
     golink: (
       <>
@@ -45,7 +45,7 @@ const data = [
     layout: "text-right", // 왼쪽에 이미지, 오른쪽에 텍스트
   },
   {
-    num: "03.",
+    // num: "03.",
     title: "가상 FAX 시스템",
     content:
       "상담사별 혹은 고객별 가상 FAX번호를 부여하여 FAX 업무 진행시 효율성을 높일 수 있는 서비스",
@@ -53,7 +53,7 @@ const data = [
     layout: "text-left",
   },
   {
-    num: "04.",
+    // num: "04.",
     title: "MO 서비스",
     content:
       "문자내용 및 이미지를 전산으로 받아 고객 원장에 바로 등록되어 업무 편의성을 향상시키는 서비스",
@@ -73,7 +73,7 @@ const SolutionService = () => {
                 <SolutionLeft
                   title={solu.title}
                   content={solu.content}
-                  num={solu.num}
+                  // num={solu.num}
                   image={solu.image}
                 />
               ) : (
@@ -81,7 +81,7 @@ const SolutionService = () => {
                   title={solu.title}
                   content={solu.content}
                   golink={solu.golink}
-                  num={solu.num}
+                  // num={solu.num}
                   image={solu.image}
                 />
               )}
