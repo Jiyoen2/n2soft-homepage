@@ -14,7 +14,6 @@ import IcoMinus from "../assets/images/ico-minus.png";
 const Header = () => {
   const [background, setBackground] = useState("rgba(0, 0, 0, 0)");
   const [color, setColor] = useState("#ffffff");
-  const [colorM, setColorM] = useState("#212121");
   const [boxShadow, setBoxShadow] = useState("none");
   const [activeMenu, setActiveMenu] = useState("");
   const [logo, setLogo] = useState(N2softLogoWhImg);
@@ -23,15 +22,19 @@ const Header = () => {
   const [IcoPC, setIcoPC] = useState(IcoMore);
   const [isScroll, setIsScroll] = useState("menu1");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuExpanded, setMenuExpanded] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const menu1Ref = useRef(null);
   const headerRef = useRef(null);
 
   useEffect(() => {
-    console.log("Location changed:", location.pathname);
     setActiveMenu(location.pathname);
   }, [location]);
+
+  useEffect(() => {
+    console.log("Active Menu:", activeMenu);
+  }, [activeMenu]);
 
   const handleScroll = () => {
     console.log("Scroll position:", window.scrollY);
@@ -70,6 +73,11 @@ const Header = () => {
     setActiveMenu(path);
     navigate(path);
     if (menuOpen) setMenuOpen(false);
+  };
+
+  const toggleMenuExpansion = () => {
+    setMenuExpanded((prev) => !prev);
+    setIcoPC((prev) => (menuExpanded ? IcoMore : IcoMinus));
   };
 
   return (
@@ -210,72 +218,105 @@ const Header = () => {
           <div className="container">
             <ul className="gnb-m">
               <li>
-                <div className="gnb-company">
-                  <div
-                    onClick={() => handleNavigation("/company")}
+                <div className="gnb-company" onClick={toggleMenuExpansion}>
+                  <span
                     style={{
-                      color: activeMenu === "/company" ? "#bc1d22" : colorM,
+                      color: activeMenu === "/company" ? "#bc1d22" : "#212121",
                       backgroundColor:
                         activeMenu === "/company" ? background : "transparent",
                     }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = "#bc1d22")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color =
+                        activeMenu === "/company" ? "#bc1d22" : "#212121")
+                    }
                   >
                     COMPANY
-                  </div>
-                  {activeMenu === "/company"}
+                  </span>
                   <img
                     src={IcoPC}
-                    alt="N2soft M로고"
+                    alt="Expand/Collapse"
                     className="logo-image-m"
                   />
                 </div>
-                <ul className="gnb-m">
-                  <li
-                    onClick={() => {
-                      navigate("/company?tab=intro");
-                      setActiveMenu("/company?tab=intro");
-                      setMenuOpen(false);
-                    }}
-                    style={{
-                      color:
-                        activeMenu === "/company?tab=intro"
-                          ? "#bc1d22"
-                          : colorM,
-                      backgroundColor:
-                        activeMenu === "/company?tab=intro"
-                          ? background
-                          : "transparent",
-                    }}
-                  >
-                    회사소개
-                  </li>
-                  <li
-                    onClick={() => {
-                      navigate("/company?tab=history");
-                      setActiveMenu("/company?tab=history");
-                      setMenuOpen(false);
-                    }}
-                    style={{
-                      color:
+                {menuExpanded && (
+                  <ul className="gnb-c">
+                    <li>
+                      <span
+                        onClick={() => {
+                          handleNavigation("/company?tab=intro");
+                          setActiveMenu("/company?tab=intro");
+                          setMenuOpen(false);
+                        }}
+                        style={{
+                          cursor: "pointer",
+                          color:
+                            activeMenu === "/company?tab=intro"
+                              ? "#bc1d22"
+                              : "#212121",
+                          backgroundColor:
+                            activeMenu === "/company?tab=intro"
+                              ? background
+                              : "transparent",
+                        }}
+                        className={
+                          activeMenu === "/company?tab=intro"
+                            ? "active-menu"
+                            : "inactive-menu"
+                        }
+                      >
+                        회사소개
+                      </span>
+                    </li>
+                    <li
+                      onClick={() => {
+                        handleNavigation("/company?tab=history");
+                        setActiveMenu("/company?tab=history");
+                        setMenuOpen(false);
+                      }}
+                      style={{
+                        cursor: "pointer",
+                        color:
+                          activeMenu === "/company?tab=history"
+                            ? "#bc1d22"
+                            : "#212121",
+                        backgroundColor:
+                          activeMenu === "/company?tab=history"
+                            ? background
+                            : "transparent",
+                      }}
+                      className={
                         activeMenu === "/company?tab=history"
-                          ? "#bc1d22"
-                          : colorM,
-                      backgroundColor:
-                        activeMenu === "/company?tab=history"
-                          ? background
-                          : "transparent",
-                    }}
-                  >
-                    연혁
-                  </li>
-                </ul>
+                          ? "active-menu"
+                          : "inactive-menu"
+                      }
+                    >
+                      연혁
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
                 <Link
                   to="/solution"
+                  style={{
+                    color: activeMenu === "/solution" ? "#bc1d22" : "#212121",
+                    backgroundColor:
+                      activeMenu === "/solution" ? background : "transparent",
+                  }}
                   onClick={() => {
                     setActiveMenu("/solution");
                     setMenuOpen(false);
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#bc1d22")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color =
+                      activeMenu === "/solution" ? "#bc1d22" : "#212121")
+                  }
                 >
                   SOLUTION
                 </Link>
@@ -283,10 +324,22 @@ const Header = () => {
               <li>
                 <Link
                   to="/notice"
+                  style={{
+                    color: activeMenu === "/notice" ? "#bc1d22" : "#212121",
+                    backgroundColor:
+                      activeMenu === "/notice" ? background : "transparent",
+                  }}
                   onClick={() => {
                     setActiveMenu("/notice");
                     setMenuOpen(false);
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#bc1d22")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color =
+                      activeMenu === "/notice" ? "#bc1d22" : "#212121")
+                  }
                 >
                   NOTICE
                 </Link>
@@ -294,13 +347,26 @@ const Header = () => {
               <li>
                 <Link
                   to="/contact"
+                  style={{
+                    color: activeMenu === "/contact" ? "#bc1d22" : "#212121",
+                    backgroundColor:
+                      activeMenu === "/contact" ? background : "transparent",
+                  }}
                   onClick={() => {
                     setActiveMenu("/contact");
                     setMenuOpen(false);
                   }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.color = "#bc1d22")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.color =
+                      activeMenu === "/contact" ? "#bc1d22" : "#212121")
+                  }
                 >
                   CONTACT US
                 </Link>
+                <div className="stick-m" style={{ marginBottom: "41px" }}></div>
               </li>
             </ul>
           </div>
