@@ -66,6 +66,7 @@
   height: 4px;
   padding: 0.3px;
   margin: 56px 0 60px 0;
+  z-index: 1;
   background: #fff;
 }
 
@@ -110,6 +111,16 @@
   margin: 10px 34px 0 37px;
   z-index: 1;
   background: #fff;
+}
+
+/* 모바일 */
+@media (min-width: 1522px) and (max-width: 1800px) {
+  /* 숨김 */
+
+  /* 보임 */
+  .video-main {
+    padding: 284px 200px 0 200px;
+  }
 }
 
 /* HomeContents.css */
@@ -446,14 +457,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin-right: 20px;
 }
 
-@media (min-width: 2331px) {
-  .news-com {
-    float: left;
-    width: calc(100% - 1700px); /* rectangle-com의 너비를 고려하여 조정 */
-    margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
-  }
-}
-
 .rectangle-com {
   float: left;
   width: 400px;
@@ -627,6 +630,77 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: #d73a3e;
 }
 
+/* 모바일 */
+@media (min-width: 1522px) and (max-width: 1800px) {
+  /* 숨김 */
+
+  /* 보임 */
+  .news-feature {
+    padding: 100px 0 0 121.2px;
+  }
+
+  .news-com {
+    float: left;
+    width: calc(100% - 1060px); /* rectangle-com의 너비를 고려하여 조정 */
+    margin-right: 20px;
+  }
+
+  .rectangle {
+    min-width: 340px;
+    height: 450px;
+  }
+
+  .news-text-date {
+    width: 100%;
+    height: 34px;
+    margin: 0 0 30px 3px;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-align: left;
+    color: #da1c3e;
+  }
+
+  .news-text-tit {
+    width: 100%;
+    height: 99px;
+    margin-top: 30px;
+    font-family: Pretendard;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #101010;
+    white-space: pre-line;
+  }
+
+  .news-text-cont {
+    width: 100%;
+    height: 85px;
+    margin: 60px 0 34px;
+    font-size: 16px;
+  }
+
+  .news-text-num {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 2331px) {
+  .news-com {
+    float: left;
+    width: calc(100% - 1700px); /* rectangle-com의 너비를 고려하여 조정 */
+    margin-right: 20px; /* 오른쪽 마진으로 간격 조정 */
+  }
+}
+
 /*************************** 캐러셀 - 2 *************************/
 
 /* 새로운 캐러셀 스타일 */
@@ -650,19 +724,6 @@ input[type="range"].slider-range-2 {
   display: block;
 }
 
-@media (min-width: 2331px) {
-  input[type="range"].slider-range-2 {
-    -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
-    width: 100%; /* 슬라이더의 너비 */
-    max-width: 1280px; /* 최대 너비 */
-    margin: 0 auto; /* 중앙 정렬 */
-    padding-left: 240px;
-    padding-right: 130px;
-    background: transparent;
-    display: block;
-  }
-}
-
 /* 슬라이더 트랙(슬라이더 바) 스타일 */
 input[type="range"].slider-range-2::-webkit-slider-runnable-track {
   width: 100%;
@@ -679,6 +740,19 @@ input[type="range"].slider-range-2::-webkit-slider-thumb {
   background: #d31f24;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 2331px) {
+  input[type="range"].slider-range-2 {
+    -webkit-appearance: none; /* 웹킷 기반 브라우저 기본 스타일 제거 */
+    width: 100%; /* 슬라이더의 너비 */
+    max-width: 1280px; /* 최대 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding-left: 240px;
+    padding-right: 130px;
+    background: transparent;
+    display: block;
+  }
 }
 
 /* HomeCertifiy.css */
